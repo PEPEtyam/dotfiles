@@ -1,0 +1,209 @@
+# Kanagawa Paper theme for Helix editor
+# Inspired by thesimonho/kanagawa-paper.nvim
+# Features transparent background and bordered popups
+
+# UI Elements
+"ui.background" = "transparent"
+"ui.background.separator" = "sumiInk2"
+"ui.cursor" = { fg = "sumiInk0", bg = "fujiWhite" }
+"ui.cursor.primary" = { fg = "sumiInk0", bg = "crystalBlue" }
+"ui.cursor.match" = { bg = "waveBlue2", modifiers = ["bold"] }
+"ui.cursor.insert" = { fg = "sumiInk0", bg = "autumnGreen" }
+"ui.cursor.select" = { fg = "sumiInk0", bg = "autumnYellow" }
+"ui.cursorline.primary" = { bg = "sumiInk2" }
+"ui.cursorline.secondary" = { bg = "sumiInk1" }
+"ui.cursorcolumn.primary" = { bg = "sumiInk2" }
+"ui.cursorcolumn.secondary" = { bg = "sumiInk1" }
+
+"ui.selection" = { bg = "waveBlue1" }
+"ui.selection.primary" = { bg = "waveBlue2" }
+
+"ui.linenr" = "sumiInk4"
+"ui.linenr.selected" = "fujiGray"
+
+"ui.statusline" = { fg = "oldWhite", bg = "sumiInk0" }
+"ui.statusline.inactive" = { fg = "fujiGray", bg = "sumiInk0", modifiers = ["bold"] }
+"ui.statusline.normal" = { fg = "sumiInk0", bg = "crystalBlue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "sumiInk0", bg = "autumnGreen", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "sumiInk0", bg = "autumnYellow", modifiers = ["bold"] }
+
+# Popups with borders
+"ui.popup" = { fg = "fujiWhite", bg = "sumiInk0" }
+"ui.popup.info" = { fg = "fujiWhite", bg = "sumiInk0" }
+"ui.window" = "sumiInk4"  # Border color for popups
+"ui.help" = { fg = "fujiWhite", bg = "sumiInk0" }
+
+"ui.text" = "fujiWhite"
+"ui.text.focus" = { fg = "fujiWhite", bg = "sumiInk2", modifiers = ["bold"] }
+"ui.text.inactive" = "fujiGray"
+"ui.text.info" = { fg = "fujiWhite" }
+
+"ui.virtual" = "sumiInk4"
+"ui.virtual.ruler" = { bg = "sumiInk2" }
+"ui.virtual.whitespace" = "sumiInk4"
+"ui.virtual.indent-guide" = "sumiInk4"
+"ui.virtual.inlay-hint" = { fg = "sumiInk4", modifiers = ["italic"] }
+
+"ui.menu" = { fg = "fujiWhite", bg = "sumiInk0" }
+"ui.menu.selected" = { fg = "sumiInk0", bg = "crystalBlue" }
+"ui.menu.scroll" = { fg = "fujiWhite", bg = "sumiInk2" }
+
+# Diagnostics
+"warning" = "roninYellow"
+"error" = "samuraiRed"
+"info" = "dragonBlue"
+"hint" = "waveAqua1"
+
+"diagnostic.warning" = { underline = { color = "roninYellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "samuraiRed", style = "curl" } }
+"diagnostic.info" = { underline = { color = "dragonBlue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "waveAqua1", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Syntax highlighting
+"type" = "waveAqua2"
+"type.builtin" = "waveAqua2"
+"type.parameter" = "carpYellow"
+"type.enum.variant" = "springViolet1"
+
+"constructor" = "springBlue"
+"constructor.builtin" = "springBlue"
+
+"constant" = "surimiOrange"
+"constant.builtin" = "surimiOrange"
+"constant.builtin.boolean" = "surimiOrange"
+"constant.character" = "springGreen"
+"constant.character.escape" = "springGreen"
+"constant.numeric" = "sakuraPink"
+"constant.numeric.integer" = "sakuraPink"
+"constant.numeric.float" = "sakuraPink"
+
+"string" = "springGreen"
+"string.regexp" = "boatYellow2"
+"string.special" = "springViolet1"
+"string.special.path" = "springGreen"
+"string.special.url" = { fg = "springGreen", modifiers = ["underlined"] }
+"string.special.symbol" = "oniViolet"
+
+"comment" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.line" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.block" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "comet", modifiers = ["italic"] }
+
+"variable" = "fujiWhite"
+"variable.builtin" = "waveRed"
+"variable.parameter" = "carpYellow"
+"variable.other.member" = "crystalBlue"
+
+"label" = "springViolet1"
+
+"punctuation" = "springViolet2"
+"punctuation.bracket" = "springViolet2"
+"punctuation.delimiter" = "springViolet2"
+"punctuation.special" = "waveRed"
+
+"keyword" = "oniViolet"
+"keyword.control" = "oniViolet"
+"keyword.control.conditional" = "oniViolet"
+"keyword.control.repeat" = "oniViolet"
+"keyword.control.import" = "oniViolet"
+"keyword.control.return" = "oniViolet"
+"keyword.control.exception" = "oniViolet"
+"keyword.operator" = "boatYellow2"
+"keyword.directive" = "peachRed"
+"keyword.function" = "oniViolet"
+"keyword.storage" = "oniViolet"
+"keyword.storage.modifier" = "oniViolet"
+"keyword.storage.type" = "oniViolet"
+
+"operator" = "boatYellow2"
+
+"function" = "crystalBlue"
+"function.builtin" = "crystalBlue"
+"function.method" = "crystalBlue"
+"function.macro" = "waveRed"
+"function.special" = "waveRed"
+
+"tag" = "springBlue"
+"tag.builtin" = "springBlue"
+
+"namespace" = "surimiOrange"
+
+"markup.heading" = "surimiOrange"
+"markup.heading.1" = { fg = "peachRed", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "surimiOrange", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "carpYellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "springGreen", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "waveAqua2", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "crystalBlue", modifiers = ["bold"] }
+"markup.list" = "waveRed"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "springBlue", modifiers = ["underlined"] }
+"markup.link.text" = "crystalBlue"
+"markup.quote" = "seaFoam"
+"markup.raw" = "seaFoam"
+
+# Diff colors
+"diff.plus" = "autumnGreen"
+"diff.delta" = "autumnYellow"
+"diff.minus" = "autumnRed"
+
+# Git gutters
+"diff.plus.gutter" = "autumnGreen"
+"diff.delta.gutter" = "autumnYellow"
+"diff.minus.gutter" = "autumnRed"
+
+# Color palette inspired by Kanagawa Paper
+# More muted and softer colors compared to original Kanagawa
+[palette]
+# Backgrounds - more muted than original
+sumiInk0 = "#2A2A37"     # Darkest background
+sumiInk1 = "#181616"     # Dark background  
+sumiInk2 = "#1f1d1d"     # Slightly lighter background
+sumiInk3 = "#2d2a2a"     # Light background
+sumiInk4 = "#625e5e"     # Border/separator color
+
+# Foregrounds - softer whites and grays
+fujiWhite = "#dcd5c7"    # Main foreground (softer white)
+oldWhite = "#c8c2b5"     # Secondary foreground
+fujiGray = "#8a8980"     # Comments and inactive text
+comet = "#54536d"        # Documentation comments
+
+# Core colors - muted versions
+waveBlue1 = "#252535"    # Selection background
+waveBlue2 = "#2d4f67"    # Primary selection
+dragonBlue = "#658594"   # Info diagnostics
+crystalBlue = "#7e9cd8"  # Functions, links (slightly muted)
+
+# Reds - more subdued
+waveRed = "#c4746e"      # Variables, punctuation (muted red)
+peachRed = "#d27e99"     # Headings, keywords (softer peach)
+surmiRed = "#c4746e"     # Alternative red
+samuraiRed = "#c4746e"   # Error diagnostics
+autumnRed = "#c4746e"    # Diff minus
+
+# Yellows and oranges - warmer, less saturated
+roninYellow = "#c4b28a"  # Warnings (muted yellow)
+carpYellow = "#c4b28a"   # Parameters, variables (warm yellow)
+boatYellow2 = "#c4b28a"  # Operators, regexp
+autumnYellow = "#c4b28a" # Diff delta
+surimiOrange = "#d27e99" # Constants, namespaces (softer orange)
+
+# Greens - earthier tones
+springGreen = "#87a987"  # Strings (muted green)
+autumnGreen = "#87a987"  # Diff plus, cursor insert
+waveAqua1 = "#7aa89f"    # Hints (teal-green)
+waveAqua2 = "#7aa89f"    # Types (teal)
+seaFoam = "#7aa89f"      # Markup quote/raw
+
+# Purples and violets - more muted
+oniViolet = "#957fb8"    # Keywords (softer purple)
+springViolet1 = "#957fb8" # Labels, enum variants
+springViolet2 = "#957fb8" # Punctuation
+sakuraPink = "#d27e99"   # Numbers (soft pink)
+
+# Blues - less vibrant
+springBlue = "#7e9cd8"   # Tags, constructors (muted blue)

@@ -1,0 +1,156 @@
+[palette]
+bg = "#282C34"
+bg-darker = "#21252B"
+bg-dark = "#2C313A"
+bg-highlight = "#3E4451"
+bg-active = "#333842"
+fg = "#D7DAE0"
+fg-dim = "#9DA5B4"
+fg-comment = "#5fc26e"
+cyan = "#7cc2d5"
+blue = "#528BFF"
+blue-light = "#6797ff"
+green = "#5fc26e"
+orange = "#d9a958"
+red = "#de8373"
+red-light = "#e08b83"
+purple = "#c581c4"
+teal = "#57bdbb"
+gray = "#bbb"
+gray-light = "#dfdfdf"
+gray-dark = "#636D83"
+border = "#181A1F"
+selection = "#3E4451"
+hover = "#2C313A66"
+white = "#FFFFFF"
+
+[ui]
+background = { bg = "bg" }
+foreground = { fg = "fg" }
+cursor = { fg = "gray-light" }
+cursor.primary = { fg = "gray-light" }
+cursor.match = { fg = "orange" }
+line-number = { fg = "gray-dark" }
+line-number.selected = { fg = "fg" }
+line-number.cursor = { fg = "fg" }
+selection.primary = { bg = "selection" }
+selection.match = { bg = "selection" }
+indent-guide = { fg = "#3C4049" }
+whitespace = { fg = "#3C4049" }
+
+[ui.buffer]
+background = { bg = "bg" }
+file-picker.highlight = { fg = "orange" }
+
+[ui.popup]
+background = { bg = "bg-darker" }
+border = { fg = "border" }
+
+[ui.help]
+background = { bg = "bg-darker" }
+border = { fg = "border" }
+
+[ui.menu]
+background = { bg = "bg-darker" }
+selected = { bg = "bg-dark" }
+selected.primary = { bg = "bg-dark" }
+
+[ui.linenr]
+background = { bg = "bg" }
+
+[ui.statusline]
+background = { bg = "bg-darker" }
+foreground = { fg = "fg-dim" }
+normal = { bg = "bg-darker" }
+insert = { bg = "bg-darker" }
+select = { bg = "bg-darker" }
+
+[ui.statusline.mode]
+normal = { fg = "white" }
+insert = { fg = "white" }
+select = { fg = "white" }
+
+[ui.statusline.separator]
+fg = "border"
+
+[ui.statusline.inactive]
+background = { bg = "bg-darker" }
+foreground = { fg = "fg-dim" }
+
+[ui.statusline.file-type]
+fg = "fg-dim"
+
+[ui.window]
+background = { bg = "bg-darker" }
+border = { fg = "border" }
+
+[ui.virtual]
+whitespace = { fg = "#3C4049" }
+indent-guide = { fg = "#3C4049" }
+
+[syntax]
+comment = { fg = "fg-comment" }
+comment.line = { fg = "fg-comment" }
+comment.block = { fg = "fg-comment" }
+comment.block.documentation = { fg = "fg-comment" }
+string = { fg = "#c2915f" }
+string.regexp = { fg = "#D19A66", modifiers = ["bold"] }
+constant = { fg = "blue-light" }
+constant.numeric = { fg = "#69b6ba" }
+constant.character = { fg = "#c2915f" }
+constant.character.escape = { fg = "orange" }
+variable = { fg = "gray" }
+variable.builtin = { fg = "red" }
+variable.parameter = { fg = "gray" }
+variable.lifetime = { fg = "#798fde" }
+type = { fg = "red" }
+type.builtin = { fg = "orange" }
+type.enum = { fg = "#6ec0d9" }
+type.enum.variant = { fg = "#91a4d0" }
+type.interface = { fg = "#82c67c" }
+type.trait = { fg = "#82c67c" }
+type.alias = { fg = "red" }
+type.parameter = { fg = "teal" }
+constructor = { fg = "#91a4d0" }
+function = { fg = "cyan" }
+function.macro = { fg = "blue-light" }
+function.builtin = { fg = "cyan" }
+function.method = { fg = "cyan" }
+function.method.static = { fg = "red-light" }
+keyword = { fg = "orange" }
+keyword.control = { fg = "orange" }
+keyword.directive = { fg = "blue-light" }
+keyword.unsafe = { fg = "#E06C75" }
+operator = { fg = "orange" }
+attribute = { fg = "white" }
+namespace = { fg = "#70a9b9" }
+module = { fg = "#70a9b9" }
+package = { fg = "#70a9b9" }
+property = { fg = "#95acbd" }
+punctuation = { fg = "gray" }
+punctuation.delimiter = { fg = "orange" }
+punctuation.bracket = { fg = "gray" }
+tag = { fg = "red" }
+
+# Специальные настройки для self/this
+"variable.special.self" = { fg = "#91a4d0" }
+"variable.special.this" = { fg = "#91a4d0" }
+
+# # Семантические токены
+# "*.mutable" = { modifiers = ["underline"] }
+# "function.async" = { fg = "purple" }
+# "keyword.async" = { fg = "orange" }
+# "decorator" = { fg = "white" }
+
+# # Инжектированные языки
+# "*.injected" = { fg = "gray" }
+# "function.injected" = { fg = "#74c9e0" }
+# "struct.injected" = { fg = "red" }
+# "namespace.injected" = { fg = "#70a9b9" }
+# "macro.injected" = { fg = "blue-light" }
+# "string.injected" = { fg = "#c2915f" }
+# "keyword.injected" = { fg = "orange" }
+# "comment.injected" = { fg = "fg-comment" }
+# "enumMember.injected" = { fg = "#91a4d0" }
+# "enum.injected" = { fg = "#6ec0d9" }
+# "typeAlias.injected" = { fg = "#6ec0d9" }

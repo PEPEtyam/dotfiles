@@ -1,0 +1,332 @@
+# =============================================================================
+# PYTHON CONFIGURATION
+# =============================================================================
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc", "pth", "pyw"]
+shebangs = ["python", "python3", "python3.9", "python3.10", "python3.11", "python3.12", "uv"]
+roots = ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git"]
+comment-token = "#"
+language-servers = ["ty", "ruff"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = false
+# rulers = [120]
+
+[language.formatter]
+command = "ruff"
+args = ["format", "--stdin-filename", "{file_path}", "-"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--preview"]
+
+[language-server.ruff.config]
+lint.enable = true
+fix.enable = true
+organizeImports = true
+format.enable = true
+
+# # Pyright LSP конфигурация
+# [language-server.pyright]
+# command = "pyright-langserver"
+# args = ["--stdio"]
+
+# # [language-server.pyright.config]
+# # Включаем строгую проверку типов
+# reportMissingTypeStubs = false
+# reportUnknownMemberType = true
+# reportUnknownArgumentType = true
+# reportUnknownVariableType = true
+# reportUnknownParameterType = true
+# reportGeneralTypeIssues = true
+
+# # Настройки Python анализа
+# [language-server.pyright.config.python]
+# pythonPath = "python"
+# venvPath = "."
+# venv = ".venv"
+
+# [language-server.pyright.config.python.analysis]
+# typeCheckingMode = "standard"
+# autoImportCompletions = true
+# autoSearchPaths = true
+# useLibraryCodeForTypes = true
+# diagnosticMode = "workspace"
+# # Автоматически находить настройки из pyproject.toml
+# stubPath = "."
+
+# # Ruff LSP конфигурация (для линтинга и быстрых исправлений)
+# [language-server.ruff]
+# command = "ruff"
+# args = ["server", "--preview"]
+
+# [language-server.ruff.config]
+# # Ruff автоматически найдет pyproject.toml в корне проекта
+# init = true
+
+# =============================================================================
+# RUST CONFIGURATION  
+# =============================================================================
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rs|rust"
+file-types = ["rs"]
+shebangs = ["rust-script", "cargo"]
+roots = ["Cargo.toml", "Cargo.lock"]
+comment-tokens = ["//", "///", "//!"]
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+rulers = [100]
+
+[language.formatter]
+command = "rustfmt"
+args = ["--edition=2021"]
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+timeout = 60
+
+[language-server.rust-analyzer.config]
+# Включаем все важные функции
+inlayHints.bindingModeHints.enable = true
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+lens.enable = true
+lens.references.adt.enable = true
+lens.references.enumVariant.enable = true
+lens.references.method.enable = true
+lens.references.trait.enable = true
+
+# Настройки проверок и компиляции
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+features = "all"
+
+[language-server.rust-analyzer.config.cargo]
+allFeatures = true
+loadOutDirsFromCheck = true
+
+[language-server.rust-analyzer.config.procMacro]
+enable = true
+attributes.enable = true
+
+# Настройки рустфмт
+[language-server.rust-analyzer.config.rustfmt]
+overrideCommand = ["rustfmt", "--edition", "2021"]
+
+# =============================================================================
+# BASH CONFIGURATION
+# =============================================================================
+[[language]]
+name = "bash"
+scope = "source.bash"
+injection-regex = "(shell|bash|zsh|sh)"
+file-types = [
+  "sh", "bash", "zsh", ".bash_login", ".bash_logout", 
+  ".bash_profile", ".bashrc", ".profile", ".zprofile", 
+  ".zshrc", ".zshenv", ".zlogin", ".zlogout", "APKBUILD", 
+  "PKGBUILD", "eclass", "ebuild", "bazelrc"
+]
+shebangs = ["sh", "bash", "zsh"]
+# comment-tokens = ["#"]
+language-servers = ["bash-language-server"]
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.bash-language-server]
+command = "bash-language-server"
+args = ["start"]
+
+# =============================================================================
+# TOML CONFIGURATION
+# =============================================================================
+[[language]]
+name = "toml"
+scope = "source.toml"
+injection-regex = "toml"
+file-types = ["toml", "poetry.lock", "Cargo.lock", "Pipfile"]
+# comment-tokens = ["#"]
+language-servers = ["taplo"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+# =============================================================================
+# YAML CONFIGURATION
+# =============================================================================
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yml", "yaml"]
+# comment-tokens = ["#"]
+language-servers = ["yaml-language-server"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[language-server.yaml-language-server.config.yaml]
+format.enable = true
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://json.schemastore.org/github-action.json" = ".github/action.{yml,yaml}"
+"https://json.schemastore.org/ansible-playbook.json" = "playbook.{yml,yaml}"
+"https://json.schemastore.org/kustomization.json" = "kustomization.{yml,yaml}"
+"https://json.schemastore.org/chart.json" = "Chart.{yml,yaml}"
+
+# =============================================================================
+# JSON CONFIGURATION
+# =============================================================================
+[[language]]
+name = "json"
+scope = "source.json"
+injection-regex = "json"
+file-types = ["json", "jsonc", "arb", "ipynb", ".babelrc", ".eslintrc", ".prettierrc"]
+language-servers = ["vscode-json-language-server"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[language.formatter]
+command = "prettier"
+args = ["--parser", "json"]
+
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-json-language-server.config]
+provideFormatter = true
+json.format.enable = true
+
+# =============================================================================
+# MARKDOWN CONFIGURATION
+# =============================================================================
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown", "PULLREQ_EDITMSG", "README"]
+language-servers = ["marksman"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[language.formatter]
+command = "prettier"
+args = ["--parser", "markdown"]
+
+[language-server.marksman]
+command = "marksman"
+args = ["server"]
+
+# =============================================================================
+# HTML CONFIGURATION
+# =============================================================================
+[[language]]
+name = "html"
+scope = "text.html.basic"
+injection-regex = "html"
+file-types = ["html", "htm", "shtml", "xhtml"]
+language-servers = ["vscode-html-language-server"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[language.formatter]
+command = "prettier"
+args = ["--parser", "html"]
+
+[language-server.vscode-html-language-server]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-html-language-server.config]
+provideFormatter = true
+
+# =============================================================================
+# CSS CONFIGURATION
+# =============================================================================
+[[language]]
+name = "css"
+scope = "source.css"
+injection-regex = "css"
+file-types = ["css", "scss", "sass"]
+language-servers = ["vscode-css-language-server"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[language.formatter]
+command = "prettier"
+args = ["--parser", "css"]
+
+[language-server.vscode-css-language-server]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-css-language-server.config]
+provideFormatter = true
+
+# =============================================================================
+# DOCKERFILE CONFIGURATION
+# =============================================================================
+[[language]]
+name = "dockerfile"
+scope = "source.dockerfile"
+injection-regex = "docker|dockerfile"
+roots = ["Dockerfile", "Containerfile"]
+file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile"]
+# comment-tokens = ["#"]
+language-servers = ["docker-langserver"]
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.docker-langserver]
+command = "docker-langserver"
+args = ["--stdio"]
+
+# =============================================================================
+# LUA CONFIGURATION  
+# =============================================================================
+[[language]]
+name = "lua"
+scope = "source.lua"
+file-types = ["lua"]
+shebangs = ["lua", "luajit"]
+roots = [".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"]
+# comment-tokens = ["--"]
+language-servers = ["lua-language-server"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[language.formatter]
+command = "stylua"
+args = ["-"]
+
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+[language-server.lua-language-server.config.Lua.runtime]
+version = "LuaJIT"
+
+[language-server.lua-language-server.config.Lua.diagnostics]
+globals = ["vim"]
+
+[language-server.lua-language-server.config.Lua.telemetry]
+enable = false
+
+[language-server.lua-language-server.config.Lua.hint]
+enable = true

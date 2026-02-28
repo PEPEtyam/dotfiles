@@ -1,0 +1,116 @@
+theme = "alabaster_gruvbox_material_dark_soft"
+# theme = "kanagawa_lotus"
+# theme = "gruvbox_material_dark_soft"
+# theme = "alabaster_gruvbox_2"
+# theme = "kanabox"
+# theme = "rusty_colors"
+
+[editor]
+line-number = "relative"
+cursorline = false
+color-modes = true
+rulers = [80]
+true-color = true
+mouse = true
+scrolloff = 10
+# gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+preview-completion-insert = true
+popup-border = "all"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+# character = "▏"
+skip-levels = 0
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+# parents = false
+git-ignore = true
+
+[editor.lsp]
+auto-signature-help = true
+enable = true
+display-progress-messages = true
+display-messages = true
+display-inlay-hints = true
+display-signature-help-docs = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "spacer",
+  "file-name",
+  "spacer",
+  "read-only-indicator",
+  "file-modification-indicator"
+]
+right = [
+  "diagnostics",
+  "spacer",
+  "position-percentage",
+  "spacer",
+  "position",
+  "spacer",
+  "file-encoding",
+  "spacer",
+  # "separator",
+  "version-control",
+  # "spacer",
+]
+# separator = ""
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.smart-tab]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+C-s = ":write"
+C-q = ":quit"
+C-w = "save_selection"
+A-d = ":buffer-close"
+E = "goto_line_end"
+B = "goto_line_start"
+tab = ":buffer-next"
+S-tab = ":buffer-previous"
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+X = "extend_line_above"
+
+[keys.normal.space]
+# p = [":sh ", ":insert-output ", "echo % | pbcopy", ":echo '✓ Path copied'"]
+# y = [":sh ", ":insert-output ", "echo % | pbcopy"]
+
+[keys.select]
+tab = "expand_selection"
+S-tab = "shrink_selection"
+E = "goto_line_end"
+B = "goto_line_start"
+C-space = "normal_mode"
+C-c = "normal_mode"
+y = "yank_main_selection_to_clipboard"
+p = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+X = "extend_line_above"
+
+[keys.insert]
+C-s = ":write"
+C-c = "normal_mode"
+C-e = "goto_line_end"
+C-l = "move_char_right"

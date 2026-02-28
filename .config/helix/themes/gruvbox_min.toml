@@ -1,0 +1,224 @@
+
+# Gruvbox Min theme for Helix
+# Ported from VSCode Gruvbox Min theme
+# Preserving original UI configuration from gruvbox_material_dark_soft
+
+# Syntax highlighting - based on Gruvbox Min VSCode
+"comment" = { fg = "green_comment", modifiers = ["italic"] }
+"comment.line" = { fg = "green_comment", modifiers = ["italic"] }
+"comment.block" = { fg = "green_comment", modifiers = ["italic"] }
+"comment.documentation" = { fg = "green_comment", modifiers = ["italic"] }
+
+# Keywords (orange in original - cc7832)
+"keyword" = "orange_keyword"
+"keyword.control" = "orange_keyword"
+"keyword.control.conditional" = "orange_keyword"
+"keyword.control.repeat" = "orange_keyword"
+"keyword.control.return" = "orange_keyword"
+"keyword.control.exception" = "orange_keyword"
+"keyword.control.import" = "orange_keyword"
+"keyword.directive" = "orange_keyword"
+"keyword.operator" = "orange_keyword"
+"keyword.function" = "orange_keyword"
+"keyword.storage" = "orange_keyword"
+"keyword.storage.type" = "orange_keyword"
+"keyword.storage.modifier" = "orange_keyword"
+
+# Strings (green in original - 98971A)
+"string" = "green_string"
+"string.regexp" = "green_string"
+"string.special" = "green_string"
+"string.special.path" = "green_string"
+"string.special.url" = "green_string"
+"string.special.symbol" = "green_string"
+
+# String escape sequences (orange - cc7832)
+"constant.character.escape" = "orange_keyword"
+
+# Numbers and constants (pink - C77F92)
+"constant" = "pink_const"
+"constant.builtin" = "pink_const"
+"constant.builtin.boolean" = "pink_const"
+"constant.character" = "pink_const"
+"constant.numeric" = "pink_const"
+"constant.numeric.integer" = "pink_const"
+"constant.numeric.float" = "pink_const"
+
+# Functions (blue - 83A598)
+"function" = "blue_func"
+"function.builtin" = "blue_func"
+"function.method" = "blue_func"
+"function.macro" = "blue_func"
+"function.special" = "blue_func"
+"constructor" = "blue_func"
+
+# Attributes (beige - bdae93)
+"attribute" = "beige_attr"
+
+# Global definitions and properties (yellow - D79921)
+"variable.other.member" = "yellow_entity"
+
+# Types - remove highlighting (use default foreground like in original theme)
+"type" = "fg0"
+"type.builtin" = "fg0"
+"type.parameter" = "fg0"
+"type.enum.variant" = "fg0"
+
+# Tags (orange - cc7832)
+"tag" = "orange_keyword"
+"tag.builtin" = "orange_keyword"
+
+# Annotations/Special (green annotation - 81AE70)
+"special" = "green_annotation"
+
+# Punctuation (default foreground - ebdbb2)
+"punctuation" = "fg0"
+"punctuation.delimiter" = "fg0"
+"punctuation.bracket" = "fg0"
+"punctuation.special" = "fg0"
+
+# Operators and variables (default foreground)
+"operator" = "fg0"
+"variable" = "fg0"
+"variable.builtin" = "orange_keyword"
+"variable.parameter" = "fg0"
+"label" = "fg0"
+"namespace" = "fg0"
+
+# Markdown
+"markup.heading.marker" = "grey2"
+"markup.heading.1" = { fg = "blue_func", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "blue_func", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "blue_func", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "fg0", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "fg0", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "fg0", modifiers = ["bold"] }
+"markup.list" = "fg0"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue_func", modifiers = ["underlined"] }
+"markup.link.text" = "fg0"
+"markup.link.label" = "fg0"
+"markup.quote" = "green_comment"
+"markup.raw" = "green_string"
+"markup.raw.inline" = "green_string"
+"markup.raw.block" = "green_string"
+
+# Diff
+"diff.plus" = "bg_green"
+"diff.delta" = "bg_yellow"
+"diff.minus" = "bg_red"
+
+# UI - preserved from gruvbox_material_dark_soft
+"ui.background" = {}
+"ui.background.separator" = "grey0"
+"ui.cursor" = { fg = "bg0", bg = "fg0" }
+"ui.cursor.normal" = { fg = "bg0", bg = "fg0" }
+"ui.cursor.insert" = { fg = "bg0", bg = "grey2" }
+"ui.cursor.select" = { fg = "bg0", bg = "blue_func" }
+"ui.cursor.match" = { fg = "orange_keyword", bg = "bg_visual_yellow" }
+"ui.cursor.primary" = { fg = "bg0", bg = "fg0" }
+"ui.cursor.primary.normal" = { fg = "bg0", bg = "fg0" }
+"ui.cursor.primary.insert" = { fg = "bg0", bg = "grey2" }
+"ui.cursor.primary.select" = { fg = "bg0", bg = "blue_func" }
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursorline.secondary" = { bg = "bg1" }
+"ui.selection" = { bg = "bg3" }
+"ui.selection.primary" = { bg = "bg3" }
+"ui.linenr" = "grey0"
+"ui.linenr.selected" = { fg = "fg0", modifiers = ["bold"] }
+"ui.statusline" = { fg = "fg0", bg = "bg1" }
+"ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
+"ui.statusline.normal" = { fg = "bg0", bg = "fg0", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg0", bg = "yellow_entity", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg0", bg = "blue_func", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "grey0", bg = "bg1" }
+"ui.bufferline.active" = { fg = "fg0", bg = "bg3", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "bg1" }
+"ui.popup" = { fg = "grey2", bg = "bg2" }
+"ui.popup.info" = { fg = "grey2", bg = "bg2" }
+"ui.window" = { fg = "grey0" }
+"ui.help" = { fg = "fg0", bg = "bg2" }
+"ui.text" = "fg0"
+"ui.text.focus" = "fg0"
+"ui.text.inactive" = "grey1"
+"ui.text.info" = "fg0"
+"ui.menu" = { fg = "fg0", bg = "bg2" }
+"ui.menu.selected" = { fg = "bg0", bg = "fg1", modifiers = ["bold"]  }
+"ui.menu.scroll" = { fg = "fg0", bg = "grey0" }
+"ui.virtual.whitespace" = { fg = "bg4" }
+"ui.virtual.indent-guide" = { fg = "bg4" }
+"ui.virtual.inlay-hint" = { fg = "grey0", modifiers = ["italic"]}
+"ui.virtual.inlay-hint.parameter" = { fg = "grey1" }
+"ui.virtual.inlay-hint.type" = { fg = "grey0" }
+"ui.virtual.ruler" = { bg = "bg0" }
+"ui.virtual.wrap" = { fg = "grey0" }
+
+# Diagnostics
+"hint" = "bg_blue"
+"info" = "bg_yellow"
+"warning" = "bg_orange"
+"error" = "bg_red"
+"diagnostic" = { underline = { style = "curl" } }
+"diagnostic.hint" = { underline = { color = "bg_blue", style = "curl" } }
+"diagnostic.info" = { underline = { color = "bg_yellow", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "bg_orange", style = "curl" } }
+"diagnostic.error" = { underline = { color = "bg_red", style = "curl" } }
+# "diagnostic.unnecessary" = { modifiers = ["dim"] }
+# "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# [palette]
+# Background colors from gruvbox_material_dark_soft
+bg0 = "#32302f"
+bg1 = "#3c3836"
+bg2 = "#3c3836"
+bg3 = "#504945"
+bg4 = "#504945"
+bg5 = "#665c54"
+bg_statusline1 = "#3c3836"
+bg_statusline2 = "#46413e"
+bg_statusline3 = "#5b534d"
+bg_diff_green = "#3d4220"
+bg_visual_green = "#424a3e"
+bg_diff_red = "#472322"
+bg_visual_red = "#543937"
+bg_diff_blue = "#0f3a42"
+bg_visual_blue = "#404946"
+bg_visual_yellow = "#574833"
+bg_current_word = "#45403d"
+
+# Foreground colors
+fg0 = "#ebdbb2"
+fg1 = "#ddc7a1"
+
+# Gruvbox Material colors
+red = "#ea6962"
+orange = "#e78a4e"
+yellow = "#d8a657"
+green = "#a9b665"
+aqua = "#89b482"
+blue = "#7daea3"
+purple = "#d3869b"
+
+bg_red = "#c45a54"
+bg_orange = "#c5733f"
+bg_yellow = "#b88d45"
+bg_green = "#8f9a54"
+bg_aqua = "#6f9669"
+bg_blue = "#649088"
+bg_purple = "#b27085"
+
+grey0 = "#7c6f64"
+grey1 = "#928374"
+grey2 = "#a89984"
+
+# Gruvbox Min specific colors (mapped from VSCode theme)
+green_comment = "#629755"      # Comments
+orange_keyword = "#cc7832"     # Keywords, tags, escape sequences
+green_string = "#98971A"       # Strings
+pink_const = "#C77F92"         # Numbers and constants
+blue_func = "#83A598"          # Functions
+beige_attr = "#bdae93"         # Attributes
+yellow_entity = "#D79921"      # Global definitions and properties
+green_annotation = "#81AE70"   # Annotations

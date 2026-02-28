@@ -1,0 +1,224 @@
+# Kanagawa Paper theme for Helix Editor
+# Based on https://github.com/thesimonho/kanagawa-paper.nvim
+# Muted colors inspired by Japanese traditional art
+
+# Color palette
+[palette]
+# Background colors - transparent
+sumiInk0 = "#16161D"
+sumiInk1 = "#1F1F28"
+sumiInk2 = "#2A2A37"
+sumiInk3 = "#363646"
+sumiInk4 = "#54546D"
+
+# Foreground colors
+fujiWhite = "#DCD7BA"
+fujiGray = "#727169"
+oldWhite = "#C8C093"
+
+# Red tones
+autumnRed = "#C34043"
+samuraiRed = "#E82424"
+peachRed = "#FF5D62"
+
+# Orange tones
+surimiOrange = "#FFA066"
+autumnYellow = "#DCA561"
+
+# Yellow tones
+carpYellow = "#E6C384"
+boatYellow1 = "#938056"
+boatYellow2 = "#C0A36E"
+
+# Green tones
+autumnGreen = "#76946A"
+springGreen = "#98BB6C"
+
+# Blue tones
+oniViolet = "#957FB8"
+crystalBlue = "#7E9CD8"
+springBlue = "#7FB4CA"
+
+# Purple/Violet tones
+oniViolet2 = "#B8B4D1"
+waveAqua1 = "#6A9589"
+waveAqua2 = "#7AA89F"
+
+# Canvas colors (lighter variant colors)
+canvasAqua1 = "#8ba59e"
+canvasAsh1 = "#707d70"
+canvasBlue1 = "#91acb8"
+
+# UI colors
+winterGreen = "#2B3328"
+winterYellow = "#49443C"
+winterRed = "#43242B"
+winterBlue = "#252535"
+
+# Main theme definition
+"ui.background" = { bg = "none" } # Transparent background
+"ui.background.separator" = { fg = "sumiInk4" }
+
+# Text colors
+"ui.text" = { fg = "fujiWhite" }
+"ui.text.focus" = { fg = "fujiWhite", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "fujiGray" }
+"ui.text.info" = { fg = "oldWhite" }
+
+# Cursor
+"ui.cursor" = { fg = "sumiInk0", bg = "fujiWhite" }
+"ui.cursor.primary" = { fg = "sumiInk0", bg = "fujiWhite" }
+"ui.cursor.select" = { fg = "sumiInk0", bg = "autumnYellow" }
+"ui.cursor.insert" = { fg = "sumiInk0", bg = "autumnGreen" }
+"ui.cursor.match" = { fg = "sumiInk0", bg = "boatYellow2" }
+
+# Selections
+"ui.selection" = { bg = "sumiInk3" }
+"ui.selection.primary" = { bg = "sumiInk3" }
+
+# Linenr
+"ui.linenr" = { fg = "sumiInk4" }
+"ui.linenr.selected" = { fg = "autumnYellow", modifiers = ["bold"] }
+
+# Popups and menus with borders
+"ui.popup" = { bg = "sumiInk1", fg = "fujiWhite" }
+"ui.popup.info" = { bg = "sumiInk1", fg = "fujiWhite" }
+"ui.menu" = { bg = "sumiInk1", fg = "fujiWhite" }
+"ui.menu.selected" = { bg = "sumiInk3", fg = "fujiWhite", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "sumiInk4", bg = "sumiInk2" }
+
+# Windows and splits
+"ui.window" = { fg = "sumiInk4" }
+"ui.window.title" = { fg = "fujiWhite", modifiers = ["bold"] }
+
+# Status line
+"ui.statusline" = { fg = "oldWhite", bg = "sumiInk2" }
+"ui.statusline.inactive" = { fg = "fujiGray", bg = "sumiInk1" }
+"ui.statusline.normal" = { fg = "sumiInk0", bg = "crystalBlue", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "sumiInk0", bg = "autumnGreen", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "sumiInk0", bg = "autumnYellow", modifiers = ["bold"] }
+
+# Help and debug
+"ui.help" = { bg = "sumiInk1", fg = "fujiWhite" }
+"ui.debug.breakpoint" = { fg = "samuraiRed" }
+"ui.debug.active" = { fg = "surimiOrange" }
+
+# Virtual text
+"ui.virtual" = { fg = "sumiInk4" }
+"ui.virtual.ruler" = { bg = "sumiInk2" }
+"ui.virtual.indent-guide" = { fg = "sumiInk3" }
+"ui.virtual.inlay-hint" = { fg = "sumiInk4", bg = "sumiInk1" }
+"ui.virtual.wrap" = { fg = "sumiInk4" }
+
+# Bufferline
+"ui.bufferline" = { fg = "fujiGray", bg = "sumiInk1" }
+"ui.bufferline.active" = { fg = "fujiWhite", bg = "sumiInk2", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "sumiInk0" }
+
+# Syntax highlighting
+"type" = { fg = "waveAqua2" }
+"type.builtin" = { fg = "waveAqua2", modifiers = ["italic"] }
+"type.parameter" = { fg = "springBlue" }
+"type.enum" = { fg = "waveAqua2" }
+
+"constructor" = { fg = "springBlue" }
+"constant" = { fg = "surimiOrange" }
+"constant.builtin" = { fg = "surimiOrange", modifiers = ["italic"] }
+"constant.builtin.boolean" = { fg = "surimiOrange" }
+"constant.character" = { fg = "carpYellow" }
+"constant.character.escape" = { fg = "peachRed" }
+"constant.numeric" = { fg = "autumnYellow" }
+
+"string" = { fg = "carpYellow" }
+"string.regexp" = { fg = "boatYellow2" }
+"string.special" = { fg = "peachRed" }
+
+"comment" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.line" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.block" = { fg = "fujiGray", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "fujiGray", modifiers = ["italic"] }
+
+"variable" = { fg = "fujiWhite" }
+"variable.builtin" = { fg = "autumnRed", modifiers = ["italic"] }
+"variable.parameter" = { fg = "springBlue" }
+"variable.other.member" = { fg = "crystalBlue" }
+
+"label" = { fg = "springBlue" }
+"punctuation" = { fg = "fujiGray" }
+"punctuation.bracket" = { fg = "fujiGray" }
+"punctuation.delimiter" = { fg = "fujiGray" }
+"punctuation.special" = { fg = "peachRed" }
+
+"keyword" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control.return" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.operator" = { fg = "boatYellow2", modifiers = ["bold"] }
+"keyword.directive" = { fg = "peachRed" }
+"keyword.function" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.storage" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.storage.type" = { fg = "oniViolet", modifiers = ["bold"] }
+"keyword.storage.modifier" = { fg = "oniViolet", modifiers = ["bold"] }
+
+"operator" = { fg = "boatYellow2" }
+
+"function" = { fg = "crystalBlue" }
+"function.builtin" = { fg = "crystalBlue", modifiers = ["italic"] }
+"function.method" = { fg = "crystalBlue" }
+"function.macro" = { fg = "autumnRed" }
+"function.special" = { fg = "peachRed" }
+
+"tag" = { fg = "autumnRed" }
+"attribute" = { fg = "carpYellow" }
+"namespace" = { fg = "surimiOrange" }
+
+"markup" = { fg = "fujiWhite" }
+"markup.heading" = { fg = "surimiOrange", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "fujiGray" }
+"markup.heading.1" = { fg = "peachRed", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "surimiOrange", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "carpYellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "autumnGreen", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "crystalBlue", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "oniViolet", modifiers = ["bold"] }
+"markup.list" = { fg = "peachRed" }
+"markup.list.numbered" = { fg = "peachRed" }
+"markup.list.unnumbered" = { fg = "peachRed" }
+"markup.bold" = { fg = "autumnYellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "oniViolet2", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link" = { fg = "crystalBlue", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "springBlue", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "crystalBlue" }
+"markup.quote" = { fg = "autumnGreen", modifiers = ["italic"] }
+"markup.raw" = { fg = "carpYellow" }
+"markup.raw.inline" = { fg = "carpYellow" }
+"markup.raw.block" = { fg = "carpYellow" }
+
+# Diff colors
+"diff.plus" = { fg = "autumnGreen" }
+"diff.minus" = { fg = "autumnRed" }
+"diff.delta" = { fg = "carpYellow" }
+
+# Diagnostic colors
+"info" = { fg = "crystalBlue" }
+"hint" = { fg = "waveAqua1" }
+"debug" = { fg = "fujiGray" }
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.info" = { fg = "crystalBlue", modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "waveAqua1", modifiers = ["underlined"] }
+"diagnostic.warning" = { fg = "autumnYellow", modifiers = ["underlined"] }
+"diagnostic.error" = { fg = "samuraiRed", modifiers = ["underlined"] }
+
+"warning" = { fg = "autumnYellow" }
+"error" = { fg = "samuraiRed" }
+"special" = { fg = "peachRed" }
+
+# Git colors
+"git.commit.hash" = { fg = "fujiGray" }
+"git.commit.time" = { fg = "fujiGray" }
+"git.commit.author" = { fg = "crystalBlue" }
+"git.commit.message" = { fg = "fujiWhite" }

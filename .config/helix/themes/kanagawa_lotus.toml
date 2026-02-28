@@ -1,0 +1,119 @@
+# Kanagawa Lotus для Helix Editor
+# Конфигурация создана на основе темы VSCode от metapho-re [citation:4]
+# Все параметры взяты из официальной документации Helix
+
+"attribute" = "blue"
+"type" = "blue"
+"type.builtin" = "blue"
+"type.enum.variant" = "yellow"
+
+"constant" = "magenta"
+"constant.builtin" = "magenta"
+"constant.character" = "magenta"
+"constant.numeric" = "magenta"
+"constant.string" = "green"
+"string.regexp" = "cyan"
+"string.special" = "cyan"
+"string.special.symbol" = "magenta"
+
+"comment" = { fg = "gray1", modifiers = ["italic"] }
+"comment.documentation" = "gray2"
+"comment.line" = { fg = "gray1", modifiers = ["italic"] }
+
+"variable" = "fg"
+"variable.builtin" = "red"
+"variable.parameter" = "fg"
+"variable.member" = "fg"
+
+"keyword" = "red"
+"keyword.control" = "red"
+"keyword.conditional" = "red"
+"keyword.repeat" = "red"
+"keyword.function" = "red"
+"keyword.storage" = "red"
+"keyword.operator" = "orange"
+
+"operator" = "orange"
+
+"function" = "blue"
+"function.builtin" = "blue"
+"function.macro" = "cyan"
+"function.special" = "cyan"
+
+"punctuation" = "gray3"
+"punctuation.delimiter" = "gray3"
+"punctuation.bracket" = "gray3"
+
+"tag" = "orange"
+"tag.builtin" = "orange"
+
+"namespace" = "blue"
+
+"markup.heading" = "blue"
+"markup.bold" = { fg = "orange", modifiers = ["bold"] }
+"markup.italic" = { fg = "green", modifiers = ["italic"] }
+"markup.link.url" = { fg = "blue", underline = { style = "line" } }
+"markup.raw" = "green"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "orange"
+
+"warning" = "yellow"
+"error" = "red"
+"info" = "blue"
+"hint" = "cyan"
+
+"ui.background" = { bg = "bg" }
+"ui.text" = "fg"
+"ui.text.focus" = { bg = "bg_visual", modifiers = ["bold"] }
+"ui.text.inactive" = "gray3"
+"ui.text.directory" = "blue"
+
+"ui.selection" = { bg = "bg_visual" }
+"ui.cursor" = { fg = "fg", bg = "bg_cursor" }
+"ui.cursorline.primary" = { bg = "bg_cursorline" }
+"ui.cursorcolumn.primary" = { bg = "bg_cursorline" }
+
+"ui.linenr" = "gray4"
+"ui.linenr.selected" = "fg"
+"ui.statusline" = { fg = "fg", bg = "bg_statusline" }
+"ui.statusline.normal" = { fg = "bg", bg = "blue" }
+"ui.statusline.insert" = { fg = "bg", bg = "green" }
+"ui.statusline.select" = { fg = "bg", bg = "orange" }
+"ui.statusline.separator" = "gray3"
+
+"ui.menu" = { fg = "fg", bg = "bg_visual" }
+"ui.menu.selected" = { fg = "bg", bg = "green" }
+
+"ui.popup" = { bg = "bg_popup" }
+"ui.window" = "bg_statusline2"
+
+"ui.virtual.ruler" = { bg = "bg_cursorline" }
+"ui.virtual.whitespace" = "gray4"
+"ui.virtual.indent-guide" = "gray4"
+"ui.virtual.wrap" = "gray4"
+
+[palette]
+# Основная палитра Kanagawa Lotus
+bg = "#e5d8c2"
+bg_statusline = "#d9cfbb"
+bg_statusline2 = "#cbc1ab"
+bg_visual = "#d0c8b5"
+bg_cursorline = "#ede1cc"
+bg_popup = "#f2e9d7"
+bg_cursor = "#545464"
+
+fg = "#4c4c49"
+gray1 = "#7f7f7c"
+gray2 = "#9f9f9c"
+gray3 = "#afafac"
+gray4 = "#bfbfbc"
+
+red = "#c84053"
+green = "#76946a"
+yellow = "#dca561"
+blue = "#7e9cd8"
+cyan = "#6a9589"
+magenta = "#957fb8"
+orange = "#ffa066"
