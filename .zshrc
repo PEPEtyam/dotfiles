@@ -1,5 +1,6 @@
 export DYLD_FALLBACK_LIBRARY_PATH="/opt/homebrew/lib/"
 export PATH="/opt/homebrew/bin:$PATH"
+export EDITOR=hx
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell_v1.omp.toml)"
