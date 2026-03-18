@@ -1,0 +1,9 @@
+[[plugin.deps]]
+use = "imsi32/yatline-gruvbox-material"
+rev = "2da9ca0"
+hash = "109a401ccbcd4c2271fd00eb194fd760"
+
+[[flavor.deps]]
+use = "matt-dong-123/gruvbox-material"
+rev = "6c36491"
+hash = "564f2335540ee2c440c3b671bc28ac60"

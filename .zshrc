@@ -217,6 +217,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# My aliases
+alias y="yazi"
+
 export BAT_THEME="gruvbox-dark"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'

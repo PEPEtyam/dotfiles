@@ -9,7 +9,7 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc", "pth", "
 shebangs = ["python", "python3", "python3.9", "python3.10", "python3.11", "python3.12", "uv"]
 roots = ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git"]
 comment-token = "#"
-language-servers = ["ty", "ruff"]
+language-servers = ["ty"]
 indent = { tab-width = 4, unit = "    " }
 auto-format = false
 # rulers = [120]
@@ -27,7 +27,7 @@ command = "ruff"
 args = ["server", "--preview"]
 
 [language-server.ruff.config]
-lint.enable = true
+lint.enable = false
 fix.enable = true
 organizeImports = true
 format.enable = true
