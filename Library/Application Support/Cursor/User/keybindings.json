@@ -1,0 +1,1081 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Toggle sidebar
+    // {
+    //     "key": "cmd+b",
+    //     "command": "-workbench.action.toggleSidebarVisibility"
+    //     // Отключение стандартной комбинации Cmd+B для боковой панели
+    // },
+    // {
+    //     "key": "ctrl+b",
+    //     "command": "workbench.action.toggleSidebarVisibility"
+    //     // Переключение видимости боковой панели (Ctrl+B)
+    // },
+    
+    // Навигация по истории редактора
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack"
+        // Навигация назад по истории открытых файлов
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack"
+        // Отключение стандартной навигации назад (Ctrl+-)
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForward"
+        // Навигация вперед по истории открытых файлов
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
+        // Отключение стандартной навигации вперед (Ctrl+Shift+-)
+    },
+    
+    // Настройки
+    {
+        "key": "cmd+,",
+        "command": "workbench.action.openSettingsJson"
+        // Открыть settings.json напрямую (вместо GUI настроек)
+    },
+    {
+        "key": "cmd+,",
+        "command": "-workbench.action.openSettings"
+        // Отключение стандартного открытия GUI настроек
+    },
+    
+    // Множественные курсоры
+    {
+        "key": "shift+cmd+up",
+        "command": "-list.collapseAll",
+        "when": "listFocus && !inputFocus"
+        // Отключение сворачивания всех элементов списка
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+        // Отключение стандартной вставки курсора выше
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+        // Отключение стандартной вставки курсора ниже
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "editor.action.insertCursorAbove"
+        // Вставить курсор на строку выше
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "editor.action.insertCursorBelow"
+        // Вставить курсор на строку ниже
+    },
+    
+    // Умное выделение (expand/shrink AST)
+    {
+        "key": "alt+o",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+        // Расширить выделение (слово → выражение → строка → блок)
+    },
+    {
+        "key": "alt+i",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+        // Уменьшить область выделения
+    },
+    
+    // Навигация по словам
+    // {
+    //     "key": "shift+alt+right",
+    //     "command": "-cursorWordEndRightSelect",
+    //     "when": "textInputFocus"
+    //     // Отключение стандартного выделения до конца слова справа
+    // },
+    // {
+    //     "key": "shift+cmd+left",
+    //     "command": "cursorWordStartLeft",
+    //     "when": "textInputFocus"
+    //     // Переместить курсор к началу слова слева
+    // },
+    // {
+    //     "key": "alt+left",
+    //     "command": "-cursorWordStartLeft",
+    //     "when": "textInputFocus"
+    //     // Отключение стандартного перемещения к началу слова (Alt+Left используется для навигации)
+    // },
+    // {
+    //     "key": "shift+alt+right",
+    //     "command": "cursorWordEndRight",
+    //     "when": "textInputFocus"
+    //     // Переместить курсор к концу слова справа
+    // },
+    // {
+    //     "key": "alt+right",
+    //     "command": "-cursorWordEndRight",
+    //     "when": "textInputFocus"
+    //     // Отключение стандартного перемещения к концу слова (Alt+Right используется для навигации)
+    // },
+    // {
+    //     "key": "shift+alt+left",
+    //     "command": "-cursorWordStartLeftSelect",
+    //     "when": "textInputFocus"
+    //     // Отключение стандартного выделения до начала слова слева
+    // },
+    // {
+    //     "key": "shift+alt+left",
+    //     "command": "cursorWordEndLeft"
+    //     // Переместить курсор к концу слова слева
+    // },
+    
+    // Поиск и hover
+    {
+        "key": "cmd+e",
+        "command": "-actions.findWithSelection"
+        // Отключение поиска выделенного текста
+    },
+    {
+        "key": "cmd+e",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+        // Показать hover (подсказку) для текущего символа/слова
+    },
+    
+    // Python/Jupyter - отключение выполнения кода
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.runcurrentcelladvance",
+        "when": "editorTextFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
+        // Отключение выполнения ячейки Jupyter и перехода к следующей
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+        // Отключение интерактивного выполнения выделения в Jupyter
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+        // Отключение выполнения выделенного кода Python в терминале
+    },
+    
+    // Копирование путей файлов
+    {
+        "key": "cmd+l",
+        "command": "copyRelativeFilePath"
+        // Копировать относительный путь к файлу
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "!editorFocus"
+        // Отключение стандартного копирования относительного пути
+    },
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "editorFocus"
+        // Отключение стандартного расширения выделения на всю строку (в редакторе)
+    },
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+        // Отключение стандартного расширения выделения на всю строку (в поле ввода)
+    },
+    
+    // Навигация в полях ввода
+    {
+        "key": "ctrl+p",
+        "command": "-cursorUp",
+        "when": "textInputFocus"
+        // Отключение перемещения курсора вверх в поле ввода
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-cursorDown",
+        "when": "textInputFocus"
+        // Отключение перемещения курсора вниз в поле ввода
+    },
+    
+    // Символы и вкладки окон
+    {
+        "key": "shift+cmd+r",
+        "command": "-workbench.action.showAllSymbols"
+        // Отключение показа всех символов
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.showNextWindowTab"
+        // Переключение на следующую вкладку окна
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.showPreviousWindowTab"
+        // Переключение на предыдущую вкладку окна
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+        // Отключение стандартного уменьшения отступа (Cmd+[ теперь для вкладок)
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+        // Отключение стандартного увеличения отступа (Cmd+] теперь для вкладок)
+    },
+    
+    // Разделение редактора - отключение стандартных комбинаций
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorOrthogonal"
+        // Отключение ортогонального разделения редактора
+    },
+    {
+        "key": "alt+cmd+2",
+        "command": "-workbench.action.splitEditor"
+        // Отключение разделения редактора (Alt+Cmd+2)
+    },
+    {
+        "key": "cmd+k cmd+up",
+        "command": "-workbench.action.splitEditor"
+        // Отключение разделения редактора (Cmd+K Cmd+Up)
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+        // Отключение стандартного разделения редактора (Cmd+\)
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+        // Отключение разделения терминала (Cmd+\)
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+        // Отключение разделения терминала (Ctrl+Shift+5)
+    },
+    
+    // Python - дополнительные отключения выполнения
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+        // Отключение выполнения выделенного кода Python в терминале (дополнительное условие)
+    },
+    
+    // Маркеры и навигация
+    {
+        "key": "cmd+k p",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus"
+        // Отключение перехода к предыдущему маркеру
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-keybindings.editor.toggleSortByPrecedence",
+        "when": "inKeybindings"
+        // Отключение переключения сортировки по приоритету в редакторе горячих клавиш
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-togglePreserveCase",
+        "when": "editorFocus"
+        // Отключение переключения сохранения регистра в редакторе
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-toggleSearchPreserveCase",
+        "when": "searchViewletFocus"
+        // Отключение переключения сохранения регистра в поиске
+    },
+    {
+        "key": "cmd+k p",
+        "command": "-workbench.action.files.copyPathOfActiveFile"
+        // Отключение копирования пути активного файла
+    },
+    
+    // Quick Open - отключение навигации
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+        // Отключение навигации вперед в Quick Open
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+        // Отключение навигации назад в Quick Open
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenPreviousEditor"
+        // Отключение открытия предыдущего редактора через Quick Open
+    },
+    
+    // Вставка строк
+    {
+        "key": "cmd+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+        // Отключение вставки строки после текущей
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+        // Отключение вставки строки перед текущей
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
+        // Отключение вставки ячейки кода ниже в ноутбуке
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-search.action.openInEditor",
+        "when": "hasSearchResult && searchViewletFocus"
+        // Отключение открытия результата поиска в редакторе
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-scm.acceptInput",
+        "when": "scmRepository"
+        // Отключение принятия ввода в SCM
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-breadcrumbs.revealFocused",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+        // Отключение раскрытия фокусированных breadcrumbs
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-breadcrumbs.revealFocusedFromTreeAside",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+        // Отключение раскрытия breadcrumbs из дерева
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-debug.openBreakpointToSide",
+        "when": "breakpointsFocused"
+        // Отключение открытия точки останова сбоку
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-workbench.action.submitComment",
+        "when": "commentEditorFocused"
+        // Отключение отправки комментария
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-editor.action.replaceAll",
+        "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
+        // Отключение замены всех вхождений
+    },
+    
+    // Открытие файлов
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "false"
+        // Отключение открытия файла (всегда отключено)
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFileFolder",
+        "when": "isMacNative && openFolderWorkspaceSupport"
+        // Отключение открытия папки файла
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openLocalFileFolder",
+        "when": "remoteFileDialogVisible"
+        // Отключение открытия локальной папки файла
+    },
+    
+    // Форматирование
+    {
+        "key": "cmd+k cmd+f",
+        "command": "-editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+        // Отключение форматирования выделения
+    },
+    
+    // Поиск в списках
+    {
+        "key": "cmd+f",
+        "command": "-list.find",
+        "when": "listFocus && listSupportsFind"
+        // Отключение поиска в списке
+    },
+    
+    // Терминал
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+        // Отключение закрытия терминала в редакторе (старое поведение)
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalEditorFocus || terminalFocus"
+        // Закрыть терминал
+    },
+    
+    // Python REPL - отключение выполнения
+    {
+        "key": "shift+enter",
+        "command": "-python.execInREPL",
+        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !accessibilityModeEnabled && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+        // Отключение выполнения кода в Python REPL
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+        // Отключение выполнения выделения в терминале (дополнительное условие)
+    },
+    {
+        "key": "shift+enter",
+        "command": "-notebook.cell.executeAndSelectBelow",
+        "when": "notebookCellListFocused && !inlineChatFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !inlineChatFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+        // Отключение выполнения ячейки ноутбука и выбора следующей
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "-notebook.cell.insertCodeCellAbove",
+        "when": "notebookCellListFocused && !inputFocus"
+        // Отключение вставки ячейки кода выше в ноутбуке
+    },
+    {
+        "key": "shift+enter",
+        "command": "-workbench.action.terminal.findNext",
+        "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
+        // Отключение поиска следующего в терминале
+    },
+    
+    // Поиск - отмена
+    {
+        "key": "cmd+f",
+        "command": "search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus && !treestickyScrollFocused && searchState != '0'"
+        // Отменить поиск (когда фокус на списке результатов)
+    },
+    {
+        "key": "escape",
+        "command": "-search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus && !treestickyScrollFocused && searchState != '0'"
+        // Отключение отмены поиска по Escape
+    },
+    
+    // Python - еще одно отключение выполнения
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+        // Отключение выполнения выделения в терминале (еще одно условие)
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execInREPL",
+        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
+        // Отключение выполнения в REPL (еще одно условие)
+    },
+    
+    // Hover и подсказки
+    {
+        "key": "cmd+k cmd+i",
+        "command": "-list.showHover",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+        // Отключение показа hover в списке
+    },
+    {
+        "key": "cmd+i",
+        "command": "-toggleSuggestionDetails",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+        // Отключение переключения деталей подсказок
+    },
+    
+    // Определения типов и автодополнение
+    {
+        "key": "shift+cmd+t",
+        "command": "editor.action.goToTypeDefinition"
+        // Перейти к определению типа
+    },
+    // {
+    //     "key": "ctrl+i",
+    //     "command": "editor.action.triggerSuggest",
+    //     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+    //     // Показать автодополнение (Ctrl+I)
+    // },
+    {
+        "key": "cmd+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+        // Отключение показа автодополнения (Cmd+I)
+    },
+    
+    // Быстрый поиск текста
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.quickTextSearch"
+        // Быстрый поиск текста в файле
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-cursorRight",
+        "when": "textInputFocus"
+        // Отключение перемещения курсора вправо (Ctrl+F теперь для поиска)
+    },
+    
+    // Панель и SCM
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.toggleMaximizedPanel"
+        // Переключить максимизацию панели (терминал/проблемы и т.д.)
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+        // Отключение стандартного показа SCM
+    },
+    {
+        "key": "alt+cmd+g",
+        "command": "git.checkout"
+        // Меню переключения веток в центре (как quick open), не панель SCM
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "-gitlens.toggleLineBlame",
+        "when": "editorTextFocus"
+        // Отвязка: Alt+Cmd+B в Cursor открывает браузер
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "gitlens.toggleLineBlame",
+        "when": "editorTextFocus"
+        // GitLens: вкл/выкл blame аннотации по строкам
+    },
+    
+    // Chat и AI функции - отключение
+    {
+        "key": "cmd+i",
+        "command": "-workbench.action.chat.startVoiceChat",
+        "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
+        // Отключение голосового чата
+    },
+    {
+        "key": "ctrl+cmd+i",
+        "command": "-workbench.action.chat.open",
+        "when": "!chatSetupHidden"
+        // Отключение открытия чата
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "-workbench.action.chat.openAgent",
+        "when": "config.chat.agent.enabled && !chatSetupHidden"
+        // Отключение открытия агента чата
+    },
+    {
+        "key": "cmd+i",
+        "command": "-workbench.action.chat.stopListeningAndSubmit",
+        "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
+        // Отключение остановки прослушивания и отправки в чате
+    },
+    {
+        "key": "cmd+i",
+        "command": "-inlineChat2.close",
+        "when": "inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.isRequestInProgress && chatEdits.requestCount == '0' || inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.hasEditorModifications && !chatEdits.isRequestInProgress && chatEdits.requestCount == '0'"
+        // Отключение закрытия inline чата
+    },
+    {
+        "key": "cmd+i",
+        "command": "-inlineChat.start",
+        "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
+        // Отключение запуска inline чата
+    },
+    {
+        "key": "cmd+k i",
+        "command": "-inlineChat.startWithCurrentLine",
+        "when": "inlineChatHasProvider && !editorReadonly && !inlineChatVisible"
+        // Отключение запуска inline чата с текущей строки
+    },
+    {
+        "key": "cmd+i",
+        "command": "-inlineChat.startWithCurrentLine",
+        "when": "inlineChatHasProvider && inlineChatShowingHint && !editorReadonly && !inlineChatVisible"
+        // Отключение запуска inline чата с текущей строки (когда показывается подсказка)
+    },
+    {
+        "key": "cmd+i",
+        "command": "-workbench.action.terminal.chat.start",
+        "when": "chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalHasBeenCreated || chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalProcessSupported"
+        // Отключение запуска чата терминала
+    },
+    {
+        "key": "cmd+i",
+        "command": "-inlineChat2.reveal",
+        "when": "inlineChatHasEditsAgent && !chatEdits.isGlobalEditingSession && chatEdits.requestCount >= 1"
+        // Отключение раскрытия inline чата
+    },
+    {
+        "key": "shift+cmd+p shift+cmd+o",
+        "command": "inlineChat2.close",
+        "when": "inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.isRequestInProgress && chatEdits.requestCount == '0' || inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.hasEditorModifications && !chatEdits.isRequestInProgress && chatEdits.requestCount == '0'"
+        // Закрыть inline чат (Shift+Cmd+P Shift+Cmd+O)
+    },
+    {
+        "key": "ctrl+cmd+i",
+        "command": "-workbench.panel.chat",
+        "when": "workbench.panel.chat.view.copilot.active"
+        // Отключение панели чата Copilot
+    },
+    
+    // Перемещение и копирование строк
+    // {
+    //     "key": "shift+alt+up",
+    //     "command": "-editor.action.copyLinesUpAction",
+    //     "when": "editorTextFocus && !editorReadonly"
+    //     // Отключение копирования строки вверх
+    // },
+    // {
+    //     "key": "alt+up",
+    //     "command": "-editor.action.moveLinesUpAction",
+    //     "when": "editorTextFocus && !editorReadonly"
+    //     // Отключение перемещения строки вверх
+    // },
+    // {
+    //     "key": "shift+alt+down",
+    //     "command": "-editor.action.copyLinesDownAction",
+    //     "when": "editorTextFocus && !editorReadonly"
+    //     // Отключение копирования строки вниз
+    // },
+    // {
+    //     "key": "alt+down",
+    //     "command": "-editor.action.moveLinesDownAction",
+    //     "when": "editorTextFocus && !editorReadonly"
+    //     // Отключение перемещения строки вниз
+    // },
+    
+    // Копирование с подсветкой синтаксиса
+    {
+        "key": "ctrl+cmd+c",
+        "command": "editor.action.clipboardCopyWithSyntaxHighlightingAction"
+        // Копировать с подсветкой синтаксиса
+    },
+    
+    // Терминал
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        // Создать новый терминал
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        // Отключение стандартного создания терминала (Ctrl+Shift+`)
+    },
+    
+    // Транспозиция букв
+    {
+        "key": "ctrl+t",
+        "command": "-editor.action.transposeLetters",
+        "when": "textInputFocus && !editorReadonly"
+        // Отключение транспозиции (перестановки) букв
+    },
+    
+    // Сворачивание кода
+    {
+        "key": "alt+cmd+[",
+        "command": "editor.fold",
+        "when": "editorTextFocus"
+        // Свернуть блок кода
+    },
+    {
+        "key": "alt+cmd+[",
+        "command": "-editor.fold",
+        "when": "editorTextFocus && foldingEnabled"
+        // Отключение стандартного сворачивания (когда сворачивание включено)
+    },
+    {
+        "key": "alt+cmd+]",
+        "command": "editor.unfold",
+        "when": "editorTextFocus"
+        // Развернуть блок кода
+    },
+    {
+        "key": "alt+cmd+]",
+        "command": "-editor.unfold",
+        "when": "editorTextFocus && foldingEnabled"
+        // Отключение стандартного разворачивания (когда сворачивание включено)
+    },
+    
+    // Новая папка
+    {
+        "key": "shift+cmd+n",
+        "command": "-workbench.action.newWindow"
+        // Отключение создания нового окна
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "explorer.newFolder"
+        // Создать новую папку в проводнике
+    },
+    
+    // Навигация по редакторам
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+        // Отключение открытия наименее используемого редактора
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+        // Открыть предыдущий недавно использованный редактор в группе
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+        // Отключение стандартного открытия предыдущего редактора (Ctrl+Tab)
+    },
+    
+    // Сохранение файла
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.save"
+        // Отключение стандартного сохранения (первое вхождение)
+    },
+    
+    // Навигация в hover
+    // {
+    //     "key": "cmd+down",
+    //     "command": "-editor.action.goToBottomHover",
+    //     "when": "editorHoverFocused"
+    //     // Отключение перехода в конец hover (первое вхождение)
+    // },
+    // {
+    //     "key": "cmd+down",
+    //     "command": "editor.action.goToBottomHover",
+    //     "when": "editorHoverFocused"
+    //     // Перейти в конец hover
+    // },
+    // {
+    //     "key": "end",
+    //     "command": "-editor.action.goToBottomHover",
+    //     "when": "editorHoverFocused"
+    //     // Отключение перехода в конец hover по клавише End
+    // },
+    
+    // Навигация курсора
+    // {
+    //     "key": "cmd+down",
+    //     "command": "-cursorBottom",
+    //     "when": "textInputFocus"
+    //     // Отключение перемещения курсора в конец (Cmd+Down)
+    // },
+    // {
+    //     "key": "alt+down",
+    //     "command": "cursorBottom",
+    //     "when": "textInputFocus"
+    //     // Переместить курсор в конец файла/поля
+    // },
+    // {
+    //     "key": "alt+up",
+    //     "command": "cursorTop",
+    //     "when": "textInputFocus"
+    //     // Переместить курсор в начало файла/поля
+    // },
+    // {
+    //     "key": "cmd+up",
+    //     "command": "-cursorTop",
+    //     "when": "textInputFocus"
+    //     // Отключение перемещения курсора в начало (Cmd+Up)
+    // },
+    
+    // Терминал - закрытие
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus"
+        // Закрыть терминал в редакторе
+    },
+    
+    // Сохранение файла (повторное)
+    {
+        "key": "cmd+s",
+        "command": "workbench.action.files.save"
+        // Сохранить файл
+    },
+    
+    // Навигация по словам (альтернативные комбинации)
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordLeft",
+        "when": "textInputFocus"
+        // Переместить курсор к началу слова слева (Ctrl+Left)
+    },
+    {
+        "key": "alt+left",
+        "command": "-cursorWordLeft",
+        "when": "textInputFocus"
+        // Отключение перемещения к началу слова (Alt+Left используется для навигации)
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordRight"
+        // Переместить курсор к началу слова справа (Ctrl+Right)
+    },
+    
+    // Навигация курсора вверх/вниз
+    {
+        "key": "up",
+        "command": "cursorUp",
+        "when": "textInputFocus"
+        // Переместить курсор вверх
+    },
+    {
+        "key": "up",
+        "command": "-cursorUp",
+        "when": "textInputFocus"
+        // Отключение стандартного перемещения вверх (конфликт)
+    },
+    {
+        "key": "ctrl+up",
+        "command": "cursorUp",
+        "when": "textInputFocus"
+        // Переместить курсор вверх (Ctrl+Up)
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorDown",
+        "when": "textInputFocus"
+        // Переместить курсор вниз (Ctrl+Down)
+    },
+    
+    // Копирование относительного пути (дополнительное отключение)
+    {
+        "key": "cmd+k shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "editorFocus"
+        // Отключение копирования относительного пути (Cmd+K Shift+Alt+Cmd+C)
+    },
+    
+    // Outline и Timeline: открыть/закрыть сайдбар одной клавишей (Cursor не поддерживает Secondary Side Bar).
+    // Alt+Cmd+O: открыть сайдбар и фокус на Outline; повторное нажатие — закрыть сайдбар.
+    {
+        "key": "alt+cmd+o",
+        "command": "runCommands",
+        "when": "!sideBarVisible",
+        "args": {
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "outline.focus"
+            ]
+        }
+    },
+    {
+        "key": "alt+cmd+o",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible"
+    },
+    // Alt+Cmd+T: открыть сайдбар и фокус на Timeline; повторное нажатие — закрыть.
+    {
+        "key": "alt+cmd+t",
+        "command": "runCommands",
+        "when": "!sideBarVisible",
+        "args": {
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "timeline.focus"
+            ]
+        }
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "outline.focus"
+        // Фокус на Outline (если сайдбар уже открыт)
+    },
+    
+    // Find All References: Shift+Cmd+R (в меню убрана привязка Option+Shift+F12)
+    {
+        "key": "alt+shift+f12",
+        "command": "-editor.action.referenceSearch.trigger"
+        // Отвязка стандартной комбинации, чтобы в меню отображалась наша
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "editor.action.referenceSearch.trigger",
+        "when": "editorTextFocus"
+        // Find All References по текущему символу
+    },
+    
+    // Удаление
+    {
+        "key": "ctrl+d",
+        "command": "-deleteRight",
+        "when": "textInputFocus"
+        // Отключение удаления справа
+    },
+    
+    // Редакторы по индексу - отключение
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+        // Отключение открытия редактора по индексу 1
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.openEditorAtIndex2"
+        // Отключение открытия редактора по индексу 2
+    },
+    {
+        "key": "ctrl+3",
+        "command": "-workbench.action.openEditorAtIndex3"
+        // Отключение открытия редактора по индексу 3
+    },
+    {
+        "key": "ctrl+4",
+        "command": "-workbench.action.openEditorAtIndex4"
+        // Отключение открытия редактора по индексу 4
+    },
+    {
+        "key": "ctrl+5",
+        "command": "-workbench.action.openEditorAtIndex5"
+        // Отключение открытия редактора по индексу 5
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+        // Отключение разделения терминала (Ctrl+Shift+5)
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.splitActiveTab",
+        "when": "terminalProcessSupported && terminalTabsFocus"
+        // Отключение разделения активной вкладки терминала
+    },
+    {
+        "key": "ctrl+6",
+        "command": "-workbench.action.openEditorAtIndex6"
+        // Отключение открытия редактора по индексу 6
+    },
+    {
+        "key": "ctrl+7",
+        "command": "-workbench.action.openEditorAtIndex7"
+        // Отключение открытия редактора по индексу 7
+    },
+    {
+        "key": "ctrl+8",
+        "command": "-workbench.action.openEditorAtIndex8"
+        // Отключение открытия редактора по индексу 8
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-workbench.action.openEditorAtIndex9"
+        // Отключение открытия редактора по индексу 9
+    },
+    
+    // Breadcrumbs - дополнительное отключение
+    {
+        "key": "cmd+enter",
+        "command": "-breadcrumbs.revealFocusedFromTreeAside",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus && !treestickyScrollFocused"
+        // Отключение раскрытия breadcrumbs из дерева (дополнительное условие)
+    },
+    
+    // Разделение редактора - дополнительные отключения
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorDown"
+        // Отключение разделения редактора вниз
+    },
+    {
+        "key": "cmd+k shift+cmd+\\",
+        "command": "-workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+        // Отключение разделения редактора в группе
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorLeft"
+        // Отключение разделения редактора слева
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorUp"
+        // Отключение разделения редактора вверх
+    },
+    {
+        "key": "alt+v",
+        "command": "workbench.action.splitEditorRight"
+        // Разделить редактор справа (Alt+V)
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorRight"
+        // Отключение стандартного разделения редактора справа
+    },
+    
+    // Открытие файлов/ссылок сбоку
+    {
+        "key": "ctrl+enter",
+        "command": "-explorer.openToSide",
+        "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+        // Отключение открытия файла сбоку из проводника
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-search.action.openResultToSide",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+        // Отключение открытия результата поиска сбоку
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-openReferenceToSide",
+        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand && !treestickyScrollFocused"
+        // Отключение открытия ссылки сбоку
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "alt+cmd+s",
+        "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+        "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
+    }
+]
