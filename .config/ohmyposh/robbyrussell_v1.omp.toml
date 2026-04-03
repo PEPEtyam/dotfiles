@@ -1,0 +1,138 @@
+version = 3
+final_space = true
+
+[upgrade]
+  source = 'cdn'
+  interval = '168h'
+  auto = false
+  notice = false
+
+# Цветовая палитра Gruvbox Dark
+[palette]
+  bg = '#282828'
+  fg = '#ebdbb2'
+  yellow = '#d79921'
+  cyan = '#458588'
+  darkblue = '#076678'
+  green = '#98971a'
+  orange = '#d65d0e'
+  magenta = '#b16286'
+  blue = '#458588'
+  red = '#c34043'
+  gray = '#A89984'
+
+# Цветовая палитра Kanagawa-paper-ink
+# [palette]
+#   bg = '#1F1F28'         # background
+#   fg = '#DCD7BA'         # foreground
+#   black = '#393836'      # palette 0
+#   red = '#c4746e'        # palette 1
+#   green = '#699469'      # palette 2
+#   yellow = '#c4b28a'     # palette 3
+#   blue = '#435965'       # palette 4
+#   magenta = '#a292a3'    # palette 5
+#   cyan = '#8ea49e'       # palette 6
+#   white = '#C8C093'      # palette 7
+#   bright_black = '#aca9a4'    # palette 8
+#   bright_red = '#cc928e'      # palette 9
+#   bright_green = '#72a072'    # palette 10
+#   bright_yellow = '#d4c196'   # palette 11
+#   bright_blue = '#698a9b'     # palette 12
+#   bright_magenta = '#b4a7b5'  # palette 13
+#   bright_cyan = '#96ada7'     # palette 14
+#   bright_white = '#d5cd9d'    # palette 15
+
+# Цветовая палитра Kanagawa Wave
+# [palette]
+#   bg = '#1F1F28'       # Основной фон
+#   fg = '#DCD7BA'       # Основной текст
+#   yellow = '#E6C384'   # Лотосовый жёлтый
+#   cyan = '#658594'     # Голубой дракона
+#   darkblue = '#2D4F67' # Волновой синий
+#   green = '#98BB6C'    # Весенний зелёный
+#   orange = '#FF9E3B'   # Осенний оранжевый
+#   magenta = '#D27E99'  # Сакуровый розовый
+#   blue = '#658594'     # Голубой дракона (дублирует cyan)
+#   red = '#E46876'      # Волновой красный
+#   gray = '#54546D'     # Серый (комментарии)
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  # Виртуальное окружение
+  [[blocks.segments]]
+    template = '<b>{{ .Venv }}</b> '
+    foreground = 'p:green'
+    type = 'python'
+    style = 'plain'
+
+  # Полный путь к файлу
+  [[blocks.segments]]
+    template = '{{ .Path }} '
+    foreground = 'p:fg'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      style = 'full'
+
+  # Git-сегмент
+  [[blocks.segments]]
+    # template = '<b>{{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}</b> '
+    # foreground = 'p:red'
+    # type = 'git'
+    # style = 'plain'
+    template = 'git:(<red><b>{{ .HEAD }}</b></>) '
+    foreground = 'p:yellow'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_max_length = 25
+      branch_icon = ''
+      fetch_status = false
+      fetch_upstream_icon = false
+      fetch_stash_count = false
+      fetch_worktree_count = false
+
+  # Статус выполнения
+  [[blocks.segments]]
+    # template = '<b>✗</b>'
+    template = '<b>×</b>'
+    foreground = 'p:red'
+    type = 'status'
+    style = 'plain'
+
+# Время выполнения операции справа
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = 'p:gray'
+    type = 'executiontime'
+    style = 'plain'
+
+# Стрелка и ввод на новой строке
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    # template = '<b>➜</b>'
+    template = '<b>→</b>'
+    foreground = 'p:green'
+    type = 'text'
+    style = 'plain'
+
+[transient_prompt]
+  # template = '<b>➜</b> '
+  # template = '<b>»➜</b> '
+  template = '<b>→</b> '
+  background = 'transparent'
+  foreground = 'p:green'
+

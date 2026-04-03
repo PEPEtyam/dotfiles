@@ -1,0 +1,42 @@
+version = 3
+final_space = true
+
+[upgrade]
+  source = 'cdn'
+  interval = '168h'
+  auto = false
+  notice = false
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    template = '➜'
+    foreground = '#98971a'
+    type = 'text'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = ' {{ .Path }} '
+    foreground = '#458588'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      style = 'folder'
+
+  [[blocks.segments]]
+    template = '<#d79921>git:(</>{{ .HEAD }}<#d79921>)</>'
+    foreground = '#cc241d'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+
+  [[blocks.segments]]
+    template = ' ✗'
+    foreground = '#d65d0e'
+    type = 'status'
+    style = 'plain'
