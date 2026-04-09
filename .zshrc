@@ -68,7 +68,9 @@ bindkey '^ ' autosuggest-accept
 bindkey '^[[27;2;13~' autosuggest-execute
 bindkey '^[[27;5;13~' autosuggest-execute
 bindkey '^[[91;5u' up-line-or-history       # Ctrl+[
-bindkey '^]' down-line-or-history            # Ctrl+]
+bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[
+bindkey '^[' up-line-or-history             # Ctrl+[
+bindkey '^]' down-line-or-history           # Ctrl+]
 
 # ============================================================
 # Load Oh My Zsh
@@ -149,6 +151,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
+export PSQL_PAGER="pspg"
 export PATH="/sbin:$PATH"
 export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:$PATH"
 export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:$PATH"
