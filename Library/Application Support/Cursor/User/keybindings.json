@@ -882,58 +882,11 @@
         // Отключение копирования относительного пути (Cmd+K Shift+Alt+Cmd+C)
     },
     
-    // Outline и Timeline: открыть/закрыть сайдбар одной клавишей (Cursor не поддерживает Secondary Side Bar).
-    // Alt+Cmd+O: открыть сайдбар и фокус на Outline; повторное нажатие — закрыть сайдбар.
-    {
-        "key": "alt+cmd+o",
-        "command": "runCommands",
-        "when": "!sideBarVisible",
-        "args": {
-            "commands": [
-                "workbench.action.toggleSidebarVisibility",
-                "outline.focus"
-            ]
-        }
-    },
-    {
-        "key": "alt+cmd+o",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarVisible"
-    },
-    // Alt+Cmd+T: открыть сайдбар и фокус на Timeline; повторное нажатие — закрыть.
-    {
-        "key": "alt+cmd+t",
-        "command": "runCommands",
-        "when": "!sideBarVisible",
-        "args": {
-            "commands": [
-                "workbench.action.toggleSidebarVisibility",
-                "timeline.focus"
-            ]
-        }
-    },
-    {
-        "key": "alt+cmd+t",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarVisible"
-    },
+    // Outline (структура файла)
     {
         "key": "shift+cmd+o",
         "command": "outline.focus"
-        // Фокус на Outline (если сайдбар уже открыт)
-    },
-    
-    // Find All References: Shift+Cmd+R (в меню убрана привязка Option+Shift+F12)
-    {
-        "key": "alt+shift+f12",
-        "command": "-editor.action.referenceSearch.trigger"
-        // Отвязка стандартной комбинации, чтобы в меню отображалась наша
-    },
-    {
-        "key": "shift+cmd+r",
-        "command": "editor.action.referenceSearch.trigger",
-        "when": "editorTextFocus"
-        // Find All References по текущему символу
+        // Фокусироваться на outline (структуре файла)
     },
     
     // Удаление
@@ -1062,20 +1015,5 @@
         "command": "-openReferenceToSide",
         "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand && !treestickyScrollFocused"
         // Отключение открытия ссылки сбоку
-    },
-    {
-        "key": "shift+cmd+r",
-        "command": "references-view.findReferences",
-        "when": "editorHasReferenceProvider"
-    },
-    {
-        "key": "shift+alt+f12",
-        "command": "-references-view.findReferences",
-        "when": "editorHasReferenceProvider"
-    },
-    {
-        "key": "alt+cmd+s",
-        "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
-        "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
     }
 ]

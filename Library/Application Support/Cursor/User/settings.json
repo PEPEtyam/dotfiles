@@ -33,13 +33,17 @@
     "editor.wordWrap": "off",
     "editor.rulers": [120],
     "editor.hover.enabled": false,
-    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.enabled": true,
+
+    // Breadcrumbs: только путь к файлу, без символов LSP (классы, методы и т.д.)
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.symbolPath": "off",
+    // "breadcrumbs.filePath": "last",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.decorations.badges": false,
     "extensions.ignoreRecommendations": true,
     "diffEditor.renderSideBySide": false,
-    "breadcrumbs.enabled": false,
     "window.commandCenter": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.hover.delay": 10000, // ms, TODO: find way to turn this off
@@ -139,7 +143,8 @@
     },
     "terminal.integrated.enableVisualBell": true,
     "terminal.integrated.fontLigatures.enabled": false,
-    "terminal.integrated.sendKeybindingsToShell": true,
+    // false: иначе почти все клавиши уходят в zsh и workbench.action.terminal.sendSequence из keybindings не вызывается (см. docs Terminal Advanced — sendKeybindingsToShell overrides commandsToSkipShell).
+    "terminal.integrated.sendKeybindingsToShell": false,
   
     // Main editor:
     "window.clickThroughInactive": false,
@@ -202,17 +207,8 @@
     },
     "editor.unicodeHighlight.nonBasicASCII": false,
   
-    "window.titleBarStyle": "native",
-    "window.customTitleBarVisibility": "never",
-    // https://github.com/subframe7536/vscode-custom-ui-style extension:
-    // "custom-ui-style.electron": {
-    //   "frame": false,
-    //   "transparent": true,
-    //   "titleBarStyle": "hidden",
-    //   "titleBarOverlay": {
-    //     "height": 35,
-    //   }
-    // },
+    "window.titleBarStyle": "custom",
+    // "window.customTitleBarVisibility": "never",
     "custom-ui-style.external.imports": [
       "file://${userHome}/.cursor/custom-ui-git-branch.js"
     ],
