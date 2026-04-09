@@ -1,1 +1,6 @@
 theme = 19
+horizontal-scroll = scroll
+mouse = yes
+freeze-header = yes
+wrap-mode = on
+wrap-width = 0
