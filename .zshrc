@@ -6,18 +6,6 @@ export DYLD_FALLBACK_LIBRARY_PATH="/opt/homebrew/lib/"
 export EDITOR=hx
 
 # ============================================================
-# Oh My Posh (skip in Apple Terminal)
-# ============================================================
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell_v1.omp.toml)"
-fi
-
-# ============================================================
-# Direnv
-# ============================================================
-eval "$(direnv hook zsh)"
-
-# ============================================================
 # Shell options
 # ============================================================
 CASE_SENSITIVE="false"
@@ -62,6 +50,18 @@ plugins=(
 )
 
 # ============================================================
+# Load Oh My Zsh
+# ============================================================
+source $ZSH/oh-my-zsh.sh
+
+# ============================================================
+# Oh My Posh (skip in Apple Terminal)
+# ============================================================
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell_v1.omp.toml)"
+fi
+
+# ============================================================
 # Key bindings
 # ============================================================
 bindkey '^ ' autosuggest-accept
@@ -71,11 +71,6 @@ bindkey '^[[91;5u' up-line-or-history       # Ctrl+[
 bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[
 bindkey '^[' up-line-or-history             # Ctrl+[
 bindkey '^]' down-line-or-history           # Ctrl+]
-
-# ============================================================
-# Load Oh My Zsh
-# ============================================================
-source $ZSH/oh-my-zsh.sh
 
 # ============================================================
 # Completions
