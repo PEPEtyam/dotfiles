@@ -1,19 +1,21 @@
 (defcfg
-  ;;process-unmapped-keys yes
+  process-unmapped-keys yes
   danger-enable-cmd yes
   concurrent-tap-hold yes
   rapid-event-delay 5
 )
 
 (defsrc
-  caps  a    s    d    f    j    k    l    ;
-  spc   t    c    b    o    m
+  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  fn
+  caps  a     s     d     f     j     k     l     ;
+  spc   t     c     b     o     m
 )
 
 (defvar
   tap-time 120
   hold-time 250
-  double-tap-time 220
+  double-tap-time 150
 )
 
 (deftemplate tap-hold-key (key mod)
@@ -27,6 +29,8 @@
 )
 
 (defalias
+  fnl (tap-hold 200 200 fn (layer-toggle fn-layer))
+
   a (tap-hold-release-keys $tap-time $hold-time a lsft (a s d f j k l ;))
   s (tap-hold-release-keys $tap-time $hold-time s lctl (a s d f j k l ;))
   d (tap-hold-release-keys $tap-time $hold-time d lalt (a s d f j k l ;))
@@ -42,17 +46,27 @@
 )
 
 (deflayer base
-  @caps  @a  @s  @d  @f  @j  @k  @l  @;
-  @spc   t   c   b   o   m
+  brdn  brup  _     _     _     _     prev  pp    next  mute  vold  volu
+  @fnl
+  @caps @a    @s    @d    @f    @j    @k    @l    @;
+  @spc  t     c     b     o     m
+)
+
+(deflayer fn-layer
+  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  _
+  _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _
 )
 
 (deflayer leader
-  _  _  _  _  _  _  _  _  _
+  _     _     _     _     _     _     _     _     _     _     _     _
+  _
+  _     _     _     _     _     _     _     _     _
   _
   (cmd open -a Ghostty)
   (cmd open -a Cursor)
   (cmd open -a Arc)
   (cmd open -a Obsidian)
   (cmd open -a Telegram)
-
 )
