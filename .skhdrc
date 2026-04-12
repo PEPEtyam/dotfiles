@@ -1,6 +1,6 @@
 # cmd - ` : open -na /Applications/Ghostty.app --args --quick-terminal || open -na /Applications/Ghostty.app
 
-cmd - g : open -a "Ghostty"
+# cmd - g : open -a "Ghostty"
 # cmd - b : open -a "Arc"
 # cmd - p : open -a "Pycharm"
 # cmd - m : open -a "Telegram"
