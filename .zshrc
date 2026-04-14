@@ -1,4 +1,20 @@
 # ============================================================
+# PATH construction (avoid overwriting)
+# ============================================================
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PSQL_PAGER="pspg"
+export PATH="/sbin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$PATH"
+
+# ============================================================
 # Environment variables
 # ============================================================
 export ZSH="$HOME/.oh-my-zsh"
@@ -135,22 +151,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg+:#f9f5d7,bg+:#282828,hl+:#f9f5d7
   --color=info:#98971a,prompt:#b8bb26,pointer:#c34043
   --color=marker:#d79921,spinner:#458588,header:#cc241d'
-
-# ============================================================
-# PATH construction (avoid overwriting)
-# ============================================================
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/bin:$PATH"
-export PATH="/bin:$PATH"
-export PATH="/usr/sbin:$PATH"
-export PSQL_PAGER="pspg"
-export PATH="/sbin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$PATH"
 
 # Source local env (if exists)
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
