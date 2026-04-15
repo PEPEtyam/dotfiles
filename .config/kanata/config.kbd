@@ -14,7 +14,7 @@
 
 (defvar
   tap-time 180
-  hold-time 280
+  hold-time 240
   double-tap-time 300
 )
 
@@ -40,9 +40,9 @@
   l (tap-hold-release-keys $tap-time $hold-time l rctl (a s d f j k l ;))
   ;;; (tap-hold-release-keys $tap-time $hold-time ; rsft (a s d f j k l ;))
 
-  caps (tap-hold $tap-time $hold-time esc lctl)
+  caps (tap-hold 200 200 esc lctl)
 
-  spc (tap-hold-release $tap-time $hold-time spc (layer-while-held leader))
+  spc (tap-hold-release 150 200 spc (layer-while-held leader))
 )
 
 (deflayer base
