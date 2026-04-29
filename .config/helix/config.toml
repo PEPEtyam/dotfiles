@@ -29,9 +29,9 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = true
+hidden = false
 # parents = false
-git-ignore = true
+git-ignore = false
 
 [editor.lsp]
 auto-signature-help = true

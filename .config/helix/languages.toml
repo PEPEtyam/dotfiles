@@ -14,6 +14,17 @@ indent = { tab-width = 4, unit = "    " }
 auto-format = false
 # rulers = [120]
 
+[language.debugger]
+name = "debugpy"
+transport = "stdio"
+command = "debugpy-adapter"
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [{ name = "entrypoint", completion = "filename", default = "." }]
+args = { mode = "debug", program = "{0}", console = "internalConsole" }
+
 [language.formatter]
 command = "ruff"
 args = ["format", "--stdin-filename", "{file_path}", "-"]

@@ -9,6 +9,9 @@
 "string" = "green"                     # Строки - зеленый (как в Alabaster)
 "string.regexp" = "green"              # Регулярные выражения - тоже зеленый
 "comment" = "grey0"                    # Комментарии - желтый для заметности
+"comment.block" = "yellow"
+"comment.documentation" = "yellow"
+"string.docstring" = "yellow"
 "variable" = "fg0"                     # Переменные - обычный текст
 "variable.builtin" = "fg0"             # Встроенные переменные - без выделения
 "variable.parameter" = "fg0"           # Параметры - обычный текст
