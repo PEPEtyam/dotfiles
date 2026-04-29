@@ -83,9 +83,8 @@ fi
 bindkey '^ ' autosuggest-accept
 bindkey '^[[27;2;13~' autosuggest-execute
 bindkey '^[[27;5;13~' autosuggest-execute
-bindkey '^[[91;5u' up-line-or-history       # Ctrl+[
-bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[
-bindkey '^[' up-line-or-history             # Ctrl+[
+bindkey '^[[91;5u' up-line-or-history       # Ctrl+[ via CSI-u capable terminals
+bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[ via CSI-u capable terminals
 bindkey '^]' down-line-or-history           # Ctrl+]
 
 # ============================================================
@@ -154,3 +153,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # Source local env (if exists)
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+
+# The next line updates PATH for CLI.
+if [ -f '/Users/a1/yandex-cloud/path.bash.inc' ]; then source '/Users/a1/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/a1/yandex-cloud/completion.zsh.inc' ]; then source '/Users/a1/yandex-cloud/completion.zsh.inc'; fi
