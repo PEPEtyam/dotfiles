@@ -240,4 +240,10 @@
     "gitlens.currentLine.enabled": true,
     "workbench.statusBar.visible": false,
     "cursor.composer.usageSummaryDisplay": "always",
+    "chatgpt.localeOverride": "ru-RU",
+    "vs-kubernetes": {
+
+      "vscode-kubernetes.helm-path-mac": "/Users/a1/.vs-kubernetes/tools/helm/darwin-arm64/helm"
+    },
+    "vscode-kubernetes.kubectl-path-mac": "/opt/homebrew/bin/kubectl",
   }
