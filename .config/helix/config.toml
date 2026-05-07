@@ -9,7 +9,7 @@ theme = "alabaster_gruvbox_material_dark_soft"
 line-number = "relative"
 cursorline = false
 color-modes = true
-rulers = [80]
+# rulers = [80]
 true-color = true
 mouse = true
 scrolloff = 10
@@ -78,6 +78,8 @@ cursor-line = "hint"
 C-s = ":write"
 C-q = ":quit"
 C-w = "save_selection"
+C-f = ":sh bash -c 'echo -n %{buffer_name} | pbcopy'"
+C-backspace = ":reset-diff-change"
 A-d = ":buffer-close"
 E = "goto_line_end"
 B = "goto_line_start"
@@ -94,8 +96,10 @@ R = "replace_selections_with_clipboard"
 X = "extend_line_above"
 
 [keys.normal.space]
-# p = [":sh ", ":insert-output ", "echo % | pbcopy", ":echo '✓ Path copied'"]
-# y = [":sh ", ":insert-output ", "echo % | pbcopy"]
+B = ":sh ~/.config/helix/bin/git-line-history %{cursor_line} \"%{buffer_name}\""
+
+[keys.normal.g]
+B = ":sh ~/.config/helix/bin/git-show-previous-change %{cursor_line} \"%{buffer_name}\""
 
 [keys.select]
 tab = "expand_selection"
