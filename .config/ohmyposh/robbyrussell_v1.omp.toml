@@ -106,15 +106,15 @@ final_space = true
     style = 'plain'
 
 # Время выполнения операции справа
-[[blocks]]
-  type = 'prompt'
-  alignment = 'right'
+# [[blocks]]
+#   type = 'prompt'
+#   alignment = 'right'
 
-  [[blocks.segments]]
-    template = '{{ .FormattedMs }}'
-    foreground = 'p:gray'
-    type = 'executiontime'
-    style = 'plain'
+#   [[blocks.segments]]
+#     template = '{{ .FormattedMs }}'
+#     foreground = 'p:gray'
+#     type = 'executiontime'
+#     style = 'plain'
 
 # Стрелка и ввод на новой строке
 [[blocks]]
