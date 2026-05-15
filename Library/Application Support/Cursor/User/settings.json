@@ -246,4 +246,5 @@
       "vscode-kubernetes.helm-path-mac": "/Users/a1/.vs-kubernetes/tools/helm/darwin-arm64/helm"
     },
     "vscode-kubernetes.kubectl-path-mac": "/opt/homebrew/bin/kubectl",
+    "window.autoDetectColorScheme": false,
   }
