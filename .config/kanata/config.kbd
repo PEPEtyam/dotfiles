@@ -1,7 +1,7 @@
 (defcfg
   process-unmapped-keys yes
   danger-enable-cmd yes
-  concurrent-tap-hold no
+  concurrent-tap-hold yes
   rapid-event-delay 10
 )
 
@@ -14,7 +14,8 @@
 
 (defvar
   tap-time 180
-  hold-time 200
+  hold-time 230
+  cmd-hold-time 270
   double-tap-time 300
 )
 
@@ -32,12 +33,12 @@
   fnl (tap-hold 200 200 fn (layer-toggle fn-layer))
 
   ;;a (tap-hold-release-keys $tap-time $hold-time a lsft (a s d f j k l ;))
-  s (tap-hold-release-keys $tap-time $hold-time s lctl (a s d f j k l ; spc))
-  d (tap-hold-release-keys $tap-time $hold-time d lalt (a s d f j k l ; spc))
-  f (tap-hold-release-keys $tap-time $hold-time f lmet (a s d f j k l ; spc))
-  j (tap-hold-release-keys $tap-time $hold-time j rmet (a s d f j k l ; spc))
-  k (tap-hold-release-keys $tap-time $hold-time k ralt (a s d f j k l ; spc))
-  l (tap-hold-release-keys $tap-time $hold-time l rctl (a s d f j k l ; spc))
+  s (tap-hold-tap-keys $tap-time $hold-time s lctl (a s d f j k l ; spc))
+  d (tap-hold-tap-keys $tap-time $hold-time d lalt (a s d f j k l ; spc))
+  f (tap-hold-tap-keys $tap-time $cmd-hold-time f lmet (a s d f j k l ; spc))
+  j (tap-hold-tap-keys $tap-time $cmd-hold-time j rmet (a s d f j k l ; spc))
+  k (tap-hold-tap-keys $tap-time $hold-time k ralt (a s d f j k l ; spc))
+  l (tap-hold-tap-keys $tap-time $hold-time l rctl (a s d f j k l ; spc))
   ;;; (tap-hold-release-keys $tap-time $hold-time ; rsft (a s d f j k l ;))
 
   caps (tap-hold 200 200 esc lctl)
