@@ -124,7 +124,8 @@ final_space = true
 
   [[blocks.segments]]
     # template = '<b>➜</b>'
-    template = '<b>→</b>'
+    # template = '<b>→</b>'
+    template = '<b>></b>'
     foreground = 'p:green'
     type = 'text'
     style = 'plain'
@@ -132,7 +133,8 @@ final_space = true
 [transient_prompt]
   # template = '<b>➜</b> '
   # template = '<b>»➜</b> '
-  template = '<b>→</b> '
+  # template = '<b>→</b> '
+  template = '<b>></b> '
   background = 'transparent'
   foreground = 'p:green'
 
