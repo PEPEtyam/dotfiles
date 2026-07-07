@@ -15,7 +15,7 @@
 (defvar
   tap-time 180
   hold-time 230
-  cmd-hold-time 270
+  ;;cmd-hold-time 270
   double-tap-time 300
 )
 
@@ -33,24 +33,24 @@
   fnl (tap-hold 200 200 fn (layer-toggle fn-layer))
 
   ;;a (tap-hold-release-keys $tap-time $hold-time a lsft (a s d f j k l ;))
-  s (tap-hold-tap-keys $tap-time $hold-time s lctl (a s d f j k l ; spc))
-  d (tap-hold-tap-keys $tap-time $hold-time d lalt (a s d f j k l ; spc))
-  f (tap-hold-tap-keys $tap-time $cmd-hold-time f lmet (a s d f j k l ; spc))
-  j (tap-hold-tap-keys $tap-time $cmd-hold-time j rmet (a s d f j k l ; spc))
-  k (tap-hold-tap-keys $tap-time $hold-time k ralt (a s d f j k l ; spc))
-  l (tap-hold-tap-keys $tap-time $hold-time l rctl (a s d f j k l ; spc))
+  s (tap-hold-tap-keys $tap-time $hold-time s lctl (a s d f j k l ;))
+  d (tap-hold-tap-keys $tap-time $hold-time d lalt (a s d f j k l ;))
+  f (tap-hold-tap-keys $tap-time $hold-time f lmet (a s d f j k l ;))
+  j (tap-hold-tap-keys $tap-time $hold-time j rmet (a s d f j k l ;))
+  k (tap-hold-tap-keys $tap-time $hold-time k ralt (a s d f j k l ;))
+  l (tap-hold-tap-keys $tap-time $hold-time l rctl (a s d f j k l ;))
   ;;; (tap-hold-release-keys $tap-time $hold-time ; rsft (a s d f j k l ;))
 
   caps (tap-hold 200 200 esc lctl)
 
-  spc (tap-hold-release-keys 150 200 spc (layer-while-held leader) (s d f j k l))
+  ;; spc (tap-hold-release-keys 150 200 spc (layer-while-held leader) (s d f j k l))
 )
 
 (deflayer base
   brdn  brup  _     _     _     _     prev  pp    next  mute  vold  volu
   @fnl
   @caps @s    @d    @f    @j    @k    @l
-  @spc  g     c     b     o     m
+  spc   g     c     b     o     m
 )
 
 (deflayer fn-layer
@@ -60,14 +60,14 @@
   _     _     _     _
 )
 
-(deflayer leader
-  _     _     _     _     _     _     _     _     _     _     _     _
-  _
-  _     _     _     _     _     _     _
-  _
-  (cmd open -a Ghostty)
-  (cmd open -a Cursor)
-  (cmd open -a Arc)
-  (cmd open -a Obsidian)
-  (cmd open -a Telegram)
-)
+;; (deflayer leader
+;;   _     _     _     _     _     _     _     _     _     _     _     _
+;;   _
+;;   _     _     _     _     _     _     _
+;;   _
+;;   (cmd open -a Ghostty)
+;;   (cmd open -a Cursor)
+;;   (cmd open -a Arc)
+;;   (cmd open -a Obsidian)
+;;   (cmd open -a Telegram)
+;; )
