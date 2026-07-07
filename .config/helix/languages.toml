@@ -9,7 +9,7 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc", "pth", "
 shebangs = ["python", "python3", "python3.9", "python3.10", "python3.11", "python3.12", "uv"]
 roots = ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git"]
 comment-token = "#"
-language-servers = ["ty"]
+language-servers = ["ty", { name = "ruff", except-features = ["diagnostics"] }]
 indent = { tab-width = 4, unit = "    " }
 auto-format = false
 # rulers = [120]
@@ -24,6 +24,16 @@ name = "source"
 request = "launch"
 completion = [{ name = "entrypoint", completion = "filename", default = "." }]
 args = { mode = "debug", program = "{0}", console = "internalConsole" }
+
+[[language.debugger.templates]]
+name = "django-runserver"
+request = "launch"
+args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = ["runserver", "127.0.0.1:8000", "--noreload"], django = true, justMyCode = false, console = "internalConsole" }
+
+[[language.debugger.templates]]
+name = "django-shell"
+request = "launch"
+args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = ["shell"], django = true, justMyCode = false, console = "internalConsole" }
 
 [language.formatter]
 command = "ruff"
