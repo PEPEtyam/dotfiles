@@ -45,6 +45,7 @@ plugins=(
   gitfast
   docker
   macos
+  you-should-use
   httpie
   eza
   docker-compose
