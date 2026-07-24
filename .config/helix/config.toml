@@ -88,6 +88,13 @@ C-f = ":sh bash -c 'echo -n %{buffer_name} | pbcopy'"
 C-backspace = ":reset-diff-change"
 A-w = ":buffer-close"
 A-f = "@maf<A-;>;2wb"
+# A-t — переход к имени класса/типа (аналог A-f, но textobject 't' = type/class)
+A-t = "@mat<A-;>;2wb"
+# A-c — переход к первому "identifier(" в текущей строке (курсор в любом месте
+# строки): x выделяет строку, s ищет по regex внутри выделения (первое
+# совпадение слева всегда становится primary — так работает select_regex),
+# затем flip+collapse ставит курсор на начало имени.
+A-c = "@xs[A-Za-z_][A-Za-z0-9_]*\\(<ret><A-;>;"
 E = "goto_line_end"
 B = "goto_line_start"
 tab = ":buffer-next"
@@ -102,11 +109,10 @@ P = "paste_clipboard_before"
 R = "replace_selections_with_clipboard"
 X = "extend_line_above"
 
-[keys.normal.space]
-B = ":sh ~/.config/helix/bin/git-line-history %{cursor_line} \"%{buffer_name}\""
-
 [keys.normal.g]
-B = ":sh ~/.config/helix/bin/git-show-previous-change %{cursor_line} \"%{buffer_name}\""
+# g+b — git blame текущей строки: коммит (название/дата/автор), который её
+# последний раз менял, + файлы и строки, изменённые в этом коммите.
+b = ":sh ~/.config/helix/bin/hx-blame-info %{cursor_line} \"%{buffer_name}\""
 
 [keys.select]
 Cmd-r = ":reload-all"

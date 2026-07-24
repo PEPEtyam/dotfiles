@@ -14,7 +14,7 @@
 "string.docstring" = "yellow"
 "variable" = "fg0"                     # Переменные - обычный текст
 "variable.builtin" = "fg0"             # Встроенные переменные - без выделения
-"variable.parameter" = "fg0"           # Параметры - обычный текст
+"variable.parameter" = "beige_attr"    # Параметры (объявление + использование) - песочно-тусклый, отличается от серого инлей-хинта
 "variable.other.member" = "fg0"        # Поля объектов - обычный текст
 "label" = "fg0"                        # Метки - обычный текст
 "punctuation" = "grey2"                # Пунктуация - серый
@@ -31,9 +31,9 @@
 "function.builtin" = "orange"          # Встроенные функции - тоже синий
 "function.macro" = "blue_func"         # Макросы - синий
 "tag" = "orange"                       # HTML/XML теги - оранжевый
-"namespace" = "red"                    # Пространства имен - обычный текст
+"namespace" = "fg0"                    # Пространства имен - обычный текст (было red, дублировало "type")
 "attribute" = "fg0"                    # Атрибуты - обычный текст
-"constructor" = "orange"               # Конструкторы - оранжевый (как типы)
+"constructor" = "red"                  # Конструкторы - как "type" (тот же класс, та же роль → тот же цвет)
 "module" = "fg0"                       # Модули - обычный текст
 "special" = "green_annotation"         # Специальные элементы - обычный текст
 
