@@ -1,7 +1,4 @@
-# cmd - ` : open -na /Applications/Ghostty.app --args --quick-terminal || open -na /Applications/Ghostty.app
-
-# cmd - g : open -a "Ghostty"
-# cmd - b : open -a "Arc"
-# cmd - p : open -a "Pycharm"
-# cmd - m : open -a "Telegram"
-# cmd - o : open -a "Obsidian"
+cmd + alt + ctrl + shift - b : open -a "Arc"
+cmd + alt + ctrl + shift - g : open -a "Ghostty"
+cmd + alt + ctrl + shift - z : open -a "Telegram"
+cmd + alt + ctrl + shift - x : open -a "DBeaver"
