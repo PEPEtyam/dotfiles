@@ -1,0 +1,26 @@
+# Keep history and search strictly local to this Mac.
+auto_sync = false
+update_check = false
+
+# Ctrl-R searches commands containing the typed text on this host.
+search_mode = "fulltext"
+filter_mode = "host"
+style = "compact"
+inline_height = 18
+show_preview = true
+max_preview_height = 8
+show_tabs = false
+enter_accept = false
+
+[search]
+filters = ["host", "directory", "session"]
+
+[theme]
+name = "gruvbox-dark"
+
+[ui]
+columns = [
+  { type = "time", width = 10 },
+  { type = "directory", width = 26 },
+  "command",
+]

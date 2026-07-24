@@ -152,6 +152,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=info:#98971a,prompt:#b8bb26,pointer:#c34043
   --color=marker:#d79921,spinner:#458588,header:#cc241d'
 
+# Local Atuin history search. Ctrl-R opens the interactive command menu.
+eval "$(atuin init zsh --disable-up-arrow --disable-ai)"
+
 # Source local env (if exists)
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
