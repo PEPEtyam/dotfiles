@@ -55,14 +55,18 @@
 )
 
 (deflayer base
-  brdn  brup  _     _     _     _     prev  pp    next  mute  vold  volu  @zmk-comma @zmk-question @zmk-dot @zmk-slash @zmk-apostrophe @zmk-double-quote
+  brdn  brup  _     _     _     _     prev  pp    next  mute  vold  volu
+  ;; F13             F14           F15       F16         F17              F18
+  @zmk-comma         @zmk-question @zmk-dot  @zmk-slash  @zmk-apostrophe  @zmk-double-quote
   @fnl
   @caps @s    @d    @f    @j    @k    @l
   spc   g     c     b     o     m
 )
 
 (deflayer fn-layer
-  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   @zmk-comma @zmk-question @zmk-dot @zmk-slash @zmk-apostrophe @zmk-double-quote
+  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  ;; F13             F14           F15       F16         F17              F18
+  @zmk-comma         @zmk-question @zmk-dot  @zmk-slash  @zmk-apostrophe  @zmk-double-quote
   _
   _     _     _     _     _     _     _     _     _
   _     _     _     _
