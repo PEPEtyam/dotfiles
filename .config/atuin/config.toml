@@ -5,22 +5,22 @@ update_check = false
 # Ctrl-R searches commands containing the typed text on this host.
 search_mode = "fulltext"
 filter_mode = "host"
-style = "compact"
-inline_height = 18
+style = "auto"
+inline_height = 15
 show_preview = true
 max_preview_height = 8
 show_tabs = false
-enter_accept = false
+enter_accept = true
 
 [search]
 filters = ["host", "directory", "session"]
 
-[theme]
-name = "gruvbox-dark"
+# [theme]
+# name = "gruvbox-dark"
 
-[ui]
-columns = [
-  { type = "time", width = 10 },
-  { type = "directory", width = 26 },
-  "command",
-]
+# [ui]
+# columns = [
+#   { type = "time", width = 10 },
+#   { type = "directory", width = 26 },
+#   "command",
+# ]
