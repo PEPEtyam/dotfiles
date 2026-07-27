@@ -48,3 +48,6 @@ quick-terminal-size = 50%, 30%
 quick-terminal-position = center
 
 keybind = global:cmd+backquote=toggle_quick_terminal
+
+# gtab managed include
+config-file = "/Users/a1/.config/gtab/ghostty-shortcut.conf"
