@@ -3,10 +3,13 @@
   danger-enable-cmd yes
   concurrent-tap-hold yes
   rapid-event-delay 10
+  macos-dev-names-include (
+    "Apple Internal Keyboard / Trackpad"
+  )
 )
 
 (defsrc
-  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   f13   f14   f15   f16   f17   f18
+  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
   fn
   caps  s     d     f     j     k     l
   spc   g     c     b     o     m
@@ -43,21 +46,11 @@
 
   caps (tap-hold 200 200 esc lctl)
 
-  ;; Private ZMK punctuation signals. Unicode output bypasses macOS input source.
-  zmk-comma (unicode U+002C)
-  zmk-question (unicode U+003F)
-  zmk-dot (unicode U+002E)
-  zmk-slash (unicode U+002F)
-  zmk-apostrophe (unicode U+0027)
-  zmk-double-quote (unicode U+0022)
-
   ;; spc (tap-hold-release-keys 150 200 spc (layer-while-held leader) (s d f j k l))
 )
 
 (deflayer base
   brdn  brup  _     _     _     _     prev  pp    next  mute  vold  volu
-  ;; F13             F14           F15       F16         F17              F18
-  @zmk-comma         @zmk-question @zmk-dot  @zmk-slash  @zmk-apostrophe  @zmk-double-quote
   @fnl
   @caps @s    @d    @f    @j    @k    @l
   spc   g     c     b     o     m
@@ -65,8 +58,6 @@
 
 (deflayer fn-layer
   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
-  ;; F13             F14           F15       F16         F17              F18
-  @zmk-comma         @zmk-question @zmk-dot  @zmk-slash  @zmk-apostrophe  @zmk-double-quote
   _
   _     _     _     _     _     _     _     _     _
   _     _     _     _
