@@ -5,9 +5,34 @@
 name = "python"
 scope = "source.python"
 injection-regex = "python"
-file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc", "pth", "pyw"]
-shebangs = ["python", "python3", "python3.9", "python3.10", "python3.11", "python3.12", "uv"]
-roots = ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git"]
+file-types = [
+  "py",
+  "pyi",
+  "py3",
+  "pyw",
+  ".pythonstartup",
+  ".pythonrc",
+  "pth",
+  "pyw",
+]
+shebangs = [
+  "python",
+  "python3",
+  "python3.9",
+  "python3.10",
+  "python3.11",
+  "python3.12",
+  "uv",
+]
+roots = [
+  "pyproject.toml",
+  "setup.py",
+  "setup.cfg",
+  "requirements.txt",
+  "Pipfile",
+  "pyrightconfig.json",
+  ".git",
+]
 comment-token = "#"
 language-servers = ["ty", { name = "ruff", except-features = ["diagnostics"] }]
 indent = { tab-width = 4, unit = "    " }
@@ -28,12 +53,18 @@ args = { mode = "debug", program = "{0}", console = "internalConsole" }
 [[language.debugger.templates]]
 name = "django-runserver"
 request = "launch"
-args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = ["runserver", "127.0.0.1:8000", "--noreload"], django = true, justMyCode = false, console = "internalConsole" }
+args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = [
+  "runserver",
+  "127.0.0.1:8000",
+  "--noreload",
+], django = true, justMyCode = false, console = "internalConsole" }
 
 [[language.debugger.templates]]
 name = "django-shell"
 request = "launch"
-args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = ["shell"], django = true, justMyCode = false, console = "internalConsole" }
+args = { mode = "debug", program = "manage.py", cwd = "backend", python = "../.venv/bin/python", args = [
+  "shell",
+], django = true, justMyCode = false, console = "internalConsole" }
 
 [language.formatter]
 command = "ruff"
@@ -154,10 +185,24 @@ name = "bash"
 scope = "source.bash"
 injection-regex = "(shell|bash|zsh|sh)"
 file-types = [
-  "sh", "bash", "zsh", ".bash_login", ".bash_logout", 
-  ".bash_profile", ".bashrc", ".profile", ".zprofile", 
-  ".zshrc", ".zshenv", ".zlogin", ".zlogout", "APKBUILD", 
-  "PKGBUILD", "eclass", "ebuild", "bazelrc"
+  "sh",
+  "bash",
+  "zsh",
+  ".bash_login",
+  ".bash_logout",
+  ".bash_profile",
+  ".bashrc",
+  ".profile",
+  ".zprofile",
+  ".zshrc",
+  ".zshenv",
+  ".zlogin",
+  ".zlogout",
+  "APKBUILD",
+  "PKGBUILD",
+  "eclass",
+  "ebuild",
+  "bazelrc",
 ]
 shebangs = ["sh", "bash", "zsh"]
 # comment-tokens = ["#"]
@@ -219,7 +264,15 @@ validation = true
 name = "json"
 scope = "source.json"
 injection-regex = "json"
-file-types = ["json", "jsonc", "arb", "ipynb", ".babelrc", ".eslintrc", ".prettierrc"]
+file-types = [
+  "json",
+  "jsonc",
+  "arb",
+  "ipynb",
+  ".babelrc",
+  ".eslintrc",
+  ".prettierrc",
+]
 language-servers = ["vscode-json-language-server"]
 auto-format = true
 indent = { tab-width = 2, unit = "  " }
@@ -242,6 +295,9 @@ json.format.enable = true
 [[language]]
 name = "markdown"
 scope = "source.md"
+text-width = 100
+soft-wrap.enable = true
+soft-wrap.wrap-at-text-width = true
 injection-regex = "md|markdown"
 file-types = ["md", "markdown", "PULLREQ_EDITMSG", "README"]
 language-servers = ["marksman"]
