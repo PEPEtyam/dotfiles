@@ -1,0 +1,51 @@
+[theme]
+name = "terminal"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "reset"
+accent = "#ddc7a1"
+
+[ui.toast]
+delivery = "herdr"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+hide_tab_bar_when_single_tab = true
+accent = "#ddc7a1"
+
+agent_panel_sort = "spaces"
+
+[keys]
+prefix = "ctrl+a"
+# --- панели ---
+close_pane = "prefix+w"
+resize_mode = "prefix+x"
+copy_mode = "prefix+c"
+rename_pane = "prefix+shift+r"
+
+# --- табы ---
+new_tab = ["prefix+n", "prefix+shift+t"]
+rename_tab = "prefix+shift+n"            # было prefix+shift+t — освободилось под new_tab
+close_tab = "prefix+shift+w"
+previous_tab = "prefix+["
+next_tab = "prefix+]"
+switch_tab = ""                          # цифры теперь переключают space, не таб
+
+# --- spaces (workspaces) ---
+new_workspace = "prefix+t"
+rename_workspace = "prefix+r"
+workspace_picker = "prefix+p"    # было prefix+w — освободилось под close_pane
+switch_workspace = "prefix+1..9"
+previous_workspace = "prefix+{"
+next_workspace = "prefix+}"
+
+# --- агенты ---
+previous_agent = "prefix+("
+next_agent = "prefix+)"
+
+# перенесено из-за коллизии с новым rename_pane (prefix+shift+r)
+reload_config = "prefix+shift+c"
+
+[experimental]
+pane_history = true
