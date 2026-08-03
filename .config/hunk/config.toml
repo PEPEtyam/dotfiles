@@ -10,15 +10,47 @@ agent_notes = false
 transparent_background = true
 
 [custom_theme]
-base = "github-dark-default"
-label = "Gruvbox Dark"
-accent = "#d79921"
-panel = "#282828"
-noteBorder = "#b16286"
+# base был "github-dark-default" — синие/серые UI-цвета GitHub Dark конфликтовали
+# с прикрученной поверх gruvbox-палитрой (панель, added/removed, границы), из-за
+# этого всё "слипалось". gruvbox-dark-soft — тот же base, что и Gruvbox Material
+# Dark Soft в helix, поэтому диффы и подсветка синтаксиса теперь согласованы.
+base = "gruvbox-dark-soft"
+label = "Gruvbox Material"
+accent = "#e78a4e"
+
+# Общий фон/панели — вся палитра из alabaster_gruvbox_material_dark_soft.toml,
+# чтобы не осталось синевато-серых остатков от base-темы.
+background = "#32302f"   # bg0
+panel = "#32302f"        # bg0
+panelAlt = "#3c3836"      # bg1
+border = "#504945"        # bg3
+text = "#d4be98"          # fg0
+muted = "#928374"         # grey1
+noteBorder = "#d3869b"     # purple
+lineNumberFg = "#a89984"   # grey2
+
+# Добавления и удаления — раньше строка ("+"/"-") была нормального цвета, а
+# фон вокруг текста оставался слишком ярким/алым и не сочетался. Теперь фон
+# строки и фон изменённого фрагмента — приглушённые оттенки той же палитры
+# (смешение bg0 с зелёным/красным), а не готовые "яркие" бейджевые цвета
+# helix, которые на весь фон строки смотрелись слишком насыщенно.
+addedBg = "#404036"
+addedContentBg = "#4c4e3b"
+addedSignColor = "#a9b665"        # green
+
+removedBg = "#483735"
+removedContentBg = "#5a3d3a"
+removedSignColor = "#fb4934"      # яркий gruvbox red (не приглушённый material-soft)
 
 [custom_theme.syntax]
+default = "#d4be98"    # fg0
 keyword = "#fb4934"
-string = "#b8bb26"
-comment = "#928374"
-operator = "#fe8019"
-variable = "#ebdbb2"
+string = "#a9b665"     # green
+comment = "#7c6f64"    # grey0 — как в helix ("comment" = "grey0"), не сине-серый
+number = "#d3869b"     # purple, как helix constant.numeric
+function = "#e78a4e"   # orange, как helix function
+property = "#d4be98"   # fg0, без лишнего выделения (alabaster-минимализм)
+type = "#ea6962"       # red, как helix type
+variable = "#d4be98"   # fg0
+operator = "#e78a4e"
+punctuation = "#a89984" # grey2, как helix punctuation
