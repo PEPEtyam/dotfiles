@@ -41,18 +41,23 @@ setopt COMPLETE_IN_WORD
 # ============================================================
 plugins=(
   brew
+  sudo
   git
+  git-lfs
+  tig
   gitfast
   docker
   macos
   you-should-use
   httpie
+  pass
   eza
   docker-compose
   npm
   pre-commit
   kubectl
   python
+  uv
   rust
   zsh-autosuggestions
   fast-syntax-highlighting
@@ -140,6 +145,9 @@ fi
 # Aliases
 # ============================================================
 alias y="yazi"
+alias c="clear"
+alias cla="claude"
+alias clo="codex"
 
 # ============================================================
 # Theme / UI (bat, fzf)
