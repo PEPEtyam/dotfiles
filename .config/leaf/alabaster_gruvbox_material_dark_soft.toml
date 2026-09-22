@@ -1,0 +1,91 @@
+# Alabaster-inspired theme with Gruvbox Material Dark Soft palette
+# Port of ../helix/themes/alabaster_gruvbox_material_dark_soft.toml
+# Backgrounds are "reset" (terminal default) so the terminal stays transparent.
+
+base = "ocean"
+syntax = "base16-ocean.dark"
+
+[ui]
+content_bg = "reset"
+toc_bg = "reset"
+toc_inactive_bg = "reset"
+status_bg = "reset"
+toc_border = "#504945"                   # bg3
+toc_accent = "#e78a4e"                   # orange
+toc_header_fg = "#928374"                # grey1
+toc_hover_fg = "#ddc7a1"                 # fg1
+toc_active_bg = "#504945"                # bg3 — выделение активного пункта должно быть видно
+toc_index_inactive = "#7c6f64"           # grey0
+toc_primary_active = "#ddc7a1"           # fg1
+toc_primary_inactive = "#d4be98"         # fg0
+toc_secondary_inactive = "#7c6f64"       # grey0
+toc_secondary_text_active = "#d4be98"    # fg0
+toc_secondary_text_inactive = "#928374"  # grey1
+scrollbar_hover = "#e78a4e"              # orange
+status_separator = "#928374"             # grey1
+status_brand_fg = "#32302f"              # bg0
+status_brand_bg = "#d8a657"              # yellow — единственный непрозрачный сегмент статусбара
+status_filename_fg = "#d4be98"           # fg0
+status_filename_bg = "reset"
+status_watch_fg = "#a9b665"              # green
+status_watch_bg = "reset"
+status_reloaded_fg = "#32302f"           # bg0
+status_reloaded_bg = "#a9b665"           # green
+status_search_fg = "#d8a657"             # yellow
+status_search_bg = "reset"
+status_success_fg = "#a9b665"            # green
+status_success_bg = "reset"
+status_warning_fg = "#e78a4e"            # orange
+status_error_fg = "#ea6962"              # red
+status_error_bg = "reset"
+status_shortcut_fg = "#7c6f64"           # grey0
+status_percent_fg = "#d8a657"            # yellow
+
+[markdown]
+text = "#d4be98"                         # fg0
+strong_text = "#ddc7a1"                  # fg1
+heading_1 = "#ea6962"                    # red
+heading_2 = "#e78a4e"                    # orange
+heading_3 = "#d8a657"                    # yellow
+heading_4 = "#a9b665"                    # green
+heading_other = "#d4be98"                # fg0 — h5/h6 без цвета, как в helix
+heading_underline = "#504945"            # bg3
+rule = "#504945"                         # bg3
+list_level_1 = "#d4be98"                 # fg0
+list_level_2 = "#a89984"                 # grey2
+list_level_3 = "#928374"                 # grey1
+ordered_list = "#d4be98"                 # fg0
+task_checked = "#a9b665"                 # green
+task_unchecked = "#7c6f64"               # grey0
+blockquote_marker = "#a89984"            # grey2
+blockquote_text = "#a89984"              # grey2 — markup.quote
+inline_code_fg = "#a9b665"               # green — markup.raw
+inline_code_bg = "reset"
+code_frame = "#504945"                   # bg3
+code_label = "#7c6f64"                   # grey0
+code_gutter = "#7c6f64"                  # grey0 — ui.linenr
+table_border = "#504945"                 # bg3
+table_separator = "#504945"              # bg3
+table_header = "#ddc7a1"                 # fg1
+table_cell = "#d4be98"                   # fg0
+link_icon = "#7daea3"                    # blue — голубой ТОЛЬКО на ссылках
+link_text = "#7daea3"                    # blue
+link_hover = "#89b482"                   # aqua
+footnote_ref = "#7daea3"                 # blue
+footnote_text = "#a89984"                # grey2
+search_highlight_bg = "#45403d"          # bg_current_word
+search_match_bg = "#574833"              # bg_visual_yellow
+mark_fg = "#32302f"                      # bg0
+mark_bg = "#98971a"                      # green_string
+latex_inline_fg = "#d3869b"              # purple
+latex_inline_bg = "reset"
+latex_block_fg = "#d3869b"               # purple
+mermaid_keyword = "#e78a4e"              # orange
+mermaid_arrow = "#7daea3"                # blue
+mermaid_label = "#a9b665"                # green
+mermaid_block_fg = "#d4be98"             # fg0
+alert_note = "#7daea3"                   # blue
+alert_tip = "#a9b665"                    # green
+alert_important = "#d3869b"              # purple
+alert_warning = "#d8a657"                # yellow
+alert_caution = "#ea6962"                # red

@@ -1,0 +1,11 @@
+# leaf — https://leaf.rivolink.mg/
+# Путь разрешается относительно этого файла.
+theme = "alabaster_gruvbox_material_dark_soft.toml"
+
+editor = 'hx {$path}:{$line}'
+watch = true
+file-history-length = 50
+code-line-numbers = true
+
+# extras не задаём: пикер показывает только .md. Любой другой файл всё равно
+# открывается напрямую — `leaf main.py`.
