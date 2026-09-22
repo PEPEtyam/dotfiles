@@ -58,6 +58,10 @@ plugins=(
   kubectl
   python
   uv
+  uv-env
+  ruff
+  herdr
+  zsh-uv-env
   rust
   zsh-autosuggestions
   fast-syntax-highlighting
