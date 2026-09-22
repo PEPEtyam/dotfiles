@@ -5,8 +5,10 @@ watch = false
 exclude_untracked = false
 line_numbers = true
 wrap_lines = false
-menu_bar = true
-agent_notes = false
+menu_bar = false
+agent_notes = true
+hunk_headers = false
+cursor_line = "off"
 transparent_background = true
 
 [custom_theme]
