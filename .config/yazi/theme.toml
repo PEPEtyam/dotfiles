@@ -1,3 +1,155 @@
+# Gruvbox Material Alabaster — yazi
+# Источник палитры: ~/.config/palette/PALETTE.md
+#
+# Флейвор gruvbox-material красит в голубой #7daea3 почти весь интерфейс:
+# директории, все рамки попапов, активную вкладку, индикатор режима, права
+# доступа.
+#
+# Директории теперь НЕ фиолетовые: от сплошного #d3869b рябило, потому что
+# в файловом менеджере папок больше всего. Они базового цвета, но жирным —
+# «главное слово» по общему правилу палитры. Цвет оставлен только там, где
+# он несёт информацию: тип содержимого, git-статус, режим, ошибки.
+
 [flavor]
 dark = "gruvbox-material"
 light = "gruvbox-material"
+
+[mgr]
+cwd = { fg = "#ddc7a1", bold = true } # текущий путь — главное слово
+
+# Строка под курсором — тот же светло-серый фон, что выделение в helix,
+# вместо инверсии. Так цвет самого файла остаётся читаемым.
+hovered         = { bg = "#504945" }
+preview_hovered = { bg = "#504945" }
+
+find_keyword  = { fg = "#d8a657", bold = true, italic = true, underline = true }
+find_position = { fg = "#e78a4e", bg = "reset", bold = true, italic = true }
+
+marker_copied   = { fg = "#a9b665", bg = "#a9b665" }
+marker_cut      = { fg = "#ea6962", bg = "#ea6962" }
+marker_marked   = { fg = "#89b482", bg = "#89b482" }
+marker_selected = { fg = "#d8a657", bg = "#d8a657" }
+
+count_copied   = { fg = "#32302f", bg = "#a9b665" }
+count_cut      = { fg = "#32302f", bg = "#ea6962" }
+count_selected = { fg = "#32302f", bg = "#d8a657" }
+
+border_symbol = "│"
+border_style  = { fg = "#504945" }    # bg3 — разделитель панелей, не должен спорить с содержимым
+
+# Подсветка синтаксиса в превью — та же тема, что у bat
+syntect_theme = "~/.config/bat/themes/gruvbox-material-alabaster.tmTheme"
+
+[tabs]
+active   = { fg = "#32302f", bg = "#e78a4e", bold = true }
+inactive = { fg = "#a89984", bg = "#32302f" }
+
+[mode]
+normal_main = { fg = "#32302f", bg = "#e78a4e", bold = true }
+normal_alt  = { fg = "#e78a4e", bg = "#32302f" }
+
+select_main = { fg = "#32302f", bg = "#a9b665", bold = true }
+select_alt  = { fg = "#a9b665", bg = "#32302f" }
+
+unset_main = { fg = "#32302f", bg = "#ea6962", bold = true }
+unset_alt  = { fg = "#ea6962", bg = "#32302f" }
+
+[status]
+perm_sep   = { fg = "#7c6f64" }
+perm_type  = { fg = "#7c6f64" }       # права — вспомогательное, серым
+perm_read  = { fg = "#7c6f64" }
+perm_write = { fg = "#d8a657" }
+perm_exec  = { fg = "#7c6f64" }
+
+progress_label  = { fg = "#ddc7a1", bold = true }
+progress_normal = { fg = "#a9b665", bg = "#45403d" }
+progress_error  = { fg = "#d8a657", bg = "#ea6962" }
+
+[pick]
+border   = { fg = "#928374" }
+active   = { fg = "#e78a4e", bold = true }
+inactive = {}
+
+[input]
+border   = { fg = "#928374" }
+title    = { fg = "#d4be98" }
+value    = {}
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "#928374" }
+
+[tasks]
+border  = { fg = "#928374" }
+title   = { fg = "#d4be98" }
+hovered = { fg = "#e78a4e", bold = true }
+
+[which]
+mask            = { bg = "#32302f" }
+cand            = { fg = "#e78a4e" }  # нажимаемая клавиша — акцент
+rest            = { fg = "#a89984" }
+desc            = { fg = "#d4be98" }
+separator       = "  "
+separator_style = { fg = "#7c6f64" }
+
+[help]
+on      = { fg = "#e78a4e" }
+run     = { fg = "#d4be98" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#32302f", bg = "#d4be98" }
+
+[spot]
+border   = { fg = "#928374" }
+title    = { fg = "#e78a4e" }
+tbl_col  = { fg = "#7c6f64" }
+tbl_cell = { fg = "#d4be98", bg = "#504945" }
+
+[notify]
+title_info  = { fg = "#a9b665" }
+title_warn  = { fg = "#d8a657" }
+title_error = { fg = "#ea6962" }
+
+# Правила и иконки перезаписываются целиком (yazi не сливает массивы),
+# поэтому продублированы полностью.
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#89b482" },
+	{ mime = "{audio,video}/*", fg = "#d8a657" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d3869b" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#a9b665" },
+	{ mime = "vfs/{absent,stale}", fg = "#a89984" },
+	{ url = "*", fg = "#d4be98" },
+	{ url = "*/", fg = "#ddc7a1", bold = true },
+]
+
+[icon]
+dirs = [
+	{ name = ".config", text = "", fg = "#ddc7a1" },
+	{ name = ".git", text = "", fg = "#e78a4e" },
+	{ name = ".github", text = "", fg = "#ddc7a1" },
+	{ name = ".npm", text = "", fg = "#ddc7a1" },
+	{ name = "Desktop", text = "", fg = "#ddc7a1" },
+	{ name = "Development", text = "", fg = "#ddc7a1" },
+	{ name = "Documents", text = "", fg = "#ddc7a1" },
+	{ name = "Downloads", text = "", fg = "#ddc7a1" },
+	{ name = "Library", text = "", fg = "#ddc7a1" },
+	{ name = "Movies", text = "", fg = "#ddc7a1" },
+	{ name = "Music", text = "", fg = "#ddc7a1" },
+	{ name = "Pictures", text = "", fg = "#ddc7a1" },
+	{ name = "Public", text = "", fg = "#ddc7a1" },
+	{ name = "Videos", text = "", fg = "#ddc7a1" },
+]
+conds = [
+	{ if = "orphan", text = "", fg = "#d4be98" },
+	{ if = "link", text = "", fg = "#928374" },
+	{ if = "block", text = "", fg = "#ea6962" },
+	{ if = "char", text = "", fg = "#ea6962" },
+	{ if = "fifo", text = "", fg = "#ea6962" },
+	{ if = "sock", text = "", fg = "#ea6962" },
+	{ if = "sticky", text = "", fg = "#ea6962" },
+	{ if = "dummy", text = "", fg = "#ea6962" },
+
+	{ if = "dir", text = "", fg = "#ddc7a1" },
+	{ if = "exec", text = "", fg = "#a9b665" },
+	{ if = "!dir", text = "", fg = "#d4be98" },
+]
