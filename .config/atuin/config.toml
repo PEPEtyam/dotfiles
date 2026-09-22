@@ -15,8 +15,9 @@ enter_accept = true
 [search]
 filters = ["host", "directory", "session"]
 
-# [theme]
-# name = "gruvbox-dark"
+# Тема из themes/gruvbox-material-alabaster.toml (палитра: ~/.config/palette/)
+[theme]
+name = "gruvbox-material-alabaster"
 
 # [ui]
 # columns = [

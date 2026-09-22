@@ -1,0 +1,22 @@
+# Gruvbox Material Alabaster — atuin
+# Палитра: ~/.config/palette/PALETTE.md
+#
+# Important — акцент и выделенная строка: зелёный.
+# Annotation — метаданные строки (время, длительность, код возврата):
+#   коричнево-серый.
+# AlertInfo раньше был голубым — но именно эта роль красит время в списке
+# истории, а время нигде в системе не должно быть голубым, поэтому жёлтый.
+[theme]
+name = "Gruvbox Material Alabaster"
+parent = "default"
+
+[colors]
+Base = "#d4be98"        # fg0    — текст команды
+Important = "#a9b665"   # green  — акцент, выделение текущей строки
+Title = "#ddc7a1"       # fg1    — заголовок
+Guidance = "#7c6f64"    # grey0  — подсказки по клавишам
+Annotation = "#928374"  # grey1  — время, длительность, метаданные
+Muted = "#7c6f64"       # grey0  — приглушённое
+AlertInfo = "#d8a657"   # yellow — время/информация (раньше голубой)
+AlertWarn = "#d8a657"   # yellow — предупреждение
+AlertError = "#cc241d"  # red
