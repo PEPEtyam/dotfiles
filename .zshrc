@@ -179,9 +179,9 @@ export LS_COLORS="di=38;2;124;111;100:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color=fg:-1,bg:-1,hl:
-  --color=fg+:#f9f5d7,bg+:#282828,hl+:#f9f5d7
-  --color=info:#98971a,prompt:#b8bb26,pointer:#c34043
+  --color=fg:#d4be98,bg:-1,hl:#98971a
+  --color=fg+:#ddc7a1,bg+:-1,hl+:#98971a
+  --color=info:#98971a,prompt:#b8bb26,pointer:#cc241d
   --color=marker:#d79921,spinner:#458588,header:#cc241d'
 
 # Local Atuin history search. Ctrl-R opens the interactive command menu.
