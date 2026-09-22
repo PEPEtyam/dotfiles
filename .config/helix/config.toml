@@ -113,6 +113,9 @@ X = "extend_line_above"
 # g+b — git blame текущей строки: коммит (название/дата/автор), который её
 # последний раз менял, + файлы и строки, изменённые в этом коммите.
 b = ":sh ~/.config/helix/bin/hx-blame-info %{cursor_line} \"%{buffer_name}\""
+# g+l — вся история строки: все коммиты, менявшие её, от новых к старым
+# (коммит, автор, дата, название) — аналог "Show History" в PyCharm blame.
+l = ":sh ~/.config/helix/bin/hx-blame-log %{cursor_line} \"%{buffer_name}\""
 
 [keys.select]
 Cmd-r = ":reload-all"
