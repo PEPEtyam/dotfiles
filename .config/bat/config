@@ -1,0 +1,7 @@
+# bat — Gruvbox Material Alabaster
+# Тема лежит в themes/gruvbox-material-alabaster.tmTheme.
+# После правки темы: bat cache --build
+# bat регистрирует тему по имени файла, а не по тегу <name> внутри .tmTheme
+--theme="gruvbox-material-alabaster"
+--style=numbers,changes,header
+--italic-text=always

@@ -1,0 +1,27 @@
+# Gruvbox Material Alabaster — base16 scheme
+# Машиночитаемая версия PALETTE.md. Совместима с base16-builder / tinted-theming.
+# Голубой base0D допустим только для ссылок и сносок.
+scheme: "Gruvbox Material Alabaster"
+author: "derived from alabaster_gruvbox_material_dark_soft (helix)"
+base00: "32302f" # bg0    — фон редактора
+base01: "3c3836" # bg1    — приподнятый фон, фон терминала
+base02: "504945" # bg3    — выделение, активная строка
+base03: "7c6f64" # grey0  — комментарии, вспомогательное, неактивное
+base04: "928374" # grey1  — метаданные, даты, размеры
+base05: "d4be98" # fg0    — БАЗОВЫЙ текст, переменные, операторы, keywords
+base06: "ddc7a1" # fg1    — главные слова, выделение, активная обводка
+base07: "f9f5d7" # white  — максимально светлый; в ANSI-слот 15 НЕ идёт (там fg1)
+base08: "ea6962" # red    — классы, типы, ошибки, removed
+base09: "e78a4e" # orange — функции, фокус, курсор
+base0A: "d8a657" # yellow — докстринги, многострочные комментарии
+base0B: "a9b665" # green  — строки в кавычках, успех, added
+base0C: "89b482" # sage   — аннотации (ANSI cyan)
+base0D: "7daea3" # blue   — ТОЛЬКО ссылки и сноски (в ANSI-слот 4 не идёт)
+base0E: "d3869b" # purple — константы
+base0F: "bdae93" # beige  — параметры, атрибуты
+
+# Дополнительные оттенки вне base16
+extra:
+  orange_light: "f0a878" # макросы — светлее обычных функций
+  grey2: "a89984"        # пунктуация, номера строк
+  magenta: "b27085"      # ANSI magenta, merged

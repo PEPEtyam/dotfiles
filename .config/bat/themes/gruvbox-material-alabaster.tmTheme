@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Gruvbox Material Alabaster — bat / syntect
+  Портирован с ~/.config/helix/themes/alabaster_gruvbox_material_dark_soft.toml
+  Палитра: ~/.config/palette/PALETTE.md — голубой только для ссылок.
+
+  Alabaster-принцип: ключевые слова, операторы, переменные и скобки
+  намеренно окрашены в цвет обычного текста. Цвет тратится только на то,
+  что несёт информацию: функции, типы, строки, числа, комментарии.
+
+  Пересобрать кэш после правки: bat cache, ключ build.
+-->
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Gruvbox Material Alabaster</string>
+	<key>semanticClass</key>
+	<string>theme.dark.gruvbox_material_alabaster</string>
+	<key>uuid</key>
+	<string>b8f3c1a2-4d6e-4b9a-9c1f-7a2e5d8b3c40</string>
+	<key>colorSpaceName</key>
+	<string>sRGB</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#32302f</string>
+				<key>foreground</key>
+				<string>#d4be98</string>
+				<key>caret</key>
+				<string>#e78a4e</string>
+				<key>lineHighlight</key>
+				<string>#3c3836</string>
+				<key>selection</key>
+				<string>#504945</string>
+				<key>invisibles</key>
+				<string>#504945</string>
+				<key>gutter</key>
+				<string>#32302f</string>
+				<key>gutterForeground</key>
+				<string>#7c6f64</string>
+			</dict>
+		</dict>
+
+		<!-- Комментарии — grey0, как helix "comment" -->
+		<dict>
+			<key>name</key><string>Comment</string>
+			<key>scope</key><string>comment, punctuation.definition.comment</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#7c6f64</string>
+			</dict>
+		</dict>
+		<!-- Блочные комментарии и docstring — yellow -->
+		<dict>
+			<key>name</key><string>Block comment / docstring</string>
+			<key>scope</key><string>comment.block, comment.block.documentation, string.quoted.docstring</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d8a657</string>
+			</dict>
+		</dict>
+
+		<!-- Строки — green -->
+		<dict>
+			<key>name</key><string>String</string>
+			<key>scope</key><string>string, string.quoted, punctuation.definition.string</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a9b665</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Regexp</string>
+			<key>scope</key><string>string.regexp</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a9b665</string>
+			</dict>
+		</dict>
+		<!-- Escape-последовательности — без выделения, как helix -->
+		<dict>
+			<key>name</key><string>Escape</string>
+			<key>scope</key><string>constant.character.escape</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+
+		<!-- Числа и константы — purple -->
+		<dict>
+			<key>name</key><string>Number / constant</string>
+			<key>scope</key><string>constant.numeric, constant.language, constant.other, support.constant</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d3869b</string>
+			</dict>
+		</dict>
+
+		<!-- Ключевые слова, операторы, storage — цвет обычного текста -->
+		<dict>
+			<key>name</key><string>Keyword / operator (alabaster: без цвета)</string>
+			<key>scope</key><string>keyword, keyword.control, keyword.operator, storage, storage.type, storage.modifier</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+
+		<!-- Переменные, поля, модули — цвет обычного текста -->
+		<dict>
+			<key>name</key><string>Variable (alabaster: без цвета)</string>
+			<key>scope</key><string>variable, variable.other, variable.other.member, variable.language, meta.module, entity.name.namespace, entity.name.module</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+		<!-- Параметры — beige, отличаются от обычного текста едва заметно -->
+		<dict>
+			<key>name</key><string>Parameter</string>
+			<key>scope</key><string>variable.parameter, entity.name.variable.parameter</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#bdae93</string>
+			</dict>
+		</dict>
+
+		<!-- Функции — orange, главный акцент -->
+		<dict>
+			<key>name</key><string>Function</string>
+			<key>scope</key><string>entity.name.function, support.function, meta.function-call, variable.function</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#e78a4e</string>
+			</dict>
+		</dict>
+		<!-- Макросы — светлее обычных функций -->
+		<dict>
+			<key>name</key><string>Macro</string>
+			<key>scope</key><string>support.macro, entity.name.function.macro, support.function.macro, meta.preprocessor, meta.macro</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#f0a878</string>
+			</dict>
+		</dict>
+
+		<!-- Типы, классы, конструкторы — red -->
+		<dict>
+			<key>name</key><string>Type / class</string>
+			<key>scope</key><string>entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.other.inherited-class, support.type, support.class</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#ea6962</string>
+			</dict>
+		</dict>
+
+		<!-- HTML/XML теги — orange, как функции -->
+		<dict>
+			<key>name</key><string>Tag</string>
+			<key>scope</key><string>entity.name.tag, punctuation.definition.tag</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#e78a4e</string>
+			</dict>
+		</dict>
+		<!-- Атрибуты — цвет обычного текста -->
+		<dict>
+			<key>name</key><string>Attribute</string>
+			<key>scope</key><string>entity.other.attribute-name</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+		<!-- Аннотации/декораторы — sage -->
+		<dict>
+			<key>name</key><string>Annotation / decorator</string>
+			<key>scope</key><string>meta.annotation, meta.decorator, punctuation.definition.annotation, variable.annotation</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#89b482</string>
+			</dict>
+		</dict>
+
+		<!-- Пунктуация — grey2; скобки — цвет текста, для читаемости -->
+		<dict>
+			<key>name</key><string>Punctuation</string>
+			<key>scope</key><string>punctuation, punctuation.separator, punctuation.terminator, punctuation.accessor</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a89984</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Bracket</string>
+			<key>scope</key><string>punctuation.section, meta.brace, punctuation.definition.parameters, punctuation.definition.arguments</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+
+		<!-- Ключи в JSON/YAML/TOML — orange (это структура, а не значение) -->
+		<dict>
+			<key>name</key><string>Mapping key</string>
+			<key>scope</key><string>support.type.property-name, meta.mapping.key string, entity.name.tag.yaml, keyword.key</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#e78a4e</string>
+			</dict>
+		</dict>
+
+		<!-- Markdown -->
+		<dict>
+			<key>name</key><string>Markdown heading (fallback)</string>
+			<key>scope</key><string>markup.heading, entity.name.section</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown heading 1</string>
+			<key>scope</key><string>markup.heading.1, markup.heading.setext.1</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#ea6962</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown heading 2</string>
+			<key>scope</key><string>markup.heading.2, markup.heading.setext.2</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#e78a4e</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown heading 3</string>
+			<key>scope</key><string>markup.heading.3</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d8a657</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown heading 4</string>
+			<key>scope</key><string>markup.heading.4</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a9b665</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown bold</string>
+			<key>scope</key><string>markup.bold</string>
+			<key>settings</key><dict>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown italic</string>
+			<key>scope</key><string>markup.italic</string>
+			<key>settings</key><dict>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown raw / code</string>
+			<key>scope</key><string>markup.raw, markup.inline.raw</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a9b665</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown link</string>
+			<key>scope</key><string>markup.underline.link, string.other.link, meta.link, constant.other.reference.link</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#7daea3</string>
+				<key>fontStyle</key><string>underline</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown quote</string>
+			<key>scope</key><string>markup.quote</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a89984</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Markdown list</string>
+			<key>scope</key><string>markup.list, punctuation.definition.list_item</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d4be98</string>
+			</dict>
+		</dict>
+
+		<!-- Диффы: цвет несёт знак и текст, фон едва тонирован -->
+		<dict>
+			<key>name</key><string>Diff inserted</string>
+			<key>scope</key><string>markup.inserted, meta.diff.header.to-file</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#a9b665</string>
+				<key>background</key><string>#3a4a30</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Diff deleted</string>
+			<key>scope</key><string>markup.deleted, meta.diff.header.from-file</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#ea6962</string>
+				<key>background</key><string>#4d2e2c</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Diff changed</string>
+			<key>scope</key><string>markup.changed</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d8a657</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Diff range / header</string>
+			<key>scope</key><string>meta.diff.range, meta.diff.header</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#928374</string>
+			</dict>
+		</dict>
+
+		<!-- Ошибки -->
+		<dict>
+			<key>name</key><string>Invalid</string>
+			<key>scope</key><string>invalid, invalid.illegal</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#ea6962</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>Deprecated</string>
+			<key>scope</key><string>invalid.deprecated</string>
+			<key>settings</key><dict>
+				<key>foreground</key><string>#d8a657</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
