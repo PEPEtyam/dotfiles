@@ -1,3 +1,4 @@
+onboarding = false
 [theme]
 name = "terminal"
 auto_switch = false
@@ -34,7 +35,19 @@ show_agent_labels_on_pane_borders = true
 hide_tab_bar_when_single_tab = true
 accent = "#d4be98"
 
-agent_panel_sort = "spaces"
+sidebar_start_collapsed = true
+sidebar_collapsed_mode = "hidden"
+
+# agent_panel_sort = "spaces"
+
+status_indicators = "symbols"
+[ui.sidebar.spaces]
+row_gap = 1
+rows = [["state_icon", "workspace"]]
+
+[ui.sidebar.agents]
+row_gap = 1
+rows = [["state_icon", "workspace", "tab"], ["pane", "agent"]]
 
 [keys]
 prefix = "ctrl+a"
