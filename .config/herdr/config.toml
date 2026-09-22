@@ -2,9 +2,29 @@
 name = "terminal"
 auto_switch = false
 
+# Палитра и роли: ~/.config/palette/PALETTE.md
+# accent   — обводка активной панели: базовый цвет текста
+# overlay0 — обводка неактивных панелей: коричнево-серый
 [theme.custom]
-panel_bg = "reset"
-accent = "#ddc7a1"
+panel_bg = "reset"          # прозрачный фон, наследует терминал
+
+accent = "#d4be98"          # fg0 — активная область
+overlay0 = "#7c6f64"        # grey0 — неактивное, вспомогательное
+overlay1 = "#928374"        # grey1 — метаданные
+text = "#d4be98"            # fg0 — обычный текст
+subtext0 = "#928374"        # grey1 — второстепенный текст
+
+surface_dim = "#32302f"     # bg0
+surface0 = "#3c3836"        # bg1
+surface1 = "#504945"        # bg3 — выделение
+
+red = "#ea6962"
+green = "#a9b665"
+yellow = "#d8a657"
+peach = "#e78a4e"           # orange — фокус
+mauve = "#d3869b"           # purple — константы
+blue = "#7daea3"            # только ссылки
+teal = "#89b482"            # sage
 
 [ui.toast]
 delivery = "herdr"
@@ -12,7 +32,7 @@ delivery = "herdr"
 [ui]
 show_agent_labels_on_pane_borders = true
 hide_tab_bar_when_single_tab = true
-accent = "#ddc7a1"
+accent = "#d4be98"
 
 agent_panel_sort = "spaces"
 
