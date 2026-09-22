@@ -12,6 +12,9 @@
 "comment.block" = "yellow"
 "comment.documentation" = "yellow"
 "string.docstring" = "yellow"
+"string.documentation" = "yellow"    # Питоновские """...""" — через runtime/queries/python
+"comment.line.documentation" = "yellow"
+"comment.block.documentation" = "yellow"
 "variable" = "fg0"                     # Переменные - обычный текст
 "variable.builtin" = "fg0"             # Встроенные переменные - без выделения
 "variable.parameter" = "beige_attr"    # Параметры (объявление + использование) - песочно-тусклый, отличается от серого инлей-хинта
@@ -29,34 +32,35 @@
 # "function" = {fg = "fg0", modifiers = ["bold"]}                     # Функции/методы - темно-синий
 "function" = "orange"
 "function.builtin" = "orange"          # Встроенные функции - тоже синий
-"function.macro" = "blue_func"         # Макросы - синий
+"function.macro" = "orange_light"      # Макросы (println!) - светлее обычных функций
 "tag" = "orange"                       # HTML/XML теги - оранжевый
 "namespace" = "fg0"                    # Пространства имен - обычный текст (было red, дублировало "type")
 "attribute" = "fg0"                    # Атрибуты - обычный текст
 "constructor" = "red"                  # Конструкторы - как "type" (тот же класс, та же роль → тот же цвет)
 "module" = "fg0"                       # Модули - обычный текст
-"special" = "green_annotation"         # Специальные элементы - обычный текст
+"special" = "#98971a"                  # Аннотации/спецэлементы + подсветка совпадений в picker (ohmyposh green, темнее helix-зелёного)
 
 # Markdown - минимальное оформление
 "markup.heading.marker" = "grey2"
-"markup.heading.1" = { fg = "orange", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "red", modifiers = ["bold"] }
 "markup.heading.2" = { fg = "orange", modifiers = ["bold"] }
-"markup.heading.3" = { fg = "orange", modifiers = ["bold"] }
-"markup.heading.4" = { fg = "fg0", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "green", modifiers = ["bold"] }
 "markup.heading.5" = { fg = "fg0", modifiers = ["bold"] }
 "markup.heading.6" = { fg = "fg0", modifiers = ["bold"] }
 "markup.list" = "fg0"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }   # голубой ТОЛЬКО здесь
+"markup.link.label" = "blue"                                      # сноски
 "markup.link.text" = "fg0"
 "markup.quote" = "grey2"
 "markup.raw" = "green"
 
 # Diff
-"diff.plus" = "bg_green"
-"diff.delta" = "bg_yellow"
-"diff.minus" = "bg_red"
+"diff.plus" = "green"
+"diff.delta" = "yellow"
+"diff.minus" = "red"
 
 # UI - сохраняем вашу конфигурацию
 "ui.background" = {}
@@ -64,7 +68,7 @@
 "ui.cursor" = { fg = "bg0", bg = "fg0" }
 "ui.cursor.match" = { fg = "orange", bg = "bg_visual_yellow" }
 "ui.cursor.insert" = { fg = "bg0", bg = "grey2" }
-"ui.cursor.select" = { fg = "bg0", bg = "blue" }
+"ui.cursor.select" = { fg = "bg0", bg = "orange" }
 "ui.cursorline.primary" = { bg = "bg1" }
 "ui.cursorline.secondary" = { bg = "bg1" }
 "ui.selection" = { bg = "bg3" }
@@ -74,7 +78,7 @@
 "ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
 "ui.statusline.normal" = { fg = "bg0", bg = "fg0", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "bg0", bg = "yellow", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "bg0", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg0", bg = "orange", modifiers = ["bold"] }
 "ui.bufferline" = { fg = "grey0", bg = "bg1" }
 "ui.bufferline.active" = { fg = "fg0", bg = "bg3", modifiers = ["bold"] }
 "ui.popup" = { fg = "grey2" }
@@ -87,17 +91,17 @@
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
 "ui.virtual.inlay-hint" = { fg = "grey0", modifiers = ["italic"]}
-"ui.virtual.inlay-hint.parameter" = { fg = "grey1" }
+"ui.virtual.inlay-hint.parameter" = { fg = "grey0", modifiers = ["italic"] }
 "ui.virtual.inlay-hint.type" = { fg = "grey0" }
 "ui.virtual.ruler" = { bg = "bg0" }
 
 # Diagnostics
-"hint" = "bg_blue"
+"hint" = "bg_purple"
 "info" = "bg_yellow"
 "warning" = "bg_orange"
 "error" = "bg_red"
 "diagnostic" = { underline = { style = "curl" } }
-"diagnostic.hint" = { underline = { color = "bg_blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "bg_purple", style = "curl" } }
 "diagnostic.info" = { underline = { color = "bg_yellow", style = "curl" } }
 "diagnostic.warning" = { underline = { color = "bg_orange", style = "curl" } }
 "diagnostic.error" = { underline = { color = "bg_red", style = "curl" } }
@@ -116,8 +120,8 @@ bg_diff_green = "#3d4220"
 bg_visual_green = "#424a3e"
 bg_diff_red = "#472322"
 bg_visual_red = "#543937"
-bg_diff_blue = "#0f3a42"
-bg_visual_blue = "#404946"
+bg_diff_purple = "#3f3040"   # был bg_diff_blue #0f3a42 — единственный холодный цвет темы
+bg_visual_purple = "#463f47" # был bg_visual_blue #404946
 bg_visual_yellow = "#574833"
 bg_current_word = "#45403d"
 
@@ -128,8 +132,9 @@ red = "#ea6962"
 orange = "#e78a4e"
 yellow = "#d8a657"
 green = "#a9b665"
-aqua = "#89b482"
-blue = "#7daea3"
+aqua = "#89b482"               # base0C — шалфейный, аннотации
+blue = "#7daea3"               # base0D — ТОЛЬКО ссылки и сноски
+orange_light = "#f0a878"       # макросы — на пару оттенков светлее orange
 purple = "#d3869b"
 white = "#f9f5d7"
 
@@ -138,7 +143,7 @@ bg_orange = "#c5733f"
 bg_yellow = "#b88d45"
 bg_green = "#8f9a54"
 bg_aqua = "#6f9669"
-bg_blue = "#649088"
+bg_muted_purple = "#8f6b7c"    # был bg_blue #649088
 bg_purple = "#b27085"
 
 grey0 = "#7c6f64"
@@ -149,7 +154,6 @@ green_comment = "#629755"      # Comments
 orange_keyword = "#cc7832"     # Keywords, tags, escape sequences
 green_string = "#98971A"       # Strings
 pink_const = "#C77F92"         # Numbers and constants
-blue_func = "#83A598"          # Functions
 beige_attr = "#bdae93"         # Attributes
 yellow_entity = "#D79921"      # Global definitions and properties
 green_annotation = "#81AE70"   # Annotations
