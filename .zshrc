@@ -168,6 +168,16 @@ leaf() {
 # ============================================================
 export BAT_THEME="gruvbox-dark"
 
+# oh-my-zsh (lib/theme-and-appearance.zsh) задаёт LSCOLORS/LS_COLORS с ярким
+# зелёным для директорий (Gx...) — эти коды просвечивают в fzf-tab превью
+# (ls -la с --ansi). Переопределяем директории на приглушённый серо-коричневый.
+export LSCOLORS="dxfxcxdxbxegedabagacad"
+export LS_COLORS="di=38;2;124;111;100:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+# oh-my-zsh/lib/completion.zsh ставит `list-colors ''` (пусто) — это должно
+# читать $LS_COLORS напрямую, но фиксируем явно, чтобы меню автодополнения
+# (Tab по каталогам/командам) точно брало наши цвета, а не яркие дефолтные.
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:-1,bg:-1,hl:
   --color=fg+:#f9f5d7,bg+:#282828,hl+:#f9f5d7
