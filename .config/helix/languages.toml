@@ -295,9 +295,9 @@ json.format.enable = true
 [[language]]
 name = "markdown"
 scope = "source.md"
-text-width = 100
+text-width = 200
 soft-wrap.enable = true
-soft-wrap.wrap-at-text-width = true
+# soft-wrap.wrap-at-text-width = true
 injection-regex = "md|markdown"
 file-types = ["md", "markdown", "PULLREQ_EDITMSG", "README"]
 language-servers = ["marksman"]
