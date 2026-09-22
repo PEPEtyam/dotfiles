@@ -11,6 +11,7 @@ final_space = true
 [palette]
   bg = '#282828'
   fg = '#ebdbb2'
+  fg1 = '#ddc7a1'
   yellow = '#d79921'
   cyan = '#458588'
   darkblue = '#076678'
@@ -18,7 +19,7 @@ final_space = true
   orange = '#d65d0e'
   magenta = '#b16286'
   blue = '#458588'
-  red = '#c34043'
+  red = '#cc241d'
   gray = '#A89984'
 
 # Цветовая палитра Kanagawa-paper-ink
@@ -71,7 +72,7 @@ final_space = true
   # Полный путь к файлу
   [[blocks.segments]]
     template = '{{ .Path }} '
-    foreground = 'p:fg'
+    foreground = 'p:fg1'
     type = 'path'
     style = 'plain'
 
@@ -84,7 +85,7 @@ final_space = true
     # foreground = 'p:red'
     # type = 'git'
     # style = 'plain'
-    template = 'git:(<red><b>{{ .HEAD }}</b></>) '
+    template = 'git:(<p:red>{{ .HEAD }}</>) '
     foreground = 'p:yellow'
     type = 'git'
     style = 'plain'
