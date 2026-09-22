@@ -29,7 +29,7 @@ window-decoration = true
 background-opacity = 0.8
 macos-window-shadow = false
 
-theme = gruvbox_dark.conf
+theme = gruvbox_material_alabaster.conf
 #theme = GruvboxDark
 #theme = Ayu Mirage
 #theme = Kanagawa Wave
