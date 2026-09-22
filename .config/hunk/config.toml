@@ -10,47 +10,169 @@ agent_notes = false
 transparent_background = true
 
 [custom_theme]
-# base был "github-dark-default" — синие/серые UI-цвета GitHub Dark конфликтовали
-# с прикрученной поверх gruvbox-палитрой (панель, added/removed, границы), из-за
-# этого всё "слипалось". gruvbox-dark-soft — тот же base, что и Gruvbox Material
-# Dark Soft в helix, поэтому диффы и подсветка синтаксиса теперь согласованы.
+# base = gruvbox-dark-soft — тот же base, что у helix-темы
+# alabaster_gruvbox_material_dark_soft. Полная палитра и роли:
+# ~/.config/palette/PALETTE.md
 base = "gruvbox-dark-soft"
-label = "Gruvbox Material"
-accent = "#e78a4e"
+label = "Gruvbox Material Alabaster"
+accent = "#e78a4e"          # orange — фокус
+accentMuted = "#bdae93"     # приглушённый акцент
 
-# Общий фон/панели — вся палитра из alabaster_gruvbox_material_dark_soft.toml,
-# чтобы не осталось синевато-серых остатков от base-темы.
-background = "#32302f"   # bg0
-panel = "#32302f"        # bg0
-panelAlt = "#3c3836"      # bg1
-border = "#504945"        # bg3
-text = "#d4be98"          # fg0
-muted = "#928374"         # grey1
-noteBorder = "#d3869b"     # purple
-lineNumberFg = "#a89984"   # grey2
+background = "#32302f"      # bg0
+panel = "#32302f"           # bg0
+panelAlt = "#3c3836"        # bg1
+border = "#504945"          # bg3
+text = "#d4be98"            # fg0 — базовый текст
+muted = "#7c6f64"           # grey0 — вспомогательное, неосновное
+noteBorder = "#7daea3"      # голубой уместен: заметка = сноска
+noteBackground = "#3c3836"      # bg1 — без этого поля agent notes
+noteTitleBackground = "#504945" # bg3 — брали яркий дефолт базовой темы
+noteTitleText = "#d4be98"       # fg0, не белый
+lineNumberFg = "#7c6f64"    # grey0 — номера строк вспомогательны
+lineNumberBg = "#32302f"
 
-# Добавления и удаления — раньше строка ("+"/"-") была нормального цвета, а
-# фон вокруг текста оставался слишком ярким/алым и не сочетался. Теперь фон
-# строки и фон изменённого фрагмента — приглушённые оттенки той же палитры
-# (смешение bg0 с зелёным/красным), а не готовые "яркие" бейджевые цвета
-# helix, которые на весь фон строки смотрелись слишком насыщенно.
-addedBg = "#404036"
-addedContentBg = "#4c4e3b"
+# Активная строка / выбранный хунк — тот же светло-серый, что выделение
+# в helix (ui.selection = bg3). Он ложится поверх фона диффа, но не гасит
+# его: зелёный/красный подложки остаются различимы, поэтому при переходе
+# по строкам +/- по-прежнему видно, что к чему относится.
+selectedHunk = "#504945"
+
+# Диффы — насыщенный фон, чтобы added/removed читались периферийным
+# зрением. Знак "+"/"−" и текст остаются цветными.
+addedBg = "#3a4a30"
+addedContentBg = "#4f6640"
 addedSignColor = "#a9b665"        # green
 
-removedBg = "#483735"
-removedContentBg = "#5a3d3a"
-removedSignColor = "#fb4934"      # яркий gruvbox red (не приглушённый material-soft)
+removedBg = "#4d2e2c"
+removedContentBg = "#6b3a36"
+removedSignColor = "#cc241d"      # red из палитры
 
-[custom_theme.syntax]
-default = "#d4be98"    # fg0
-keyword = "#fb4934"
-string = "#a9b665"     # green
-comment = "#7c6f64"    # grey0 — как в helix ("comment" = "grey0"), не сине-серый
-number = "#d3869b"     # purple, как helix constant.numeric
-function = "#e78a4e"   # orange, как helix function
-property = "#d4be98"   # fg0, без лишнего выделения (alabaster-минимализм)
-type = "#ea6962"       # red, как helix type
-variable = "#d4be98"   # fg0
-operator = "#e78a4e"
-punctuation = "#a89984" # grey2, как helix punctuation
+movedAddedBg = "#333a2c"
+movedRemovedBg = "#3f2b29"
+contextBg = "#32302f"
+contextContentBg = "#3c3836"
+
+badgeAdded = "#a9b665"
+badgeRemoved = "#cc241d"
+badgeNeutral = "#7c6f64"
+
+fileNew = "#a9b665"
+fileDeleted = "#cc241d"
+fileRenamed = "#d8a657"
+fileModified = "#e78a4e"
+fileUntracked = "#7c6f64"
+
+# Точные Shiki-скоупы. Прежний [custom_theme.syntax] покрывал всего 11
+# ролей, из-за чего подскоупы вроде variable.other.readwrite проваливались
+# в базовую тему и красились в голубой. Здесь перечислены явно.
+[custom_theme.syntax_scopes]
+# --- Базовый текст: переменные, ключевые слова, операторы, скобки ---
+"source" = "#d4be98"
+"variable" = "#d4be98"
+"variable.other" = "#d4be98"
+"variable.other.readwrite" = "#d4be98"
+"variable.other.member" = "#d4be98"
+"variable.other.property" = "#d4be98"
+"variable.other.object" = "#d4be98"
+"variable.other.constant" = "#d3869b"
+"variable.language" = "#d4be98"
+"support.variable" = "#d4be98"
+"support.variable.property" = "#d4be98"
+"keyword" = "#d4be98"
+"keyword.control" = "#d4be98"
+"keyword.operator" = "#d4be98"
+"keyword.other" = "#d4be98"
+"storage" = "#d4be98"
+"storage.type" = "#d4be98"
+"storage.modifier" = "#d4be98"
+# MagicPython даёt более специфичные *.python-скоупы для самих ключевых
+# слов class/def/if/else/for/in/with — они побеждают правила выше по
+# специфичности TextMate, поэтому дублируем явно (см. также функции/строки)
+"storage.type.class.python" = "#d4be98"
+"storage.type.function.python" = "#d4be98"
+"keyword.control.flow.python" = "#d4be98"
+"keyword.control.import.python" = "#d4be98"
+"entity.name.namespace" = "#d4be98"
+"entity.name.module" = "#d4be98"
+"meta.brace" = "#d4be98"
+"constant.character.escape" = "#d4be98"
+
+# --- Параметры — едва отличимый тёплый нейтральный ---
+"variable.parameter" = "#bdae93"
+"entity.other.attribute-name" = "#d4be98"
+
+# --- Функции — оранжевый; макросы на пару оттенков светлее ---
+"entity.name.function" = "#e78a4e"
+"support.function" = "#e78a4e"
+"variable.function" = "#e78a4e"
+"meta.function-call" = "#e78a4e"
+"entity.name.tag" = "#e78a4e"
+"support.type.property-name" = "#e78a4e"
+"support.macro" = "#f0a878"
+"entity.name.function.macro" = "#f0a878"
+"support.function.macro" = "#f0a878"
+"meta.preprocessor" = "#f0a878"
+# MagicPython (grammar Shiki реально использует для .py) даёт более
+# специфичные *.python-скоупы, которые побеждают наши общие правила выше
+# по специфичности TextMate — поэтому дублируем явно
+"entity.name.function.python" = "#e78a4e"
+"meta.function-call.generic.python" = "#e78a4e"
+
+# --- Строки в кавычках — зелёный ---
+"string" = "#a9b665"
+"string.quoted" = "#a9b665"
+"string.quoted.single" = "#a9b665"
+"string.quoted.double" = "#a9b665"
+"string.template" = "#a9b665"
+"string.regexp" = "#a9b665"
+"string.quoted.single.python" = "#a9b665"
+"string.quoted.multi.python" = "#a9b665"
+
+# --- Обычные комментарии — коричнево-серый ---
+"comment" = "#7c6f64"
+"comment.line" = "#7c6f64"
+"punctuation.definition.comment" = "#7c6f64"
+
+# --- Докстринги и многострочные комментарии — жёлтый ---
+"comment.block" = "#d8a657"
+"comment.block.documentation" = "#d8a657"
+"comment.line.documentation" = "#d8a657"
+"string.quoted.docstring" = "#d8a657"
+"string.quoted.docstring.multi.python" = "#d8a657"
+
+# --- Константы и числа — фиолетовый ---
+"constant" = "#d3869b"
+"constant.numeric" = "#d3869b"
+"constant.language" = "#d3869b"
+"constant.other" = "#d3869b"
+"support.constant" = "#d3869b"
+
+# --- Классы и типы — красный из палитры ---
+"entity.name.type" = "#ea6962"
+"entity.name.class" = "#ea6962"
+"entity.name.type.class.python" = "#ea6962"
+"entity.name.struct" = "#ea6962"
+"entity.name.enum" = "#ea6962"
+"entity.other.inherited-class" = "#ea6962"
+"support.type" = "#ea6962"
+"support.class" = "#ea6962"
+
+# --- Пунктуация ---
+"punctuation" = "#a89984"
+"punctuation.separator" = "#a89984"
+"punctuation.terminator" = "#a89984"
+"punctuation.accessor" = "#a89984"
+
+# --- Аннотации, ссылки ---
+"meta.annotation" = "#89b482"
+"meta.decorator" = "#89b482"
+"markup.underline.link" = "#7daea3"
+
+# --- Markdown: лестница заголовков ---
+"markup.heading" = "#d4be98"
+"markup.heading.1" = "#cc241d"
+"markup.heading.2" = "#e78a4e"
+"markup.heading.3" = "#d8a657"
+"markup.heading.4" = "#a9b665"
+"markup.raw" = "#a9b665"
+"markup.quote" = "#7c6f64"
