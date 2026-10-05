@@ -100,11 +100,6 @@
 "info" = "bg_yellow"
 "warning" = "bg_orange"
 "error" = "bg_red"
-"diagnostic" = { underline = { style = "curl" } }
-"diagnostic.hint" = { underline = { color = "bg_purple", style = "curl" } }
-"diagnostic.info" = { underline = { color = "bg_yellow", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "bg_orange", style = "curl" } }
-"diagnostic.error" = { underline = { color = "bg_red", style = "curl" } }
 
 [palette]
 bg0 = "#32302f"
