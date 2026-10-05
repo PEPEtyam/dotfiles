@@ -50,7 +50,7 @@ row_gap = 1
 rows = [["state_icon", "workspace", "tab"], ["pane", "agent"]]
 
 [keys]
-prefix = "ctrl+a"
+prefix = "alt+space"
 # --- панели ---
 close_pane = "prefix+w"
 resize_mode = "prefix+x"
