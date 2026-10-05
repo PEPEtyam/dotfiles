@@ -41,7 +41,6 @@ setopt COMPLETE_IN_WORD
 # ============================================================
 plugins=(
   brew
-  sudo
   git
   git-lfs
   tig
@@ -93,6 +92,10 @@ fi
 bindkey '^ ' autosuggest-accept
 bindkey '^[[27;2;13~' autosuggest-execute
 bindkey '^[[27;5;13~' autosuggest-execute
+_enable_modify_other_keys() { print -n '\e[>4;1m' }
+_disable_modify_other_keys() { print -n '\e[>4;0m' }
+precmd_functions+=(_enable_modify_other_keys)
+preexec_functions+=(_disable_modify_other_keys)
 bindkey '^[[91;5u' up-line-or-history       # Ctrl+[ via CSI-u capable terminals
 bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[ via CSI-u capable terminals
 bindkey '^]' down-line-or-history           # Ctrl+]
