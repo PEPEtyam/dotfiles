@@ -1,0 +1,64 @@
+version = 4
+final_space = true
+
+[transient_prompt]
+  template = '<b>></b> '
+  foreground = 'green'
+  background = 'transparent'
+
+[upgrade]
+  source = 'cdn'
+  interval = '168h'
+  auto = false
+  notice = false
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '<b>{{ .Venv }}</b> '
+    foreground = 'green'
+    type = 'python'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '{{ .Path }} '
+    foreground = 'white'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.options]
+      style = 'full'
+
+  [[blocks.segments]]
+    template = 'git:(<red>{{ .HEAD }}</>) '
+    foreground = 'yellow'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.options]
+      branch_icon = ''
+      branch_max_length = 25
+      fetch_stash_count = false
+      fetch_status = false
+      fetch_upstream_icon = false
+      fetch_worktree_count = false
+
+  [[blocks.segments]]
+    template = '<b>×</b>'
+    foreground = 'red'
+    type = 'status'
+    style = 'plain'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '<b>></b>'
+    foreground = 'green'
+    type = 'text'
+    style = 'plain'
