@@ -1,25 +1,25 @@
-font-size = 14
+font-size = 12
 adjust-cell-height = -10%
-background-blur-radius = 20
+background-blur = 20
 
 macos-option-as-alt = true
 macos-icon = custom-style
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 
 desktop-notifications = true
 
 window-padding-x = 15
 window-padding-y = 10
-window-position-x = 285
-window-position-y = 139
+window-position-x = 315
+window-position-y = 150
 window-save-state = never
 
 confirm-close-surface = false
 
 cursor-style = bar
 
-window-width = 90
-window-height = 32
+window-width = 100
+window-height = 35
 
 auto-update = check
 auto-update-channel = stable
@@ -30,19 +30,8 @@ background-opacity = 0.8
 macos-window-shadow = false
 
 theme = gruvbox_material_alabaster.conf
-#theme = GruvboxDark
-#theme = Ayu Mirage
-#theme = Kanagawa Wave
-#theme = miasma
-#font-family = "MesloLGM Nerd Font"
-#font-family = "JetBrainsMono Nerd Font"
 font-family = "DepartureMono Nerd Font"
-#font-family = "Departure Mono"
-#font-family = "JetBrainsMono NFM Medium"
-#font-family = "FiraCode Nerd Font Mono"
-#font-ligature = true
-#font-weight = 700
-term = ghostty
+shell-integration-features = cursor,title,path,ssh-terminfo,ssh-env
 
 quick-terminal-size = 50%, 30%
 quick-terminal-position = center
