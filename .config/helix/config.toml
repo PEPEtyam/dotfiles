@@ -1,9 +1,4 @@
 theme = "alabaster_gruvbox_material_dark_soft"
-# theme = "kanagawa_lotus"
-# theme = "gruvbox_material_dark_soft"
-# theme = "alabaster_gruvbox_2"
-# theme = "kanabox"
-# theme = "rusty_colors"
 
 [editor]
 line-number = "relative"
