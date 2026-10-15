@@ -13,11 +13,16 @@
   fn
   caps  s     d     f     j     k     l
   spc   g     c     b     o     m
+  q     w     e     r     t     y     u     i     p
+  a     h     z     x     v     n
+  1     2     3     4     5     6     7     8     9     0
+  grv   min   eql   lbrc  rbrc  bksl  scln  apos  comm  .     /
+  tab   ret   bspc
 )
 
 (defvar
-  tap-time 180
-  hold-time 230
+  tap-time 150
+  hold-time 190
   ;;cmd-hold-time 270
   double-tap-time 300
 )
@@ -44,7 +49,12 @@
   l (tap-hold-tap-keys $tap-time $hold-time l rctl (a s d f j k l ;))
   ;;; (tap-hold-release-keys $tap-time $hold-time ; rsft (a s d f j k l ;))
 
-  caps (tap-hold 200 200 esc lctl)
+  caps (tap-hold 200 200 esc (layer-while-held hyper))
+
+  ;; в слое hyper s/d/f остаются модификаторами, как на базовом слое
+  hs (tap-hold-release $tap-time $hold-time C-A-M-S-s lctl)
+  hd (tap-hold-release $tap-time $hold-time C-A-M-S-d lalt)
+  hf (tap-hold-release $tap-time $hold-time C-A-M-S-f lmet)
 
   ;; spc (tap-hold-release-keys 150 200 spc (layer-while-held leader) (s d f j k l))
 )
@@ -54,6 +64,23 @@
   @fnl
   @caps @s    @d    @f    @j    @k    @l
   spc   g     c     b     o     m
+  q     w     e     r     t     y     u     i     p
+  a     h     z     x     v     n
+  1     2     3     4     5     6     7     8     9     0
+  grv   min   eql   lbrc  rbrc  bksl  scln  apos  comm  .     /
+  tab   ret   bspc
+)
+
+(deflayer hyper
+  _     _     _     _     _     _     _     _     _     _     _     _
+  _
+  _     @hs   @hd   @hf   down  up    right
+  C-A-M-S-spc C-A-M-S-g C-A-M-S-c C-A-M-S-b C-A-M-S-o C-A-M-S-m
+  C-A-M-S-q C-A-M-S-w C-A-M-S-e C-A-M-S-r C-A-M-S-t C-A-M-S-y C-A-M-S-u C-A-M-S-i C-A-M-S-p
+  C-A-M-S-a left  C-A-M-S-z C-A-M-S-x C-A-M-S-v C-A-M-S-n
+  C-A-M-S-1 C-A-M-S-2 C-A-M-S-3 C-A-M-S-4 C-A-M-S-5 C-A-M-S-6 C-A-M-S-7 C-A-M-S-8 C-A-M-S-9 C-A-M-S-0
+  C-A-M-S-grv C-A-M-S-min C-A-M-S-eql C-A-M-S-lbrc C-A-M-S-rbrc C-A-M-S-bksl C-A-M-S-scln C-A-M-S-apos C-A-M-S-comm C-A-M-S-. C-A-M-S-/
+  C-A-M-S-tab C-A-M-S-ret C-A-M-S-bspc
 )
 
 (deflayer fn-layer
@@ -61,16 +88,9 @@
   _
   _     _     _     _     _     _     _     _     _
   _     _     _     _
+  _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _
+  _     _     _     _     _     _     _     _     _     _     _
+  _     _     _
 )
-
-;; (deflayer leader
-;;   _     _     _     _     _     _     _     _     _     _     _     _
-;;   _
-;;   _     _     _     _     _     _     _
-;;   _
-;;   (cmd open -a Ghostty)
-;;   (cmd open -a Cursor)
-;;   (cmd open -a Arc)
-;;   (cmd open -a Obsidian)
-;;   (cmd open -a Telegram)
-;; )
