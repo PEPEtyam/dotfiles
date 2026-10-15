@@ -48,7 +48,6 @@ plugins=(
   docker
   macos
   you-should-use
-  httpie
   pass
   eza
   docker-compose
@@ -65,9 +64,7 @@ plugins=(
   zsh-autosuggestions
   fast-syntax-highlighting
   zoxide
-  fzf-tab
   colored-man-pages
-  command-not-found
   extract
   web-search
   copyfile
@@ -77,13 +74,17 @@ plugins=(
 # ============================================================
 # Load Oh My Zsh
 # ============================================================
+# oh-my-zsh runs compinit itself; skip its compaudit directory audit (~50 ms)
+ZSH_DISABLE_COMPFIX="true"
+# Completion dirs must be in fpath before oh-my-zsh calls compinit (the brew plugin adds its own too late)
+fpath=(/Users/a1/.docker/completions $fpath /opt/homebrew/share/zsh/site-functions)
 source $ZSH/oh-my-zsh.sh
 
 # ============================================================
 # Oh My Posh (skip in Apple Terminal)
 # ============================================================
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell_v1.omp.toml)"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/prompt.toml)"
 fi
 
 # ============================================================
@@ -103,17 +104,7 @@ bindkey '^]' down-line-or-history           # Ctrl+]
 # ============================================================
 # Completions
 # ============================================================
-# Speed up compinit – recheck once a day
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-  compinit
-else
-  compinit -C
-fi
-
-# Docker CLI completions
-fpath=(/Users/a1/.docker/completions $fpath)
-
+# compinit is run once by oh-my-zsh above; fzf-tab must load after it
 # fzf-tab (if installed)
 if [[ -f ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh ]]; then
   source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
@@ -155,6 +146,25 @@ alias y="yazi"
 alias c="clear"
 alias cla="claude"
 alias clo="codex"
+alias o="open"
+
+# Пароль из 20 символов без повторов: pwgen не умеет уникальные символы,
+# поэтому берём пачку кандидатов и выбираем первого без повторов.
+pw() {
+  local length=${1:-20} candidate
+  local -a chars
+  local excluded=$'"#\'()*+,-./:;<=>?[\\]`{|}~'
+  while true; do
+    for candidate in ${(f)"$(pwgen -s -B -c -n -y -1 -r "$excluded" $length 1000)"}; do
+      chars=( ${(s::)candidate} )
+      chars=( ${(u)chars} )
+      (( ${#chars} == length )) || continue
+      [[ $candidate == *[a-z]* && $candidate == *[A-Z]* && $candidate == *[0-9]* && $candidate == *[_\&^%\$@!]* ]] || continue
+      print -r -- $candidate
+      return
+    done
+  done
+}
 
 # leaf без аргументов открывает fuzzy-пикер; файловый браузер (Shift+P) ищет
 # надёжнее — делаем его стартовым. С аргументами leaf работает как обычно.
@@ -169,7 +179,7 @@ leaf() {
 # ============================================================
 # Theme / UI (bat, fzf)
 # ============================================================
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="gruvbox-material-alabaster"
 
 # oh-my-zsh (lib/theme-and-appearance.zsh) задаёт LSCOLORS/LS_COLORS с ярким
 # зелёным для директорий (Gx...) — эти коды просвечивают в fzf-tab превью
@@ -184,8 +194,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d4be98,bg:-1,hl:#98971a
   --color=fg+:#ddc7a1,bg+:-1,hl+:#98971a
-  --color=info:#98971a,prompt:#b8bb26,pointer:#cc241d
-  --color=marker:#d79921,spinner:#458588,header:#cc241d'
+  --color=info:#98971a,prompt:#98971a,pointer:#cc241d
+  --color=marker:#d5a034,spinner:#7c6f64,header:#cc241d
+  --color=border:#7c6f64,scrollbar:#7c6f64,separator:#7c6f64,gutter:#504945'
 
 # Local Atuin history search. Ctrl-R opens the interactive command menu.
 eval "$(atuin init zsh --disable-up-arrow --disable-ai)"
