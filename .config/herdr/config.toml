@@ -20,8 +20,8 @@ surface0 = "#3c3836"        # bg1
 surface1 = "#504945"        # bg3 — выделение
 
 red = "#ea6962"
-green = "#a9b665"
-yellow = "#d8a657"
+green = "#98971a"
+yellow = "#d5a034"
 peach = "#e78a4e"           # orange — фокус
 mauve = "#d3869b"           # purple — константы
 blue = "#7daea3"            # только ссылки

@@ -2,43 +2,43 @@
 # Minimalist approach: colors for meaningful information only
 
 # Syntax highlighting - minimal but informative
-"type" = "red"                         # Структуры/типы - оранжевый для выделения
-"constant" = "purple"                  # Константы
-"constant.numeric" = "purple"          # Числа
-"constant.character.escape" = "fg0"    # Escape-последовательности - без выделения
-"string" = "green"                     # Строки - зеленый (как в Alabaster)
-"string.regexp" = "green"              # Регулярные выражения - тоже зеленый
-"comment" = "grey0"                    # Комментарии - желтый для заметности
+"type" = "red"                           # Структуры/типы - оранжевый для выделения
+"constant" = "purple"                    # Константы
+"constant.numeric" = "purple"            # Числа
+"constant.character.escape" = "fg0"      # Escape-последовательности - без выделения
+"string" = "green"                       # Строки - зеленый (как в Alabaster)
+"string.regexp" = "green"                # Регулярные выражения - тоже зеленый
+"comment" = "grey0"                      # Комментарии - желтый для заметности
 "comment.block" = "yellow"
 "comment.documentation" = "yellow"
 "string.docstring" = "yellow"
-"string.documentation" = "yellow"    # Питоновские """...""" — через runtime/queries/python
+"string.documentation" = "yellow"        # Питоновские """...""" — через runtime/queries/python
 "comment.line.documentation" = "yellow"
 "comment.block.documentation" = "yellow"
-"variable" = "fg0"                     # Переменные - обычный текст
-"variable.builtin" = "fg0"             # Встроенные переменные - без выделения
-"variable.parameter" = "beige_attr"    # Параметры (объявление + использование) - песочно-тусклый, отличается от серого инлей-хинта
-"variable.other.member" = "fg0"        # Поля объектов - обычный текст
-"label" = "fg0"                        # Метки - обычный текст
-"punctuation" = "grey2"                # Пунктуация - серый
-"punctuation.delimiter" = "grey2"      # Разделители
-"punctuation.bracket" = "fg0"          # Скобки - обычный текст для читаемости
+"variable" = "fg0"                       # Переменные - обычный текст
+"variable.builtin" = "fg0"               # Встроенные переменные - без выделения
+"variable.parameter" = "beige_attr"      # Параметры (объявление + использование) - песочно-тусклый, отличается от серого инлей-хинта
+"variable.other.member" = "fg0"          # Поля объектов - обычный текст
+"label" = "fg0"                          # Метки - обычный текст
+"punctuation" = "grey2"                  # Пунктуация - серый
+"punctuation.delimiter" = "grey2"        # Разделители
+"punctuation.bracket" = "fg0"            # Скобки - обычный текст для читаемости
 # "keyword" = "grey1"                    # Ключевые слова - легкое выделение серым
 # "keyword.directive" = "grey1"          # Директивы
-"keyword" = "fg0"                      # Ключевые слова - легкое выделение серым  
-"keyword.directive" = "fg0"            # Директивы  
-"operator" = "fg0"                     # Операторы - обычный текст
+"keyword" = "fg0"           # Ключевые слова - легкое выделение серым  
+"keyword.directive" = "fg0" # Директивы  
+"operator" = "fg0"          # Операторы - обычный текст
 # "function" = "red"                     # Функции/методы - темно-синий
 # "function" = {fg = "fg0", modifiers = ["bold"]}                     # Функции/методы - темно-синий
 "function" = "orange"
-"function.builtin" = "orange"          # Встроенные функции - тоже синий
-"function.macro" = "orange_light"      # Макросы (println!) - светлее обычных функций
-"tag" = "orange"                       # HTML/XML теги - оранжевый
-"namespace" = "fg0"                    # Пространства имен - обычный текст (было red, дублировало "type")
-"attribute" = "fg0"                    # Атрибуты - обычный текст
-"constructor" = "red"                  # Конструкторы - как "type" (тот же класс, та же роль → тот же цвет)
-"module" = "fg0"                       # Модули - обычный текст
-"special" = "#98971a"                  # Аннотации/спецэлементы + подсветка совпадений в picker (ohmyposh green, темнее helix-зелёного)
+"function.builtin" = "orange"     # Встроенные функции - тоже синий
+"function.macro" = "orange_light" # Макросы (println!) - светлее обычных функций
+"tag" = "orange"                  # HTML/XML теги - оранжевый
+"namespace" = "fg0"               # Пространства имен - обычный текст (было red, дублировало "type")
+"attribute" = "fg0"               # Атрибуты - обычный текст
+"constructor" = "red"             # Конструкторы - как "type" (тот же класс, та же роль → тот же цвет)
+"module" = "fg0"                  # Модули - обычный текст
+"special" = "green"               # Аннотации/спецэлементы + подсветка совпадений в picker
 
 # Markdown - минимальное оформление
 "markup.heading.marker" = "grey2"
@@ -51,8 +51,10 @@
 "markup.list" = "fg0"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }   # голубой ТОЛЬКО здесь
-"markup.link.label" = "blue"                                      # сноски
+"markup.link.url" = { fg = "blue", modifiers = [
+  "underlined",
+] } # голубой ТОЛЬКО здесь
+"markup.link.label" = "blue" # сноски
 "markup.link.text" = "fg0"
 "markup.quote" = "grey2"
 "markup.raw" = "green"
@@ -87,10 +89,10 @@
 "ui.text" = "fg0"
 "ui.text.focus" = "fg0"
 "ui.menu" = { fg = "fg0" }
-"ui.menu.selected" = { fg = "bg0", bg = "fg1", modifiers = ["bold"]  }
+"ui.menu.selected" = { fg = "bg0", bg = "fg1", modifiers = ["bold"] }
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
-"ui.virtual.inlay-hint" = { fg = "grey0", modifiers = ["italic"]}
+"ui.virtual.inlay-hint" = { fg = "grey0", modifiers = ["italic"] }
 "ui.virtual.inlay-hint.parameter" = { fg = "grey0", modifiers = ["italic"] }
 "ui.virtual.inlay-hint.type" = { fg = "grey0" }
 "ui.virtual.ruler" = { bg = "bg0" }
@@ -100,6 +102,11 @@
 "info" = "bg_yellow"
 "warning" = "bg_orange"
 "error" = "bg_red"
+"diagnostic" = {}
+"diagnostic.hint" = {}
+"diagnostic.info" = {}
+"diagnostic.warning" = {}
+"diagnostic.error" = {}
 
 [palette]
 bg0 = "#32302f"
@@ -125,11 +132,11 @@ fg1 = "#ddc7a1"
 
 red = "#ea6962"
 orange = "#e78a4e"
-yellow = "#d8a657"
-green = "#a9b665"
-aqua = "#89b482"               # base0C — шалфейный, аннотации
-blue = "#7daea3"               # base0D — ТОЛЬКО ссылки и сноски
-orange_light = "#f0a878"       # макросы — на пару оттенков светлее orange
+yellow = "#d5a034"
+green = "#98971a"
+aqua = "#89b482"         # base0C — шалфейный, аннотации
+blue = "#7daea3"         # base0D — ТОЛЬКО ссылки и сноски
+orange_light = "#f0a878" # макросы — на пару оттенков светлее orange
 purple = "#d3869b"
 white = "#f9f5d7"
 
@@ -138,18 +145,17 @@ bg_orange = "#c5733f"
 bg_yellow = "#b88d45"
 bg_green = "#8f9a54"
 bg_aqua = "#6f9669"
-bg_muted_purple = "#8f6b7c"    # был bg_blue #649088
+bg_muted_purple = "#8f6b7c" # был bg_blue #649088
 bg_purple = "#b27085"
 
 grey0 = "#7c6f64"
 grey1 = "#928374"
 grey2 = "#a89984"
 
-green_comment = "#629755"      # Comments
-orange_keyword = "#cc7832"     # Keywords, tags, escape sequences
-green_string = "#98971A"       # Strings
-pink_const = "#C77F92"         # Numbers and constants
-beige_attr = "#bdae93"         # Attributes
-yellow_entity = "#D79921"      # Global definitions and properties
-green_annotation = "#81AE70"   # Annotations
-
+green_comment = "#629755"    # Comments
+orange_keyword = "#cc7832"   # Keywords, tags, escape sequences
+green_string = "#98971a"     # Strings
+pink_const = "#C77F92"       # Numbers and constants
+beige_attr = "#bdae93"       # Attributes
+yellow_entity = "#D79921"    # Global definitions and properties
+green_annotation = "#81AE70" # Annotations

@@ -43,7 +43,7 @@ selectedHunk = "#504945"
 # зрением. Знак "+"/"−" и текст остаются цветными.
 addedBg = "#3a4a30"
 addedContentBg = "#4f6640"
-addedSignColor = "#a9b665"        # green
+addedSignColor = "#98971a"        # green
 
 removedBg = "#4d2e2c"
 removedContentBg = "#6b3a36"
@@ -54,13 +54,13 @@ movedRemovedBg = "#3f2b29"
 contextBg = "#32302f"
 contextContentBg = "#3c3836"
 
-badgeAdded = "#a9b665"
+badgeAdded = "#98971a"
 badgeRemoved = "#cc241d"
 badgeNeutral = "#7c6f64"
 
-fileNew = "#a9b665"
+fileNew = "#98971a"
 fileDeleted = "#cc241d"
-fileRenamed = "#d8a657"
+fileRenamed = "#d5a034"
 fileModified = "#e78a4e"
 fileUntracked = "#7c6f64"
 
@@ -121,14 +121,14 @@ fileUntracked = "#7c6f64"
 "meta.function-call.generic.python" = "#e78a4e"
 
 # --- Строки в кавычках — зелёный ---
-"string" = "#a9b665"
-"string.quoted" = "#a9b665"
-"string.quoted.single" = "#a9b665"
-"string.quoted.double" = "#a9b665"
-"string.template" = "#a9b665"
-"string.regexp" = "#a9b665"
-"string.quoted.single.python" = "#a9b665"
-"string.quoted.multi.python" = "#a9b665"
+"string" = "#98971a"
+"string.quoted" = "#98971a"
+"string.quoted.single" = "#98971a"
+"string.quoted.double" = "#98971a"
+"string.template" = "#98971a"
+"string.regexp" = "#98971a"
+"string.quoted.single.python" = "#98971a"
+"string.quoted.multi.python" = "#98971a"
 
 # --- Обычные комментарии — коричнево-серый ---
 "comment" = "#7c6f64"
@@ -136,11 +136,11 @@ fileUntracked = "#7c6f64"
 "punctuation.definition.comment" = "#7c6f64"
 
 # --- Докстринги и многострочные комментарии — жёлтый ---
-"comment.block" = "#d8a657"
-"comment.block.documentation" = "#d8a657"
-"comment.line.documentation" = "#d8a657"
-"string.quoted.docstring" = "#d8a657"
-"string.quoted.docstring.multi.python" = "#d8a657"
+"comment.block" = "#d5a034"
+"comment.block.documentation" = "#d5a034"
+"comment.line.documentation" = "#d5a034"
+"string.quoted.docstring" = "#d5a034"
+"string.quoted.docstring.multi.python" = "#d5a034"
 
 # --- Константы и числа — фиолетовый ---
 "constant" = "#d3869b"
@@ -174,7 +174,7 @@ fileUntracked = "#7c6f64"
 "markup.heading" = "#d4be98"
 "markup.heading.1" = "#cc241d"
 "markup.heading.2" = "#e78a4e"
-"markup.heading.3" = "#d8a657"
-"markup.heading.4" = "#a9b665"
-"markup.raw" = "#a9b665"
+"markup.heading.3" = "#d5a034"
+"markup.heading.4" = "#98971a"
+"markup.raw" = "#98971a"
 "markup.quote" = "#7c6f64"
