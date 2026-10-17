@@ -1,4 +1,4 @@
 cmd + alt + ctrl - b : open -a "Arc"
 cmd + alt + ctrl - g : open -a "Ghostty"
 cmd + alt + ctrl - z : open -a "Telegram"
-cmd + alt + ctrl - v : open -a "DBeaver"
+cmd + alt + ctrl - x : open -a "DBeaver"
