@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="742" height="374" viewBox="0 0 742 374" font-family="'DepartureMono Nerd Font','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14"><rect x="0.5" y="0.5" width="741" height="373" rx="12" fill="#32302f" stroke="#504945"/><circle cx="22" cy="19" r="5.5" fill="#ea6962" opacity="0.85"/><circle cx="40" cy="19" r="5.5" fill="#d5a034" opacity="0.85"/><circle cx="58" cy="19" r="5.5" fill="#98971a" opacity="0.85"/><text x="370.8" y="24" fill="#928374" text-anchor="middle" font-size="12">hunk - services.py</text>
+<text x="26.4" y="76" fill="#ddc7a1" textLength="260.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">backend/app/reviews/services.py</text>
+<text x="26.4" y="116" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 41</text>
+<text x="60.0" y="116" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 41</text>
+<text x="93.6" y="116" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold"> </text>
+<text x="110.4" y="116" fill="#d4be98" textLength="411.6" lengthAdjust="spacing" xml:space="preserve">    def find_existing(self, brand_id, origin_id):</text>
+<rect x="18.0" y="121" width="705.6" height="20" fill="#4d2e2c"/>
+<rect x="26.4" y="121" width="25.2" height="20" fill="#4d2e2c"/>
+<text x="26.4" y="136" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 42</text>
+<rect x="60.0" y="121" width="25.2" height="20" fill="#4d2e2c"/>
+<text x="60.0" y="136" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve">   </text>
+<rect x="93.6" y="121" width="8.4" height="20" fill="#4d2e2c"/>
+<text x="93.6" y="136" fill="#ea6962" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">-</text>
+<rect x="110.4" y="121" width="470.4" height="20" fill="#4d2e2c"/>
+<text x="110.4" y="136" fill="#d4be98" textLength="470.4" lengthAdjust="spacing" xml:space="preserve">        return Review.objects.filter(brand_id=brand_id, </text>
+<rect x="580.8" y="121" width="126.0" height="20" fill="#6b3a36"/>
+<text x="580.8" y="136" fill="#d4be98" textLength="126.0" lengthAdjust="spacing" xml:space="preserve">company_id=None</text>
+<rect x="706.8" y="121" width="8.4" height="20" fill="#4d2e2c"/>
+<text x="706.8" y="136" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">)</text>
+<rect x="18.0" y="141" width="705.6" height="20" fill="#3a4a30"/>
+<rect x="26.4" y="141" width="25.2" height="20" fill="#3a4a30"/>
+<text x="26.4" y="156" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve">   </text>
+<rect x="60.0" y="141" width="25.2" height="20" fill="#3a4a30"/>
+<text x="60.0" y="156" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 42</text>
+<rect x="93.6" y="141" width="8.4" height="20" fill="#3a4a30"/>
+<text x="93.6" y="156" fill="#98971a" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">+</text>
+<rect x="110.4" y="141" width="470.4" height="20" fill="#3a4a30"/>
+<text x="110.4" y="156" fill="#d4be98" textLength="470.4" lengthAdjust="spacing" xml:space="preserve">        return Review.objects.filter(brand_id=brand_id, </text>
+<rect x="580.8" y="141" width="159.6" height="20" fill="#4f6640"/>
+<text x="580.8" y="156" fill="#d4be98" textLength="159.6" lengthAdjust="spacing" xml:space="preserve">origin_id=origin_id</text>
+<rect x="740.4" y="141" width="8.4" height="20" fill="#3a4a30"/>
+<text x="740.4" y="156" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">)</text>
+<text x="26.4" y="176" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 43</text>
+<text x="60.0" y="176" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 43</text>
+<text x="93.6" y="176" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold"> </text>
+<text x="26.4" y="196" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 44</text>
+<text x="60.0" y="196" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 44</text>
+<text x="93.6" y="196" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold"> </text>
+<text x="110.4" y="196" fill="#d4be98" textLength="235.2" lengthAdjust="spacing" xml:space="preserve">    def save(self, payload):</text>
+<rect x="18.0" y="201" width="705.6" height="20" fill="#4d2e2c"/>
+<rect x="26.4" y="201" width="25.2" height="20" fill="#4d2e2c"/>
+<text x="26.4" y="216" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 45</text>
+<rect x="60.0" y="201" width="25.2" height="20" fill="#4d2e2c"/>
+<text x="60.0" y="216" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve">   </text>
+<rect x="93.6" y="201" width="8.4" height="20" fill="#4d2e2c"/>
+<text x="93.6" y="216" fill="#ea6962" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">-</text>
+<rect x="110.4" y="201" width="445.2" height="20" fill="#4d2e2c"/>
+<text x="110.4" y="216" fill="#d4be98" textLength="445.2" lengthAdjust="spacing" xml:space="preserve">        review = self.find_existing(payload.brand_id)</text>
+<rect x="18.0" y="221" width="705.6" height="20" fill="#3a4a30"/>
+<rect x="26.4" y="221" width="25.2" height="20" fill="#3a4a30"/>
+<text x="26.4" y="236" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve">   </text>
+<rect x="60.0" y="221" width="25.2" height="20" fill="#3a4a30"/>
+<text x="60.0" y="236" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 45</text>
+<rect x="93.6" y="221" width="8.4" height="20" fill="#3a4a30"/>
+<text x="93.6" y="236" fill="#98971a" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">+</text>
+<rect x="110.4" y="221" width="436.8" height="20" fill="#3a4a30"/>
+<text x="110.4" y="236" fill="#d4be98" textLength="436.8" lengthAdjust="spacing" xml:space="preserve">        review = self.find_existing(payload.brand_id</text>
+<rect x="547.2" y="221" width="159.6" height="20" fill="#4f6640"/>
+<text x="547.2" y="236" fill="#d4be98" textLength="159.6" lengthAdjust="spacing" xml:space="preserve">, payload.origin_id</text>
+<rect x="706.8" y="221" width="8.4" height="20" fill="#3a4a30"/>
+<text x="706.8" y="236" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">)</text>
+<text x="26.4" y="256" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 46</text>
+<text x="60.0" y="256" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 46</text>
+<text x="93.6" y="256" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold"> </text>
+<text x="110.4" y="256" fill="#d4be98" textLength="218.4" lengthAdjust="spacing" xml:space="preserve">        if review is None:</text>
+<text x="26.4" y="276" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 47</text>
+<text x="60.0" y="276" fill="#928374" textLength="25.2" lengthAdjust="spacing" xml:space="preserve"> 47</text>
+<text x="93.6" y="276" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold"> </text>
+<text x="110.4" y="276" fill="#d4be98" textLength="378.0" lengthAdjust="spacing" xml:space="preserve">            review = Review(**payload.fields)</text></svg>

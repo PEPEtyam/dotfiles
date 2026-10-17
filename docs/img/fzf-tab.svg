@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="758" height="454" viewBox="0 0 758 454" font-family="'DepartureMono Nerd Font','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14"><rect x="0.5" y="0.5" width="757" height="453" rx="12" fill="#3c3836" stroke="#504945"/><circle cx="22" cy="19" r="5.5" fill="#ea6962" opacity="0.85"/><circle cx="40" cy="19" r="5.5" fill="#d5a034" opacity="0.85"/><circle cx="58" cy="19" r="5.5" fill="#98971a" opacity="0.85"/><text x="379.2" y="24" fill="#928374" text-anchor="middle" font-size="12">zsh - fzf-tab</text>
+<text x="26.4" y="76" fill="#98971a" textLength="75.6" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">.dotfiles</text>
+<text x="102.0" y="76" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve"> </text>
+<text x="110.4" y="76" fill="#928374" textLength="92.4" lengthAdjust="spacing" xml:space="preserve">~/.dotfiles</text>
+<text x="202.8" y="76" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve"> </text>
+<text x="211.2" y="76" fill="#d5a034" textLength="42.0" lengthAdjust="spacing" xml:space="preserve">git:(</text>
+<text x="253.2" y="76" fill="#ea6962" textLength="33.6" lengthAdjust="spacing" xml:space="preserve">main</text>
+<text x="286.8" y="76" fill="#d5a034" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">)</text>
+<text x="295.2" y="76" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve"> </text>
+<text x="303.6" y="76" fill="#d4be98" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">×</text>
+<text x="26.4" y="96" fill="#98971a" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">&gt;</text>
+<text x="34.8" y="96" fill="#d4be98" textLength="109.2" lengthAdjust="spacing" xml:space="preserve"> bat .config/</text>
+<text x="144.0" y="96" fill="#928374" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">he</text>
+<text x="43.2" y="136" fill="#7c6f64" textLength="285.6" lengthAdjust="spacing" xml:space="preserve">╭────────────────────────────────╮</text>
+<text x="43.2" y="156" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="156" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="176" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="176" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="196" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="196" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="216" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="216" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="236" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="236" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="256" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="256" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="276" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="276" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="296" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="296" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="316" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="316" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="336" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="336" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="356" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="320.4" y="356" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="43.2" y="376" fill="#7c6f64" textLength="285.6" lengthAdjust="spacing" xml:space="preserve">╰────────────────────────────────╯</text>
+<text x="60.0" y="156" fill="#98971a" textLength="33.6" lengthAdjust="spacing" xml:space="preserve">&gt; he</text>
+<text x="253.2" y="156" fill="#98971a" textLength="33.6" lengthAdjust="spacing" xml:space="preserve">9/42</text>
+<rect x="51.6" y="181" width="268.8" height="20" fill="#504945"/>
+<rect x="60.0" y="181" width="8.4" height="20" fill="#504945"/>
+<text x="60.0" y="196" fill="#cc241d" textLength="8.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">&gt;</text>
+<rect x="76.8" y="181" width="16.8" height="20" fill="#504945"/>
+<text x="76.8" y="196" fill="#98971a" textLength="16.8" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">he</text>
+<rect x="93.6" y="181" width="126.0" height="20" fill="#504945"/>
+<text x="93.6" y="196" fill="#ddc7a1" textLength="126.0" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">lix/config.toml</text>
+<text x="76.8" y="216" fill="#98971a" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">he</text>
+<text x="93.6" y="216" fill="#d4be98" textLength="151.2" lengthAdjust="spacing" xml:space="preserve">lix/languages.toml</text>
+<text x="76.8" y="236" fill="#98971a" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">he</text>
+<text x="93.6" y="236" fill="#d4be98" textLength="126.0" lengthAdjust="spacing" xml:space="preserve">rdr/config.toml</text>
+<text x="76.8" y="256" fill="#98971a" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">hu</text>
+<text x="93.6" y="256" fill="#d4be98" textLength="117.6" lengthAdjust="spacing" xml:space="preserve">nk/config.toml</text>
+<text x="354.0" y="136" fill="#7c6f64" textLength="369.6" lengthAdjust="spacing" xml:space="preserve">╭──────────────────────────────────────────╮</text>
+<text x="354.0" y="156" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="156" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="176" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="176" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="196" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="196" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="216" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="216" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="236" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="236" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="256" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="256" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="276" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="276" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="296" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="296" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="316" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="316" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="336" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="336" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="356" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="715.2" y="356" fill="#7c6f64" textLength="8.4" lengthAdjust="spacing" xml:space="preserve">│</text>
+<text x="354.0" y="376" fill="#7c6f64" textLength="369.6" lengthAdjust="spacing" xml:space="preserve">╰──────────────────────────────────────────╯</text>
+<text x="370.8" y="156" fill="#928374" textLength="92.4" lengthAdjust="spacing" xml:space="preserve">config.toml</text>
+<text x="370.8" y="176" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 1</text>
+<text x="404.4" y="176" fill="#d4be98" textLength="67.2" lengthAdjust="spacing" xml:space="preserve">theme = </text>
+<text x="471.6" y="176" fill="#98971a" textLength="235.2" lengthAdjust="spacing" xml:space="preserve">"alabaster_gruvbox_material"</text>
+<text x="370.8" y="196" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 2</text>
+<text x="370.8" y="216" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 3</text>
+<text x="404.4" y="216" fill="#d4be98" textLength="67.2" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">[editor]</text>
+<text x="370.8" y="236" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 4</text>
+<text x="404.4" y="236" fill="#d4be98" textLength="117.6" lengthAdjust="spacing" xml:space="preserve">line-number = </text>
+<text x="522.0" y="236" fill="#98971a" textLength="84.0" lengthAdjust="spacing" xml:space="preserve">"relative"</text>
+<text x="370.8" y="256" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 5</text>
+<text x="404.4" y="256" fill="#d4be98" textLength="100.8" lengthAdjust="spacing" xml:space="preserve">scrolloff = </text>
+<text x="505.2" y="256" fill="#d3869b" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">10</text>
+<text x="370.8" y="276" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 6</text>
+<text x="404.4" y="276" fill="#d4be98" textLength="67.2" lengthAdjust="spacing" xml:space="preserve">mouse = </text>
+<text x="471.6" y="276" fill="#d3869b" textLength="33.6" lengthAdjust="spacing" xml:space="preserve">true</text>
+<text x="370.8" y="296" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 7</text>
+<text x="370.8" y="316" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 8</text>
+<text x="404.4" y="316" fill="#d4be98" textLength="176.4" lengthAdjust="spacing" xml:space="preserve" font-weight="bold">[editor.cursor-shape]</text>
+<text x="370.8" y="336" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve"> 9</text>
+<text x="404.4" y="336" fill="#d4be98" textLength="75.6" lengthAdjust="spacing" xml:space="preserve">insert = </text>
+<text x="480.0" y="336" fill="#98971a" textLength="42.0" lengthAdjust="spacing" xml:space="preserve">"bar"</text>
+<text x="370.8" y="356" fill="#a89984" textLength="16.8" lengthAdjust="spacing" xml:space="preserve">10</text>
+<text x="404.4" y="356" fill="#d4be98" textLength="75.6" lengthAdjust="spacing" xml:space="preserve">normal = </text>
+<text x="480.0" y="356" fill="#98971a" textLength="58.8" lengthAdjust="spacing" xml:space="preserve">"block"</text></svg>
