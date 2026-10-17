@@ -1,4 +1,4 @@
-cmd + alt + ctrl + shift - b : open -a "Arc"
-cmd + alt + ctrl + shift - g : open -a "Ghostty"
-cmd + alt + ctrl + shift - z : open -a "Telegram"
-cmd + alt + ctrl + shift - v : open -a "DBeaver"
+cmd + alt + ctrl - b : open -a "Arc"
+cmd + alt + ctrl - g : open -a "Ghostty"
+cmd + alt + ctrl - z : open -a "Telegram"
+cmd + alt + ctrl - v : open -a "DBeaver"
