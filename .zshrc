@@ -44,7 +44,6 @@ plugins=(
   git
   git-lfs
   tig
-  gitfast
   docker
   macos
   you-should-use
@@ -56,7 +55,6 @@ plugins=(
   kubectl
   python
   uv
-  uv-env
   ruff
   herdr
   zsh-uv-env
@@ -66,7 +64,6 @@ plugins=(
   zoxide
   colored-man-pages
   extract
-  web-search
   copyfile
   copypath
 )
@@ -91,15 +88,7 @@ fi
 # Key bindings
 # ============================================================
 bindkey '^ ' autosuggest-accept
-bindkey '^[[27;2;13~' autosuggest-execute
-bindkey '^[[27;5;13~' autosuggest-execute
-_enable_modify_other_keys() { print -n '\e[>4;1m' }
-_disable_modify_other_keys() { print -n '\e[>4;0m' }
-precmd_functions+=(_enable_modify_other_keys)
-preexec_functions+=(_disable_modify_other_keys)
-bindkey '^[[91;5u' up-line-or-history       # Ctrl+[ via CSI-u capable terminals
-bindkey '^[[1093;5u' up-line-or-history     # Ctrl+[ via CSI-u capable terminals
-bindkey '^]' down-line-or-history           # Ctrl+]
+bindkey '^[^M' autosuggest-execute
 
 # ============================================================
 # Completions
@@ -200,6 +189,36 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # Local Atuin history search. Ctrl-R opens the interactive command menu.
 eval "$(atuin init zsh --disable-up-arrow --disable-ai)"
+
+# atuin puts its own search first in the suggestion strategy; keep suggestions on the zsh history only,
+# so one wrong entry can be removed exactly (Ctrl+X D below)
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+
+# Ctrl+X D: delete the currently shown suggestion from the zsh history file and memory
+forget-suggestion() {
+  [[ -n $POSTDISPLAY ]] || return
+  local histsize=$HISTSIZE
+  local filtered=$(mktemp)
+  fc -W
+  COMMAND_TEXT=$BUFFER$POSTDISPLAY python3 -I -c '
+import os, sys
+target = os.environ["COMMAND_TEXT"].encode()
+kept = []
+for line in sys.stdin.buffer.read().split(b"\n"):
+    text = line.split(b";", 1)[1] if line.startswith(b": ") and b";" in line else line
+    if text != target:
+        kept.append(line)
+sys.stdout.buffer.write(b"\n".join(kept))
+' < "$HISTFILE" > "$filtered" && [[ -s $filtered ]] && mv "$filtered" "$HISTFILE"
+  HISTSIZE=0
+  HISTSIZE=$histsize
+  fc -R
+  zle autosuggest-fetch
+}
+zle -N forget-suggestion
+# otherwise zsh-autosuggestions wraps the widget and clears the suggestion before it runs
+ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(forget-suggestion)
+bindkey '^Xd' forget-suggestion
 
 # Source local env (if exists)
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
